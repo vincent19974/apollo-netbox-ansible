@@ -1,0 +1,17 @@
+[nms_stack]
+netbox      
+awx         
+grafana      
+elk         
+
+[nms_stack:vars]
+ansible_user=vagrant
+
+
+
+
+
+
+
+
+

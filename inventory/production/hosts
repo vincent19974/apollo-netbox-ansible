@@ -1,0 +1,29 @@
+[nms_stack]
+netbox      ansible_host=202.60.12.108
+awx         ansible_host=202.60.10.75
+grafana      ansible_host=202.60.10.86
+elk         ansible_host=202.60.10.77
+
+[CPE]
+ST-2318
+ST-0935
+ST-1029
+ST-1060
+
+[build_config]
+L2-CPE02
+
+[ruijie]
+L2-CPE02
+
+[nms_stack:vars]
+ansible_user=ubuntu
+
+
+
+
+
+
+
+
+

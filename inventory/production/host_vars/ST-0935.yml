@@ -1,0 +1,5 @@
+---
+device_site: 'Tune Hotel'
+device_vendor: 'Ruijie'
+device_model: 'RSR10'
+device_mgmt_ip: '172.17.0.69'

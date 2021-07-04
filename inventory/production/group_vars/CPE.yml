@@ -1,0 +1,6 @@
+---
+device_role: 'CPE'
+device_tenant: '7-eleven'
+
+netbox_host: 'http://202.60.10.71'
+netbox_token: '09a5d41772cd2fbb96c49a9f7c14a96554d0689b'

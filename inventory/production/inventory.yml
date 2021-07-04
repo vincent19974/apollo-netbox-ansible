@@ -1,0 +1,19 @@
+---
+plugin: netbox.netbox.nb_inventory
+api_endpoint: 'http://202.60.10.71'
+token: '09a5d41772cd2fbb96c49a9f7c14a96554d0689b'
+validate_certs: False
+follow_redirects: none
+config_context: False
+group_names_raw: true
+group_by:
+  - device_roles
+  - device_types
+  - region
+  - platforms
+  - manufacturers
+query_filters:
+  - role: cpe
+  - tenant: '7-eleven'
+device_query_filters:
+  - has_primary_ip: 'true'

@@ -1,0 +1,20 @@
+[nms_stack]
+netbox      ansible_host=10.202.102.56
+awx         ansible_host=10.202.102.57
+grafana     ansible_host=10.202.102.58
+elk         ansible_host=10.202.102.59
+grafana_docker     ansible_host=10.202.102.60
+
+
+[all:vars]
+ansible_user=lab
+ansible_become_password=lab123
+#ansible_password=ansible123
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+---
+device_site: 'Caltex Tipolo'
+device_vendor: 'Mikrotik'
+device_model: 'RB951'
+device_mgmt_ip: '10.10.9.158'
