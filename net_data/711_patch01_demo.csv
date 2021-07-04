@@ -1,0 +1,4 @@
+site_id,site_name,mgmt_ip,vendor,cpe_type,region,address,Island Group,City,Zip Code,parent_region
+ST-0002,BF Homes,10.10.10.110,MIKROTIK,RB951,Metro Manila,"Pres. Ave., BF Homes Para–aque - Amorado, Lani (SM) - 9985900932",Luzon,Para–aque City,1720,patch01
+ST-0003,Libertad,10.10.11.166,MIKROTIK,RB951,Metro Manila,"Libertad cor., F.B. Harrison, Pasay - Jhay-Ar Fuego (SM) - 9088111278",Luzon,Pasay City,1300,patch01
+ST-0005,U.N.,10.10.7.110,MIKROTIK,RB951,Metro Manila,"900 U.N. Ave., Ermita, Manila - Jerome S. Sergio (SM) - 9090837929",Luzon,City of Manila,1000,patch01

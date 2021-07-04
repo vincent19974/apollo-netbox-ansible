@@ -1,0 +1,4 @@
+site_id,site_name,mgmt_ip,vendor,cpe_type,region
+DEMO-0002,demo_site01,172.17.254.232,RUIJIE,RSR10,demo_Cebu
+DEMO-0027,demo_site02,172.17.254.230,RUIJIE,RSR10,demo_Manilla
+DEMO-0028,demo_site03,172.17.254.231,RUIJIE,RSR10,demo_Manilla

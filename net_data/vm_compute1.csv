@@ -1,0 +1,29 @@
+name,cf_Group,vcpus,memory,disk,cluster,tenant,cf_Public IP,cf_Private IP,role,type,cf_Owner,cf_Active Status
+supplychain-wms-production-wms.ecommerce,Sys Ops,2,4096,35,A1-R05-U26,AGC SysOps ,202.60.10.107,,AOS,OpenStackHost,Sarah,Running
+fintech-payconnect-production-rs2.rewards.processing,Sys Ops,4,2048,31,A1-R05-U26,AGC SysOps ,202.60.10.204,,AOS,OpenStackHost,Juan Jamon,Running
+supplychain-erp-test-odoo12.pmi,Sys Ops,4,4096,64,A1-R05-U26,AGC SysOps ,,192.168.18.46,AOS,OpenStackHost,Carlex & Sarah,Running
+supplychain-erp-test-erp.prod,Sys Ops,8,4096,64,A1-R05-U26,AGC SysOps ,10.255.255.183,,AOS,OpenStackHost,Randy,Running
+infra-oss-production-nginx.proxy,Sys Ops,2,2048,31,A1-R05-U26,AGC SysOps ,202.60.10.217,,AOS,OpenStackHost,Mae,Running
+infra-internal-production-openproject,Sys Ops,4,8192,64,A1-R05-U26,AGC SysOps ,202.60.10.137,,AOS,OpenStackHost,Luigi,Running
+infra-network-production-quad.a,Sys Ops,2,4096,64,A1-R05-U26,AGC SysOps ,202.60.10.125,,AOS,OpenStackHost,Luigi,Running
+fintech-payconnect-test-switch2,Sys Ops,4,4096,32,A1-R05-U26,AGC SysOps ,202.60.10.168,,AOS,OpenStackHost,Juan Jamon,Running
+fintech-payconnect-production-kafka3,Sys Ops,4,8192,100,A1-R05-U26,AGC SysOps ,,192.168.18.237,AOS,OpenStackHost,Carlex,Running
+infra-internal-production-rocketchat.mongodb.1,Sys Ops,4,4096,100,A1-R05-U26,AGC SysOps ,,192.168.18.21,AOS,OpenStackHost,Luigi,Running
+infra-internal-production-rocketchat.mongodb.3,Sys Ops,4,4096,100,A1-R05-U26,AGC SysOps ,,192.168.18.23,AOS,OpenStackHost,Luigi,Running
+fms-fms-production-kitanglad,Sys Ops,4,4096,64,A1-R05-U26,AGC SysOps ,,192.168.70.241,AOS,OpenStackHost,Michael,Running
+etrade-etrade-test-fe,Sys Ops,2,2048,34,A1-R05-U26,AGC SysOps ,202.60.10.120,,AOS,OpenStackHost,Danrey,Running
+datalake-datalake-dev-wiki,Sys Ops,4,4096,30,A1-R05-U26,AGC SysOps ,,192.168.70.21,AOS,OpenStackHost,Dom Cimafranca,Running
+infra-network.management-test-elk,Sys Ops,4,4096,20,A1-R05-U26,AGC SysOps ,202.60.10.135,,AOS,OpenStackHost,mitzi/menard,Running
+infra-network.management-test-grafana,Sys Ops,2,2048,20,A1-R05-U26,AGC SysOps ,202.60.10.138,,AOS,OpenStackHost,mitzi/menard,Running
+infra-internal-test-cloned.dcim,Sys Ops,2,2048,60,A1-R05-U26,AGC SysOps ,202.60.12.108,,AOS,OpenStackHost,vincent,Running
+supplychain-wms-production-wms.dataconnect,Sys Ops,2,2048,35,A1-R04-U10,AGC SysOps ,202.60.10.121 ,,AOS,OpenStackHost,Sarah Osay,Running
+fintech-payconnect-dev-backend,Sys Ops,4,4096,50,A1-R04-U10,AGC SysOps ,202.60.10.176,,AOS,OpenStackHost,Juan Jamon,Running
+supplychain-erp-test-odoo12.1,Sys Ops,4,4096,64,A1-R04-U10,AGC SysOps ,,192.168.18.178,AOS,OpenStackHost,Sarah Osay & Gelie,Running
+infra-oss-production-atis.apollo,Sys Ops,4,4096,62,A1-R04-U10,AGC SysOps ,,192.168.17.180,AOS,OpenStackHost,Randy/Mae,Running
+infra-oss-production-atis.corona,Sys Ops,2,2048,62,A1-R04-U10,AGC SysOps ,,192.168.17.86 ,AOS,OpenStackHost,Randy/Mae,Running
+fintech-payconnect-dev-biller.api.test,Sys Ops,2,2048,30,A1-R04-U10,AGC SysOps ,202.60.10.100,,AOS,OpenStackHost,Russel Cuy,Running
+fintech-payconnect-production-kafka1,Sys Ops,4,4096,100,A1-R04-U10,AGC SysOps ,,192.168.18.165,AOS,OpenStackHost,Carlex,Running
+fintech-cliqq-dev-redeem3,Sys Ops,4,4096,62,A1-R04-U10,AGC SysOps ,202.60.10.184,,AOS,OpenStackHost,Juan Jamon,Running
+fintech-cliqq-production-bot2,Sys Ops,8,4096,32,A1-R04-U10,AGC SysOps ,,192.168.18.187,AOS,OpenStackHost,JanChristian & Juan,Running
+fintech-cliqq-test-sms.api,Sys Ops,4,4096,30,A1-R04-U10,AGC SysOps ,202.60.10.179,,AOS,OpenStackHost,JanChristian & Juan Jamon,Running
+infra-internal-test-rocketchat.nginx,Sys Ops,4,4096,30,A1-R04-U10,AGC SysOps ,202.60.10.145,,AOS,OpenStackHost,Luigi,Running

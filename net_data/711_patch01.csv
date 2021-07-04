@@ -1,0 +1,501 @@
+site_id,site_name,mgmt_ip,vendor,cpe_type,region,Address,Island Group,City,Zip Code,parent_region
+ST-0002,BF Homes,10.10.10.110,MIKROTIK,RB951,Metro Manila,"Pres. Ave., BF Homes Para�aque - Amorado, Lani (SM) - 9985900932",Luzon,Para�aque City,1720,patch01
+ST-0003,Libertad,10.10.11.166,MIKROTIK,RB951,Metro Manila,"Libertad cor., F.B. Harrison, Pasay - Jhay-Ar Fuego (SM) - 9088111278",Luzon,Pasay City,1300,patch01
+ST-0005,U.N.,10.10.7.110,MIKROTIK,RB951,Metro Manila,"900 U.N. Ave., Ermita, Manila - Jerome S. Sergio (SM) - 9090837929",Luzon,City of Manila,1000,patch01
+ST-0007,Quiapo,10.10.7.114,MIKROTIK,RB951,Metro Manila,"465 Quezon Blvd., Quiapo, Manila - Ronald O. Valdez (SM) - 9223252008",Luzon,City of Manila,1001,patch01
+ST-0012,Roces,10.10.3.62,MIKROTIK,RB951,Metro Manila,"A. Roces St. cor. Quezon Ave.,  Q.C. - Igcalinos, Joan (SM) - 9285080790",Luzon,Quezon City,1103,patch01
+ST-0022,Retiro,10.10.13.58,MIKROTIK,RB951,Metro Manila,"Retiro cor. Dimasalang, Manila - Tan, Marjorie (SM) - 9989651934",Luzon,City of Manila,1015,patch01
+ST-0030,Burgos -,10.10.2.146,MIKROTIK,RB951,Metro Manila,"Libertad St., cor. Burgos St., Pasay City - Edgar Amba (SM) - 9228110967",Luzon,Pasay City,1300,patch01
+ST-0031,Barangka,10.10.18.182,MIKROTIK,RB951,Metro Manila,"Boni Ave., Barangka Drive, Mandaluyong - Marcelo M. Annang Jr. (SM) - 9989651958",Luzon,Mandaluyong City,1550,patch01
+ST-0032,Maypajo,10.10.7.126,MIKROTIK,RB951,Metro Manila,"J.P. Rizal St., cor. Ambini St., Maypajo, Caloocan City - Quizon, Emer (SM) - 9283394723",Luzon,Caloocan City,1410,patch01
+ST-0035,Pasig Church,10.10.9.34,MIKROTIK,RB951,Metro Manila,"Caruncho Ave., cor. Sixto Ave., Pasig - Willy Benitez (SM) - 9235477770",Luzon,Pasig City,1600,patch01
+ST-0037,Nova 1,10.10.3.66,MIKROTIK,RB951,Metro Manila,"Gen. Luis St, cor. Austria St., Novaliches, Q.C. - Agawin, Marilou (SM) - 0916-4735801/937-3516",Luzon,Quezon City,1123,patch01
+ST-0039,MCU,10.10.17.74,MIKROTIK,RB951,Metro Manila,"Edsa cor. Asuncion St., Monumento, Caloocan City - Matias , Gemma (SM) - 0922-8035039/363-6279",Luzon,Caloocan City,1400,patch01
+ST-0041,Marulas,10.10.5.246,MIKROTIK,RB951,Metro Manila,"Mc Arthur Hi-way cor. Pio del Pilar, Valenzuela, Manila - Bueno , Pamela (SM) - 0943-3117138/291-6485",Luzon,Caloocan City,1400,patch01
+ST-0044,Bacoor 1,10.10.19.202,MIKROTIK,RB951,Cavite,"G.E. Aguinaldo Hi-way cor. Talaba, Bacoor - MARLENE ABAD (SM) - 9397614680",Luzon,Bacoor,4102,patch01
+ST-0045,Gagalangin,10.10.6.214,MIKROTIK,RB951,Metro Manila,"Juan Luna cor., Pampanga St., Gagalangin Tondo, Manila",Luzon,City of Manila,1013,patch01
+ST-0046,Pandacan,10.10.19.246,MIKROTIK,RB951,Metro Manila,"Jesus cor., Labores St., Pandacan, Manila",Luzon,City of Manila,1011,patch01
+ST-0047,Singalong,10.10.3.22,MIKROTIK,RB951,Metro Manila,"Singalong St., cor., san Andres, Malate Manila",Luzon,City of Manila,1017,patch01
+ST-0054,Muntinlupa,10.10.7.138,MIKROTIK,RB951,Metro Manila,"Rizal St. cor. National Road, Poblacion, Muntinlupa",Luzon,Muntinlupa City,1776,patch01
+ST-0057,Commonwealth-Tandang Sora,10.10.34.2,MIKROTIK,RB951,Metro Manila,"Commonwealth Avenue, corner Tandang Sora Avenue, Diliman, Quezon City, 1101 Metro Manila, Philippines",Luzon,Quezon City,1101,patch01
+ST-0059,Revilla,10.10.3.34,MIKROTIK,RB951,Metro Manila,"EDSA cor. C. Revilla St., Pasay City",Luzon,Pasay City,1300,patch01
+ST-0060,Cainta Junction,10.10.6.130,MIKROTIK,RB951,Rizal,"A. Bonifacio St., cor. Ortigas Ave., Ext., Cainta, Rizal",Luzon,Cainta,1900,patch01
+ST-0063,Guadalupe 1,10.10.13.150,MIKROTIK,RB951,Metro Manila,"EDSA nr. cor. R. Magsaysay, Guadalupe, Makati",Luzon,Makati City,1212,patch01
+ST-0064,Masinag,10.10.36.78,MIKROTIK,RB951,Rizal,"Marcos Highway cor. Sumulong Highway, Antipolo, Rizal",Luzon,Antipolo,1870,patch01
+ST-0065,Road 8,10.10.32.114,MIKROTIK,RB951,Metro Manila,"Road 8 cor. Visayas  Ave., Proj. 6, Q.C.",Luzon,Quezon City,1100,patch01
+ST-0067,St. James,10.10.3.74,MIKROTIK,RB951,Metro Manila,"Tandang Sora Ave., cor. Mindanao Avenue, Q.C.",Luzon,Quezon City,1116,patch01
+ST-0068,Murphy,10.10.24.2,MIKROTIK,RB951,Metro Manila,"15th Ave. cor. Liberty Ave., Murphy, Cubao, Q.C.",Luzon,Quezon City,1109,patch01
+ST-0069,PCU,10.10.18.38,MIKROTIK,RB951,Metro Manila,"Pedro Gil St. cor. L. Guinto St., Malate, Manila",Luzon,City of Manila,1004,patch01
+ST-0071,A. Bonifacio,10.10.1.178,MIKROTIK,RB951,Metro Manila,"A. Bonifacio St., cor. Shaw Blvd., Mandaluyong City",Luzon,Mandaluyong City,1550,patch01
+ST-0072,Calamba 1,10.10.9.42,MIKROTIK,RB951,Laguna,National Highway cor. J.P. Rizal,Luzon,Rizal,4003,patch01
+ST-0075,Antipolo Church,10.10.9.46,MIKROTIK,RB951,Rizal,"P. Oliveros St. cor Masangkay Rd., Antipolo, Rizal",Luzon,Antipolo,1870,patch01
+ST-0076,Pasig Rotonda,10.10.30.86,MIKROTIK,RB951,Metro Manila,"Pasig Blvd. cor. Sixto Antonio, Pasig City",Luzon,Pasig City,1600,patch01
+ST-0078,Bruger,10.10.34.86,MIKROTIK,RB951,Metro Manila,"National Rd., Bruger St., Bruger Subd., Muntinlupa City",Luzon,Muntinlupa City,1770,patch01
+ST-0080,Marcelo,10.10.7.146,MIKROTIK,RB951,Metro Manila,"West Service Road cor. Marcelo Ave., Para�aque",Luzon,Para�aque City,1700,patch01
+ST-0085,FB Harrison,10.10.7.150,MIKROTIK,RB951,Metro Manila,"F.B. Harisson St. cor. Vito Cruz, Manila",Luzon,City of Manila,1004,patch01
+ST-0086,Tayuman,10.10.12.54,MIKROTIK,RB951,Metro Manila,"Tayuman St. cor. Rizal Ave., Manila",Luzon,City of Manila,1014,patch01
+ST-0087,Imus1,10.10.38.6,MIKROTIK,RB951,Cavite,"Aguinaldo Highway cor. Tanzang Luma, Imus Cavite",Luzon,Imus,4103,patch01
+ST-0088,Antipolo Junction,10.10.9.50,MIKROTIK,RB951,Rizal,"Circumferential Rd. cor. M.L. Quezon St., Anipolo, Rizal",Luzon,Antipolo,1870,patch01
+ST-0093,Meycauayan 2,10.10.1.150,MIKROTIK,RB951,Bulacan,"Mc Arthur Hi-way cor. Malhakan Rd., Meycauayan, Bulacan",Luzon,Meycauayan,3020,patch01
+ST-0096,San Pedro2,10.10.6.142,MIKROTIK,RB951,Laguna,"A. Mabini St. cor. Garcia St. San Pedro, Laguna",Luzon,San Pedro,4023,patch01
+ST-0100,Balibago,10.10.11.54,MIKROTIK,RB951,Laguna,"National Highway cor. R. Lasaga St., Balibago",Luzon,Sta. Rosa,4026,patch01
+ST-0101,Blumentritt 2,10.10.7.158,MIKROTIK,RB951,Metro Manila,"Blumentritt St. cor. Isagani St. Sampaloc, Manila",Luzon,City of Manila,1008,patch01
+ST-0103,Kabihasnan,10.10.12.158,MIKROTIK,RB951,Metro Manila,Kabihasnan St. cor. San Dionisio  Para�aque,Luzon,Para�aque City,1709,patch01
+ST-0106,Tamaraw Hills,10.10.7.66,MIKROTIK,RB951,Metro Manila,"Mc Arthur Hi-way cor. Tamarraw Hills, Marulas, Valenzuela",Luzon,Valenzuela City,1440,patch01
+ST-0107,Cabuyao,10.10.14.46,MIKROTIK,RB951,Laguna,"J.P. Rizal cor. Circumferencial Ave., Cabuyao, Laguna",Luzon,Cabuyao,4025,patch01
+ST-0108,Chico,10.10.18.242,MIKROTIK,RB951,Metro Manila,"Chico St. cor. Anonas St., Proj. 2, Q.C.",Luzon,Quezon City,1102,patch01
+ST-0112,San Pablo 1,10.10.3.110,MIKROTIK,RB951,Laguna,"Rizal Ave., cor. A. Flores St., San Pablo City",Luzon,San Pablo City,4000,patch01
+ST-0116,Salinas,10.10.16.130,MIKROTIK,RB951,Cavite,"193 Gen. Trias Drive, Rosario, Cavite",Luzon,Rosario,4106,patch01
+ST-0119,Binan 2,10.10.7.186,MIKROTIK,RB951,Laguna,"National Highway cor. Malvar St., Bi�an, Laguna",Luzon,Bi�an,4024,patch01
+ST-0120,Balagtas,10.10.21.154,MIKROTIK,RB951,Bulacan,"Mc Arthur Hi-way, Wawa, Balagtas, Bulacan",Luzon,Balagtas,3016,patch01
+ST-0122,BF Resort,10.10.17.142,MIKROTIK,RB951,Metro Manila,"Alabang Zapote rd. cor. BF Resort Drive, Pamplona",Luzon,Las Pi�as,1740,patch01
+ST-0123,Parang,10.10.14.6,MIKROTIK,RB951,Metro Manila,"G. del Pilar cor., M.L. Quezon, Parang, Marikina",Luzon,Marikina City,1809,patch01
+ST-0125,JP Ramoy,10.10.3.94,MIKROTIK,RB951,Metro Manila,"Quirino Highway cor. J.P. Ramoy, Barrio Talipapa, Novaliches, Q.C.",Luzon,Quezon City,1123,patch01
+ST-0126,Parola,10.10.9.58,MIKROTIK,RB951,Rizal,"A. Bonifacio Avenue, San Andres, Cainta, Rizal",Luzon,Cainta,1900,patch01
+ST-0127,Tatlong Hari,10.10.0.198,MIKROTIK,RB951,Laguna,"Rizal Blvd. nr. cor. Tatlong Hari St., Sta. Rosa, Laguna",Luzon,Sta. Rosa,4026,patch01
+ST-0128,Los Ba�os,10.10.19.134,MIKROTIK,RB951,Laguna,"Batong Malaki National Highway, Los Ba�os, Laguna",Luzon,Los Ba�os,4030,patch01
+ST-0130,Binakayan,10.10.0.166,MIKROTIK,RB951,Cavite,"Gen. Tirona Highway cor. Bisita St., Binakayan, Kawit, Cavite",Luzon,Kawit,4104,patch01
+ST-0134,Molave,10.10.13.222,MIKROTIK,RB951,Metro Manila,"Bayan bayanan Ave. cor. Molave St., Concepcion, Marikina",Luzon,Marikina City,1811,patch01
+ST-0135,Panapaan,10.10.34.50,MIKROTIK,RB951,Cavite,"Tirona Hi-way cor. Aguinaldo Hi-way, Panapaan, Cavite",Luzon,Bacoor,4102,patch01
+ST-0137,San Pedro 3,10.10.40.158,MIKROTIK,RB951,Laguna,"Pacita cor. Macaria Ave., San Pedro, Laguna",Luzon,San Pedro,4023,patch01
+ST-0138,Lipa Proper,10.10.1.182,MIKROTIK,RB951,Batangas,"C.M. Recto Ave., Lipa, Batangas",Luzon,Lipa City,4217,patch01
+ST-0142,Tanza 1,10.10.14.234,MIKROTIK,RB951,Cavite,"Sta. Cruz cor. San Agustine Poblacion , Tanza, Cavite",Luzon,Tanza,4108,patch01
+ST-0148,Jp Rizal 1,10.10.2.234,MIKROTIK,RB951,Metro Manila,"J.P. Rizal cor. Constancia St., Makati City",Luzon,Makati City,1200,patch01
+ST-0150,Zabarte,10.10.3.102,MIKROTIK,RB951,Metro Manila,"Quirino Hiway cor. Zabarte Ave., Novaliches",Luzon,Quezon City,1123,patch01
+ST-0153,Paco 2,10.10.10.142,MIKROTIK,RB951,Metro Manila,"Pedro Gil St. cor. Main St., Paco, Manila",Luzon,City of Manila,1007,patch01
+ST-0154,Insular,10.10.17.54,MIKROTIK,RB951,Metro Manila,"P. Burgos St. cor. Gen. Luna St., Makati",Luzon,Makati City,1210,patch01
+ST-0155,Onyx,10.10.12.50,MIKROTIK,RB951,Metro Manila,"A. Francisco cor. Onyx and Concha Sts., Sta. Ana, Manila",Luzon,City of Manila,1009,patch01
+ST-0156,Guada 2,10.10.7.178,MIKROTIK,RB951,Metro Manila,"Sgt. Yabut nr. cor. Anastasio St., Guadalupe, Makati",Luzon,Makati City,1212,patch01
+ST-0160,San Bartolome,10.10.3.106,MIKROTIK,RB951,Metro Manila,"M. Dela Cruz cor. Quirino Highway, Novaliches, Q.C.",Luzon,Quezon City,1123,patch01
+ST-0162,San Fernando,10.10.18.202,MIKROTIK,RB951,Pampanga,"B. Mendoza cor. Tiomico St., San Fernando, Pampanga",Luzon,San Fernando,2000,patch01
+ST-0168,TM Kalaw -,10.10.7.190,MIKROTIK,RB951,Metro Manila,"Kalaw cor. A. Mabini St., Ermita, Manila",Luzon,City of Manila,1000,patch01
+ST-0175,MCU 2,10.10.23.58,MIKROTIK,RB951,Metro Manila,"EDSA cor. Benin St., Caloocan City",Luzon,Caloocan City,1400,patch01
+ST-0176,Farmers,10.10.7.198,MIKROTIK,RB951,Metro Manila,"Space 1&2, 2nd Level New Farmers Plaza, Cubao, Q.C.",Luzon,Quezon City,1109,patch01
+ST-0180,Batangas City,10.10.0.106,MIKROTIK,RB951,Batangas,"P. Burgos Ave. cor. P. Panganiban St., Batangas",Luzon,Batangas City,4200,patch01
+ST-0192,Turbina,10.10.7.210,MIKROTIK,RB951,Laguna,"National Highway Brgy., Turbina, Calamba, Laguna",Luzon,Calamba,4027,patch01
+ST-0195,RFM,10.10.15.30,MIKROTIK,RB951,Metro Manila,"RFM Corporate Center, Mandaluyong City",Luzon,Mandaluyong City,1550,patch01
+ST-0200,Carmen,10.10.14.142,MIKROTIK,RB951,Pangasinan,"Mc Arthur Highway, Carmen, Rosales, Pangasinan",Luzon,Rosales,2441,patch01
+ST-0204,Priscilla,10.10.1.158,MIKROTIK,RB951,Metro Manila,"Pasong Tamo Ext.Kayamanan - C, Makati City",Luzon,Makati City,1200,patch01
+ST-0208,Angeles,10.10.16.110,MIKROTIK,RB951,Pampanga,"Sto. Rosario cor. Sukdulan St., Angeles City",Luzon,Angeles City,2009,patch01
+ST-0209,Dagupan,10.10.12.10,MIKROTIK,RB951,Pangasinan,"Arellano St., Dagupan City",Luzon,Dagupan City,2400,patch01
+ST-0210,Session 2,10.10.13.238,MIKROTIK,RB951,Benguet,"G/F B - 105 Lpez Bldg., Session Rd., Baguio City",Luzon,Baguio City,2600,patch01
+ST-0213,Parkview,10.10.1.66,MIKROTIK,RB951,Metro Manila,"Valero St. cor. Salcedo Village, Makati City",Luzon,Makati City,1227,patch01
+ST-0214,San Pablo 2,10.10.5.98,MIKROTIK,RB951,Laguna,"Leonor St. cor. Maharlika Hi-way, San Pablo, Laguna",Luzon,San Pablo City,4000,patch01
+ST-0215,Crame,10.10.3.114,MIKROTIK,RB951,Metro Manila,"Boni Serrano cor. 2nd St., Camp Crame, Q.C.",Luzon,Quezon City,1100,patch01
+ST-0216,Baclaran 2,10.10.12.230,MIKROTIK,RB951,Metro Manila,"Quirino Ave., cor. Dimasalang St., Baclaran, Para�aque City",Luzon,Para�aque City,1702,patch01
+ST-0217,Nova 3,10.10.3.118,MIKROTIK,RB951,Metro Manila,"Quirino Hi-way cor. Sarmiento St., Novaliches City, Q.C.",Luzon,Quezon City,1123,patch01
+ST-0221,Baclaran 3,10.10.14.202,MIKROTIK,RB951,Metro Manila,"G/F C Side Bldg. Roxas Bldv. Corner Aguara st.,",Luzon,Para�aque City,1700,patch01
+ST-0222,Calamba 2,10.10.14.2,MIKROTIK,RB951,Laguna,"National Hi-way nr. cor. Halang St., Calamba, Laguna",Luzon,Calamba,4027,patch01
+ST-0224,Luisita,10.10.9.70,MIKROTIK,RB951,Tarlac,"Mc Arthur Hi-way, San Miguel, Tarlac City",Luzon,Tarlac,2300,patch01
+ST-0226,Legarda,10.10.24.154,MIKROTIK,RB951,Metro Manila,"2108 Legarda St., Quiapo, Manila",Luzon,City of Manila,1001,patch01
+ST-0229,Cityland,10.10.18.30,MIKROTIK,RB951,Metro Manila,"LG07 Cityland 10 Tower, Valero cor. Dela Costa St., Salcedo Village, Makati City",Luzon,Makati City,1200,patch01
+ST-0232,CBC,10.10.16.70,MIKROTIK,RB951,Metro Manila,"115 G/F Corporate Business Center, Paseo de Roxas cor. Pasay Road, Makati City",Luzon,Makati City,1200,patch01
+ST-0234,La Huerta,10.10.7.238,MIKROTIK,RB951,Metro Manila,"Quirino Avenue cor. Dandan St., La Huerta, Para�aque",Luzon,Para�aque City,1700,patch01
+ST-0236,UP Manila,10.10.2.38,MIKROTIK,RB951,Metro Manila,"Pedro Gil St. nr. cor. Taft Avenue, Malate, Manila",Luzon,City of Manila,1004,patch01
+ST-0243,Merville,10.10.23.62,MIKROTIK,RB951,Metro Manila,"Moreland Bldg., Merville Access Rd. cor. West Service Rd.",Luzon,Pasay City,1300,patch01
+ST-0244,Guadalupe 3,10.10.7.250,MIKROTIK,RB951,Metro Manila,"F. Yabut St., nr. cor. EDSA, Guadalupe Nuevo, Makati City",Luzon,Makati City,1200,patch01
+ST-0251,Nobel,10.10.7.254,MIKROTIK,RB951,Metro Manila,"G/F, 110 Nobel Plaza, Valero St., Makati City",Luzon,Makati City,1200,patch01
+ST-0252,Talon,10.10.13.130,MIKROTIK,RB951,Metro Manila,"J. Aguilar Ave. cor. Alabang-Zapote Road, Talon, Las Pi�as City",Luzon,Las Pi�as,1740,patch01
+ST-0254,Salawag 1,10.10.15.102,MIKROTIK,RB951,Cavite,"Molino-Paliparan Road, Salawag, Dasmari�as, Cavite",Luzon,Dasmari�as,4114,patch01
+ST-0258,Herrera,10.10.2.246,MIKROTIK,RB951,Metro Manila,"Y-L Bldg., Herrera St. cor. Salcedo St., Legaspi Village, Makati City",Luzon,Makati City,1200,patch01
+ST-0270,Binan 3,10.10.20.122,MIKROTIK,RB951,Metro Manila,"Arayat cor. Pinatubo St. nr. cor. Edsa, Cubao Q.C.",Luzon,Quezon City,1109,patch01
+ST-0271,Starmall,10.10.32.30,MIKROTIK,RB951,Metro Manila,Shaw Blvd. cor. EDSA Mandaluyong,Luzon,Mandaluyong City,1550,patch01
+ST-0276,Hansel,10.10.16.250,MIKROTIK,RB951,Metro Manila,"Aurora Blvd. cor. Imperial, Cubao, Q.C.",Luzon,Quezon City,1109,patch01
+ST-0277,Session 3,10.10.36.122,MIKROTIK,RB951,Benguet,"Upper Session Rd., Baguio City",Luzon,Baguio City,2600,patch01
+ST-0278,Sagittarius,10.10.8.14,MIKROTIK,RB951,Metro Manila,"G/F Sagittarius Bldg., H.V. Dela Costa St., Salcedo Village, Makati",Luzon,Makati City,1200,patch01
+ST-0279,Marina,10.10.2.46,MIKROTIK,RB951,Metro Manila,"A. Mabini St., Malate, Manila",Luzon,City of Manila,1004,patch01
+ST-0282,Gatchalian,10.10.2.122,MIKROTIK,RB951,Metro Manila,"Dr. A. Santos Ave. cor. Palanyag St., Para�aque City",Luzon,Para�aque City,1700,patch01
+ST-0284,Burgundy,10.10.22.102,MIKROTIK,RB951,Metro Manila,"G/F One Burgundy Plaza, Katipunan Ave., Q.C.",Luzon,Quezon City,1105,patch01
+ST-0285,Emerald,10.10.14.206,MIKROTIK,RB951,Metro Manila,"Emerald Ave., Ortigas Ctr., Pasig City",Luzon,Pasig City,1600,patch01
+ST-0288,San Fernando 2,10.10.31.234,MIKROTIK,RB951,Pampanga,"Lam Bldg., San Fernando Crossing, San Fernando, Pampanga",Luzon,San Fernando,2000,patch01
+ST-0293,Plaridel,10.10.4.214,MIKROTIK,RB951,Bulacan,"Cagayan Valley Road, Banga 1st, Plaridel, Bulacan",Luzon,Bulacan,3017,patch01
+ST-0294,Binan 4,10.10.15.150,MIKROTIK,RB951,Laguna,"In front of Perpetual Help Hospital & College, Bi�an, Laguna",Luzon,Bi�an,4024,patch01
+ST-0295,King's Plaza,10.10.36.146,MIKROTIK,RB951,Metro Manila,"King's Plaza, Juan Luna cor. Padre Rada St., Tondo, Manila",Luzon,City of Manila,1006,patch01
+ST-0297,DFA,10.10.11.210,MIKROTIK,RB951,Metro Manila,"G/F AIMS Bldg., Roxas Blvd. Service Rd. cor. Arnaiz St., Pasay City",Luzon,Pasay City,1300,patch01
+ST-0299,Indang 1,10.10.18.222,MIKROTIK,RB951,Cavite,"San Gregorio nr. cor. Mabini St., Indang, Cavite",Luzon,Indang,4122,patch01
+ST-0301,Annapolis,10.10.9.82,MIKROTIK,RB951,Metro Manila,"G/F Continental Plaza, #45 Annapolis, Greenhills, San Juan, MM",Luzon,San Juan City,1502,patch01
+ST-0303,Asian Mansion,10.10.17.146,MIKROTIK,RB951,Metro Manila,"G/F Asian Mansion 2 Dela Rosa St., Legaspi Village, Makati City",Luzon,Makati City,1229,patch01
+ST-0304,Starwoods,10.10.27.114,MIKROTIK,RB951,Benguet,"Kisad Road nr. cor. Marcos Hi-way, Baguio City",Luzon,Baguio City,2600,patch01
+ST-0312,US Embassy,10.10.1.194,MIKROTIK,RB951,Metro Manila,"Roxas Blvd. cor. U.N. Avenue, Ermita, Manila",Luzon,City of Manila,1000,patch01
+ST-0313,Northgate,10.10.14.146,MIKROTIK,RB951,Metro Manila,F@st bytes @North Gate cyberzone Alabang Muntinlupa,Luzon,Muntinlupa City,1780,patch01
+ST-0315,Banaue,10.10.7.22,MIKROTIK,RB951,Metro Manila,426 Banaue Ave. cor Tirad Pass St. SMH QC,Luzon,Quezon City,1114,patch01
+ST-0316,Xavier Hills,10.10.37.250,MIKROTIK,RB951,Metro Manila,"Xavier Hills Condo. Tower 1, Granada St. cor. N. Domingo, QC",Luzon,San Juan City,1500,patch01
+ST-0318,Pearl Drive,10.10.3.58,MIKROTIK,RB951,Metro Manila,"Pearl Drive corner Lourdes St., Pasig City",Luzon,Pasig City,1600,patch01
+ST-0322,St. Scholastica,10.10.3.182,MIKROTIK,RB951,Metro Manila,"896 Vito Cruz cor. Dominga St., Malate, Manila",Luzon,City of Manila,1004,patch01
+ST-0328,Cabanatuan 2,10.10.22.78,MIKROTIK,RB951,Nueva Ecija,"199 Gen. Tinio cor. Mabini St., Quezon District, Cabanatuan, Nueva Ecija",Luzon,Cabanatuan City,3100,patch01
+ST-0330,Imperial,10.10.7.26,MIKROTIK,RB951,Metro Manila,Tomas Morato Ave. cor Timog Ave Diliman QC,Luzon,Quezon City,1101,patch01
+ST-0332,Legarda 2,10.10.2.50,MIKROTIK,RB951,Metro Manila,Legarda cor. Jhocson St. Sampaloc Manila,Luzon,City of Manila,1008,patch01
+ST-0333,Balibago 2,10.10.13.182,MIKROTIK,RB951,Laguna,Balibago Complex Balibago Sta. Rosa Laguna,Luzon,Sta. Rosa,4026,patch01
+ST-0334,Owwa2,10.10.1.214,MIKROTIK,RB951,Metro Manila,749 Victoria St. cor. Solana St. Intramuros Manila,Luzon,City of Manila,1002,patch01
+ST-0336,Faura,10.10.10.138,MIKROTIK,RB951,Metro Manila,P. Faura cor MH del Pilar,Luzon,City of Manila,1004,patch01
+ST-0341,Olivarez,10.10.2.126,MIKROTIK,RB951,Metro Manila,"8156 Dr. A. Santos Ave., Brgy. San Dionisio, Sucat, Para�aque City",Luzon,Para�aque City,1700,patch01
+ST-0343,Fields 2,10.10.20.202,MIKROTIK,RB951,Pampanga,"Mc Arthur Highway, Balibago, Angeles City, Pampanga",Luzon,Angeles City,2009,patch01
+ST-0346,Pedro Gil,10.10.9.14,MIKROTIK,RB951,Metro Manila,1578 A. MABINI CORNER PEDRO GIL ST. ERMITA MANILA,Luzon,City of Manila,1000,patch01
+ST-0347,Bulihan,10.10.15.130,MIKROTIK,RB951,Cavite,"B 275 L13 AFP Housing, Old Bulihan Rd., Bulihan, Silang Cavite",Luzon,Silang,4118,patch01
+ST-0349,Teacher's Bliss,10.10.7.30,MIKROTIK,RB951,Metro Manila,"#1 Teachers Bliss,Balong bato Balintawak QC",Luzon,Quezon City,1106,patch01
+ST-0352,Baclaran 4,10.10.3.166,MIKROTIK,RB951,Metro Manila,"Roxas Blvd. cor. Rivera St., Baclaran, Para�aque",Luzon,Para�aque City,1702,patch01
+ST-0353,Guagua,10.10.6.66,MIKROTIK,RB951,Pampanga,"One Crown Property & Devt., Plaza Burgos, Guagua, Pampanga",Luzon,Guagua,2003,patch01
+ST-0354,Gordon Avenue,10.10.9.102,MIKROTIK,RB951,Zambales,"Gordon Ave. cor. 6th St. Asinan, Olongapo City",Luzon,Olongapo City,2200,patch01
+ST-0355,Vito Cruz,10.10.9.18,MIKROTIK,RB951,Metro Manila,"Unit 102&103 Cityland Tower One, Vito Cruz, Manila",Luzon,City of Manila,1000,patch01
+ST-0356,Gualberto,10.10.12.254,MIKROTIK,RB951,Batangas,"Zunio St. Gualberto Ave., Rosario, Batangas",Luzon,Rosario,4225,patch01
+ST-0357,Tanza 2,10.10.12.126,MIKROTIK,RB951,Cavite,"Tanza Crossing, Daang Amaya, Tanza, Cavite",Luzon,Tanza,4108,patch01
+ST-0360,Cabanatuan 3,10.10.33.230,MIKROTIK,RB951,Nueva Ecija,"Manson Bldg. Burgos Ave., Cabanatuan City",Luzon,Cabanatuan City,3100,patch01
+ST-0362,Tomas Mapua,10.10.17.10,MIKROTIK,RB951,Metro Manila,1512 C.M. Recto Cor. F. Torres & T. Mapua Sta. Cruz Manila,Luzon,City of Manila,1001,patch01
+ST-0366,SM Clark,10.10.21.238,MIKROTIK,RB951,Pampanga,"Bayanihan Park, SM Clark, Balibago, Angeles City Pampanga",Luzon,Angeles City,2009,patch01
+ST-0368,Naguillan,10.10.14.34,MIKROTIK,RB951,Benguet,Naguillan Rd. Cor. Bokawkan Rd. Baguio City,Luzon,Baguio City,2600,patch01
+ST-0375,Villamor,10.10.0.178,MIKROTIK,RB951,Metro Manila,"Lot 12 B.1 12th St. Airman's Village Airbase Area, Pasay City",Luzon,Pasay City,1300,patch01
+ST-0376,TSU,10.10.35.186,MIKROTIK,RB951,Tarlac,Brgy. Cut-Cut Romulo Ave. Tarlac City,Luzon,Tarlac,2300,patch01
+ST-0377,Lucena 2,10.10.12.66,MIKROTIK,RB951,Quezon,"Lot # 2771 � B Along Quezon Ave., Lucena City, Quezon",Luzon,Lucena City,4301,patch01
+ST-0378,Blumentritt 1,10.10.34.150,MIKROTIK,RB951,Metro Manila,Rizal Ave. Cor. Blumentritt St. Sta. Cruz Manila,Luzon,City of Manila,1014,patch01
+ST-0379,Olongapo Victory,10.10.19.126,MIKROTIK,RB951,Zambales,"West 18th ST. Corner Anonas West Bajac-Bajac, Olongapo City",Luzon,Olongapo City,2200,patch01
+ST-0380,Citadella,10.10.2.230,MIKROTIK,RB951,Metro Manila,CAA RD. CORNER CITADELLA AVE. LAS PINAS CITY,Luzon,Las Pi�as,1740,patch01
+ST-0381,Dongalo,10.10.20.134,MIKROTIK,RB951,Metro Manila,0423 Quirino Ave. Cor. Dimatimbangan St. Don Galo Paranaque City,Luzon,Para�aque City,1700,patch01
+ST-0383,Maya Arcade,10.10.9.30,MIKROTIK,RB951,Metro Manila,"G/F MAYA ARCADE 678 EDSA, CUBAO, QUEZON CITY",Luzon,Quezon City,1109,patch01
+ST-0384,One E-Com,10.10.36.82,MIKROTIK,RB951,Metro Manila,"Unit 4,5 & 6 Harbour Drive Cor. Palm Coast Ave. SM Central Business Park, Pasay City",Luzon,Pasay City,1300,patch01
+ST-0386,Palico 1,10.10.6.186,MIKROTIK,RB951,Cavite,Aguinaldo Highway Palico II Imus Cavite,Luzon,Imus,4103,patch01
+ST-0388,Bago Bantay,10.10.25.146,MIKROTIK,RB951,Metro Manila,#131 Ilocos Sur ST. Cor. Bukidnon st. Bago Bantay Quezon City,Luzon,Quezon City,1100,patch01
+ST-0390,One Mc Kinley,10.10.11.178,MIKROTIK,RB951,Metro Manila,"26th St. Fort Bonifacio Global City, Taguig",Luzon,Taguig City,1630,patch01
+ST-0391,Manaoag,10.10.1.250,MIKROTIK,RB951,Pangasinan,"Felix St. Cor. Garcia St. Manaoag, Pangasinan",Luzon,Manaoag,2430,patch01
+ST-0392,SM San Fernando,10.10.19.158,MIKROTIK,RB951,Pampanga,"Unit AX3 123a & AX3 123c, Building 4, SM City Pampanga, Lagundi, Mexico, Pampanga",Luzon,Mexico,2021,patch01
+ST-0393,Trancoville,10.10.1.254,MIKROTIK,RB951,Benguet,"148 M Roxas Street, Baguio City",Luzon,Baguio City,2600,patch01
+ST-0394,Maragondon,10.10.26.242,MIKROTIK,RB951,Cavite,Poblacion 1-A Maragondon Cavite,Luzon,Maragondon,4112,patch01
+ST-0396,DLSU - Lipa,10.10.2.2,MIKROTIK,RB951,Batangas,"National Hiway, Brgy., Paninsingin, Tambo, Lipa City",Luzon,Lipa City,4217,patch01
+ST-0397,Santa Rosa Estate,10.10.5.114,MIKROTIK,RB951,Laguna,"Sta. Rosa Highway, Sta. Rosa Estate, Sta. Rosa,  Laguna",Luzon,Sta. Rosa,4026,patch01
+ST-0398,Gordon Hospital,10.10.28.230,MIKROTIK,RB951,Zambales,"104 Rizal Ave., East Tapinac Olongapo City",Luzon,Olongapo City,2200,patch01
+ST-0400,FPIP,10.10.30.10,MIKROTIK,RB951,Batangas,"No. 158 Sta. Anastacia, Sto. Tomas, Batangas",Luzon,Sto. Tomas,4234,patch01
+ST-0403,Tagaytay 2,10.10.15.138,MIKROTIK,RB951,Cavite,"One Tagaytay Place Calamba Rd., Tagaytay City",Luzon,Tagaytay,4120,patch01
+ST-0409,San Pablo 3,10.10.1.18,MIKROTIK,RB951,Laguna,"Maharlika Hiway, San Pablo, Laguna",Luzon,San Pablo City,4000,patch01
+ST-0410,Sto.Nino,10.10.4.210,MIKROTIK,RB951,Bulacan,L. Camino Real Rd. Sto. Nino Meycauyan Bulacan,Luzon,Meycauayan,3020,patch01
+ST-0412,Citimotors,10.10.26.82,MIKROTIK,RB951,Metro Manila,"Don Bosco Road. Cor Chino Roces Ave., Makati City",Luzon,Makati City,1200,patch01
+ST-0418,Multinational,10.10.30.166,MIKROTIK,RB951,Metro Manila,"J&P Bldg (Multinational) Ninoy Aquino Ave., Paranaque City",Luzon,Para�aque City,1700,patch01
+ST-0419,Gate 3,10.10.6.14,MIKROTIK,RB951,Metro Manila,"AFPOVAI Western Bicutan, Taguig City",Luzon,Taguig City,1630,patch01
+ST-0421,AIC Gold,10.10.2.22,MIKROTIK,RB951,Metro Manila,Unit 101 AIC Gold Tower F. Ortigas Cor. Garnet Road Ortigas,Luzon,Pasig City,1605,patch01
+ST-0423,Calasiao,10.10.12.14,MIKROTIK,RB951,Pangasinan,"Poblacion East,National road,Calasiao,Pangasinan",Luzon,Calasiao,2418,patch01
+ST-0424,Capas,10.10.34.66,MIKROTIK,RB951,Tarlac,"Mc Arthur  Hiway, Poblacion, Capas, Tarlac",Luzon,Capas,2315,patch01
+ST-0425,Sunny Broke,10.10.15.118,MIKROTIK,RB951,Cavite,"Blk 31 Lot 6 Brooke side lane brgy. San Francisco, Gen. Trias, Cavite",Luzon,Gen. Trias,4107,patch01
+ST-0427,Talavera,10.10.14.66,MIKROTIK,RB951,Nueva Ecija,"Maharlika Hiway, Talavera, Nueva Ecija",Luzon,Talavera,3114,patch01
+ST-0428,Asia Pacific College,10.10.14.54,MIKROTIK,RB951,Bataan,"Tenejeros St. Balanga, Bataan",Luzon,Balanga,2100,patch01
+ST-0429,Mendez Crossing,10.10.16.66,MIKROTIK,RB951,Cavite,"Aguinaldo Hiway Mendez Junction East,  Tagaytay City, Cavite",Luzon,Tagaytay,4120,patch01
+ST-0430,Balanga Church,10.10.2.26,MIKROTIK,RB951,Bataan,"J.P. Rizal St., Balanga City, Bataan",Luzon,Balanga,2100,patch01
+ST-0433,Batangas 3,10.10.1.146,MIKROTIK,RB951,Batangas,"Poblacion 18, Rizal Ave., Batangas City",Luzon,Batangas City,4200,patch01
+ST-0434,Malibay Plaza,10.10.3.42,MIKROTIK,RB951,Metro Manila,"Reance Bldg. 93 C. Jose st. cor. Malibay Ave., Pasay City",Luzon,Pasay City,1300,patch01
+ST-0436,Leveriza,10.10.2.54,MIKROTIK,RB951,Metro Manila,"#665 CRI Bldg. President E. Quirino Ave. cor. Leveriza, Malate, Manila",Luzon,City of Manila,1004,patch01
+ST-0438,Balanga Plaza,10.10.14.58,MIKROTIK,RB951,Bataan,Aguirre St. Balanga City,Luzon,Balanga,2100,patch01
+ST-0439,Porta Vaga,10.10.8.30,MIKROTIK,RB951,Benguet,"Fr. Carlu st. cor. Cathedral Drive, Baguio City",Luzon,Baguio City,2600,patch01
+ST-0440,Total Corp,10.10.20.138,MIKROTIK,RB951,Metro Manila,"Total Corporate Ctr Bldg., Bonifacio Triangle, Bonifacio Global City, Taguig City",Luzon,Taguig City,1630,patch01
+ST-0443,Olongapo City Hall -,10.10.10.102,MIKROTIK,RB951,Zambales,"23rd st., Rizal Ave., East Bajac-Bajac, Olongapo City",Luzon,Olongapo City,2200,patch01
+ST-0445,NE Pacific,10.10.10.62,MIKROTIK,RB951,Nueva Ecija,"Km 111, Brgy. H. Concepcion, Maharlika Hi-way, Cabanatuan City",Luzon,Cabanatuan City,3100,patch01
+ST-0446,Paniqui,10.10.10.66,MIKROTIK,RB951,Tarlac,"UCPB Building along National Highway, Brgy. Estacion, Paniqui, Tarlac",Luzon,Paniqui,2307,patch01
+ST-0447,Kimston,10.10.8.34,MIKROTIK,RB951,Metro Manila,"2650 Agutaya St. cor. EDSA, Pinagkaisahan, Makati",Luzon,Makati City,1213,patch01
+ST-0448,Pavilion,10.10.1.82,MIKROTIK,RB951,Laguna,"Space Nos. 143-B Bldg A G/F Pavillion Mall, Bi�an, Laguna",Luzon,Bi�an,4024,patch01
+ST-0450,PWU,10.10.28.118,MIKROTIK,RB951,Metro Manila,"1807 G/F Nakpil St. cor. L. Guinto St. Malate, Manila",Luzon,City of Manila,1004,patch01
+ST-0453,Tayabas,10.10.12.182,MIKROTIK,RB951,Quezon,Quezon Ave. Cor. P. Paterno St. Brgy. San Diego Tayabas Quezon,Luzon,Tayabas,4327,patch01
+ST-0454,Cogeo,10.10.12.162,MIKROTIK,RB951,Rizal,"Marcos Hiway cor. GSIS Ave., Bagong Nayon 1, Antipolo City",Luzon,Antipolo,1870,patch01
+ST-0455,Pearl Drive 2,10.10.8.42,MIKROTIK,RB951,Metro Manila,"G/F Unit 102, Pacific Place Condominium, Pearl Drive, Ortigas Ctr, Pasig City",Luzon,Pasig City,1605,patch01
+ST-0456,Sariaya,10.10.12.186,MIKROTIK,RB951,Quezon,"Gen. Luna St. National Hi-Way Sariaya, Quezon",Luzon,Sariaya,4322,patch01
+ST-0458,San Marcelino *,10.10.28.6,MIKROTIK,RB951,Metro Manila,"G/F CMC Bldg. #710 San Marcelino St., Ermita, Manila",Luzon,City of Manila,1000,patch01
+ST-0460,Telus,10.10.31.170,MIKROTIK,RB951,Metro Manila,"Arcade 6 &7 G/F Telus Bldg., Araneta Center, Cubao, Quezon City",Luzon,Quezon City,1109,patch01
+ST-0464,Osmak,10.10.0.174,MIKROTIK,RB951,Metro Manila,"Blk 5 Lot 18 Sampaguita cor. Escarlata, Pembo, Makati City",Luzon,Makati City,1218,patch01
+ST-0465,Taal Proper,10.10.13.6,MIKROTIK,RB951,Batangas,"Poblacion. 3, Taal Proper, Taal, Batangas",Luzon,Taal,4208,patch01
+ST-0468,SM Lucena,10.10.33.146,MIKROTIK,RB951,Quezon,115-116 SM City Lucena Dalahican cor. Maharlika Hiway Nat'l Rd. Lucena City,Luzon,Lucena City,4301,patch01
+ST-0469,Sta Rosa N.E.,10.10.6.42,MIKROTIK,RB951,Nueva Ecija,"Maharlika Hi-Way, Sta. Rosa, Nueva Ecija",Luzon,Sta. Rosa,3101,patch01
+ST-0471,Valenzuela Exit,10.10.18.62,MIKROTIK,RB951,Metro Manila,"Maysan Road, Paso De Blas,Valenzuela City",Luzon,Valenzuela City,1442,patch01
+ST-0473,VG Cruz,10.10.5.174,MIKROTIK,RB951,Metro Manila,Ramon Magsaysay Blvd. Cor. Vicente Cruz St. Sampaloc Manila,Luzon,City of Manila,1015,patch01
+ST-0476,Mayapa,10.10.15.230,MIKROTIK,RB951,Laguna,"National Highway Checkpoint, Paciano Rizal Calamba City Laguna",Luzon,Calamba,4027,patch01
+ST-0478,Jp Rizal 2,10.10.31.26,MIKROTIK,RB951,Metro Manila,347 JP Rizal Ave. Cor. Pasong Tamo Ave. Makati City,Luzon,Makati City,1200,patch01
+ST-0480,Philtranco,10.10.5.222,MIKROTIK,RB951,Metro Manila,"610 Apelo Cruz St., Malibay, Pasay City",Luzon,Pasay City,1300,patch01
+ST-0486,Alabang Med,10.10.8.62,MIKROTIK,RB951,Metro Manila,"Unit 1 G/F Aurora Bldg, Alabang Zapote Rd., Mutinlupa City",Luzon,Muntinlupa City,1780,patch01
+ST-0487,Vista Verde,10.10.13.78,MIKROTIK,RB951,Rizal,"G/F Unit 1,2,3,4 Vista Square Comm'l Center, Felix ave., Cainta, Rizal",Luzon,Cainta,1900,patch01
+ST-0490,12th Ave.,10.10.1.170,MIKROTIK,RB951,Metro Manila,"Ten Commandments Bldg. 689 Rizal Ave, Grace Park, Caloocan City",Luzon,Caloocan City,1400,patch01
+ST-0493,San Pablo 5,10.10.2.210,MIKROTIK,RB951,Laguna,"Brgy. 6A Mabini St., San Pablo City, Laguna",Luzon,San Pablo City,4000,patch01
+ST-0494,Los Ba�os 2,10.10.18.78,MIKROTIK,RB951,Laguna,"Lopez Ave. Cor. Mt. Halcon St., Los Ba�os Subd., Batong Malake, Los Ba�os, Laguna",Luzon,Los Ba�os,4030,patch01
+ST-0495,Sun Plaza,10.10.15.166,MIKROTIK,RB951,Metro Manila,"G/F Sun Plaza Shaw Boulevard, cor Princeton st., Mandaluyong City",Luzon,Mandaluyong City,1550,patch01
+ST-0498,SM Cyber One,10.10.14.50,MIKROTIK,RB951,Metro Manila,"Retail Space 4, Buendia Ave., Makati City",Luzon,Makati City,1200,patch01
+ST-0501,Sto Domingo Angeles,10.10.7.86,MIKROTIK,RB951,Pampanga,"McArthur Hi-Way cor. Apo rd. Sto. Domingo, Angeles, Pampanga",Luzon,Angeles City,2009,patch01
+ST-0502,Rockwell Business Center,10.10.2.154,MIKROTIK,RB951,Metro Manila,"Tower 2 (North) Level 1 Unit No. N-02 Rockwell Business Center, Pasig City",Luzon,Pasig City,1600,patch01
+ST-0504,Paragon Plaza,10.10.3.6,MIKROTIK,RB951,Metro Manila,"Upper G/F Paragon Plaza Condominium, EDSA cor. Reliance St., Mandaluyong City",Luzon,Mandaluyong City,1550,patch01
+ST-0505,Makati Ave 2,10.10.13.214,MIKROTIK,RB951,Metro Manila,"Makati Ave. Cor. Constelllation st., Brgy. Bel-air, Makati City",Luzon,Makati City,1209,patch01
+ST-0508,Heart Center,10.10.8.130,MIKROTIK,RB951,Metro Manila,"G/F Philippine Heart Center, East Ave., Quezon City",Luzon,Quezon City,1100,patch01
+ST-0509,Woodland,10.10.8.146,MIKROTIK,RB951,Metro Manila,"G/F Pioneer Woodlands Showroom, EDSA near cor. Pioneer St., Mandaluyong City",Luzon,Mandaluyong City,1550,patch01
+ST-0513,One Solaris,10.10.19.34,MIKROTIK,RB951,Metro Manila,"Retail 2 G/F One Solaris Bldg, Dela Rosa St., Legaspi Village, Makati City",Luzon,Makati City,1229,patch01
+ST-0515,Castillejos,10.10.15.186,MIKROTIK,RB951,Zambales,"National Hi-way, Castillejos, Zambales",Luzon,Castillejos,2208,patch01
+ST-0527,Retiro 2,10.10.7.38,MIKROTIK,RB951,Metro Manila,"311-313 N.S. Amoranto St. Sta Mesa Heights, Quezon City",Luzon,Quezon City,1100,patch01
+ST-0528,BPO San Lazaro,10.10.31.62,MIKROTIK,RB951,Metro Manila,"Retail 4, Vertex 1 Bldg. Yuseco Cor. Felix Huertas, San Lazaro Racetrack, Sta Cruz, Manila",Luzon,City of Manila,1014,patch01
+ST-0529,Port Area,10.10.8.98,MIKROTIK,RB951,Metro Manila,"637 Bonifacio Drive, Port Area, Manila",Luzon,City of Manila,1000,patch01
+ST-0530,Net Square,10.10.0.182,MIKROTIK,RB951,Metro Manila,"3rd Avenue cor., 28th St., E- Square, Crescent Park West, Bonifacio Global City, Taguig M.M.",Luzon,Taguig City,1630,patch01
+ST-0533,Dagupan 4,10.10.8.106,MIKROTIK,RB951,Pangasinan,"G/F Orient Pacific Center cor. Perez Blvd., Rizal Ext., Dagupan City, Pangasinan",Luzon,Dagupan City,2400,patch01
+ST-0536,San Andres,10.10.2.58,MIKROTIK,RB951,Metro Manila,"Mabini Cor., San Andres St., Malate, Manila",Luzon,City of Manila,1004,patch01
+ST-0540,"Grand Hampton, Fort",10.10.8.110,MIKROTIK,RB951,Metro Manila,"Grand Hampton Place, 1st Ave., and 31st St., Fort Bonifacio Global City, Taguig",Luzon,Taguig City,1630,patch01
+ST-0541,San Miguel -,10.10.0.114,MIKROTIK,RB951,Bulacan,"906 Norberto St., Brgy. San Jose, San Miguel, Bulacan",Luzon,San Miguel,3011,patch01
+ST-0548,SLEX,10.10.2.206,MIKROTIK,RB951,Laguna,KM 22 South Luzon Tollway (Northbound) San Antonio San Pedro Laguna,Luzon,San Pedro,4023,patch01
+ST-0552,Malolos Crossing,10.10.15.142,MIKROTIK,RB951,Bulacan,"E & R , McArthur Highway  cor.,  Mabini St., Malolos Bulacan",Luzon,Malolos,3000,patch01
+ST-0553,Tustine,10.10.9.86,MIKROTIK,RB951,Metro Manila,"Molino St., South Super Highway, Alabang, Muntinlupa City",Luzon,Muntinlupa City,1780,patch01
+ST-0555,C. Raymundo,10.10.10.90,MIKROTIK,RB951,Metro Manila,"#64 Stella Mariz cor.,  C. Raymundo Ave., Maybunga Pasig City",Luzon,Pasig City,1607,patch01
+ST-0558,Welding Bldg.,10.10.8.126,MIKROTIK,RB951,Metro Manila,"Upper Building, 349 Sen. Gil J. Puyat Ave., Makati City Metro Manila",Luzon,Makati City,1200,patch01
+ST-0560,San Fernando NLEX,10.10.38.154,MIKROTIK,RB951,Pampanga,"KM 62 NLEX North Bound Brgy. San Felipe, San Fernando Pampanga",Luzon,San Fernando,2000,patch01
+ST-0561,Tarlac 2 ( Caltex ),10.10.1.130,MIKROTIK,RB951,Tarlac,"Mc. Arthur Hi-Way, Tarlac Tarlac City",Luzon,Tarlac,2300,patch01
+ST-0563,Concepcion Tarlac,10.10.7.206,MIKROTIK,RB951,Tarlac,"Brgy. San Nicolas, Concepcion Tarlac",Luzon,Concepcion,2316,patch01
+ST-0565,Mabalacat,10.10.11.18,MIKROTIK,RB951,Pampanga,"Velasquez St., Mabalacat Proper, Pampanga",Luzon,Mabalacat,2010,patch01
+ST-0567,San Isidro,10.10.39.58,MIKROTIK,RB951,Laguna,"No. 35 Brgy. San Isidr, Cabuyao, Laguna",Luzon,Cabuyao,4025,patch01
+ST-0568,Camiling,10.10.11.194,MIKROTIK,RB951,Tarlac,"Arellano St., cor., Quezon Ave., Camiling Tarlac",Luzon,Camiling,2306,patch01
+ST-0570,Wilson,10.10.19.106,MIKROTIK,RB951,Metro Manila,"Wilson cor. Ortigas San Juan, City",Luzon,San Juan City,1500,patch01
+ST-0576,Boni Edsa,10.10.19.22,MIKROTIK,RB951,Metro Manila,"EDSA cor., Boni Ave., Mandaluyong",Luzon,Mandaluyong City,1550,patch01
+ST-0578,Malanday 2,10.10.6.34,MIKROTIK,RB951,Metro Manila,"Brgy. Malanday McArthur Highway, Valenzuela City",Luzon,Valenzuela City,1440,patch01
+ST-0580,Silver City,10.10.18.82,MIKROTIK,RB951,Metro Manila,"G/F Unit L1-003A, silver City, Frontera Verde, Pasig City",Luzon,Pasig City,1600,patch01
+ST-0582,McKinley San Juan,10.10.35.14,MIKROTIK,RB951,Metro Manila,"Ortigas Ave., McKinley, San Juan",Luzon,San Juan City,1500,patch01
+ST-0587,Marvin Plaza,10.10.8.138,MIKROTIK,RB951,Metro Manila,"Chino Roces cor., Herrera St., Makati City",Luzon,Makati City,1200,patch01
+ST-0590,Kingswood,10.10.8.142,MIKROTIK,RB951,Metro Manila,UG/F Kingswood Makati Condo. Chino Roces Ave. Makati City.,Luzon,Makati City,1200,patch01
+ST-0594,Victoria De Manila,10.10.2.66,MIKROTIK,RB951,Metro Manila,"Shoppes @ Victoria Space No. 101 G/F Victoria De Manila, Taft Ave., Manila",Luzon,City of Manila,1001,patch01
+ST-0596,"San Pascual, Batangas",10.10.2.166,MIKROTIK,RB951,Batangas,"San Pascual, Batangas",Luzon,San Pascual,4204,patch01
+ST-0603,Fortune Square,10.10.32.162,MIKROTIK,RB951,Pampanga,"Mc Arthur Hi-way Cor. Villa Julita Subdivion, Brgy. Saguin, San Fernando, Pampanga",Luzon,San Fernando,2000,patch01
+ST-0604,Dewey Ave,10.10.13.106,MIKROTIK,RB951,Zambales,"Lot 2, Block 18, Dewey Ave., cor. Aguinaldo Highway, CBD, Subic Bay Freeport Zone",Luzon,Subic,2209,patch01
+ST-0605,Molino 5,10.10.8.158,MIKROTIK,RB951,Cavite,"Molino Rd., Brgy. Molino III, Bacoor Cavite",Luzon,Bacoor,4102,patch01
+ST-0607,The Enclave,10.10.6.202,MIKROTIK,RB951,Pampanga,"The Enclave, Fil-Am Friendship Hi-way, Pampang, Angeles City",Luzon,Angeles City,2009,patch01
+ST-0608,Zaragoza,10.10.9.78,MIKROTIK,RB951,Nueva Ecija,"Corner Concepcion, Zaragoza, Nueva Ecija",Luzon,Zaragoza,3110,patch01
+ST-0610,Olongapo Public Market,10.10.15.182,MIKROTIK,RB951,Zambales,"Canda St., East Bajac - Bajac, Olongapo City",Luzon,Olongapo City,2200,patch01
+ST-0611,San Marcelino,10.10.4.206,MIKROTIK,RB951,Zambales,"Brgy. Central, San Marcelino, Zambales",Luzon,San Marcelino,2207,patch01
+ST-0612,Pagasa Imus,10.10.32.122,MIKROTIK,RB951,Cavite,"National Rd., cor. Alapan St., Pagasa, Imus, Cavite",Luzon,Imus,4103,patch01
+ST-0613,Baliuag Hi-Way,10.10.13.22,MIKROTIK,RB951,Bulacan,"Do�a Remedios Highway, Brgy. Pinagbarilan, Baliuag Bulacan",Luzon,Baliuag,3006,patch01
+ST-0614,Bansalangin,10.10.25.190,MIKROTIK,RB951,Metro Manila,# 4Bansalangin st brgy Veterans Village QC,Luzon,Quezon City,1105,patch01
+ST-0615,San Pedro5,10.10.0.26,MIKROTIK,RB951,Laguna,"Lot 8 AB National hghway cor Garcia st, Nueva Poblacion San Pedro Laguna",Luzon,San Pedro,4023,patch01
+ST-0618,Angelo King,10.10.4.118,MIKROTIK,RB951,Metro Manila,"Arellano Ave., Malate Manila",Luzon,City of Manila,1004,patch01
+ST-0619,Buendia 4,10.10.3.46,MIKROTIK,RB951,Metro Manila,"No. 317 Sen Gil Puyat Ave., Pasay City",Luzon,Pasay City,1300,patch01
+ST-0620,FVR,10.10.17.130,MIKROTIK,RB951,Bulacan,"Area D (Sta. Cruz), Sapang Palay, San Jose Del Monte City, Bulacan",Luzon,San Jose Del Monte,3023,patch01
+ST-0621,Life Homes,10.10.16.162,MIKROTIK,RB951,Metro Manila,"Lot 1-B-1-B, Ortigas Ave., Ext., cor. Alfonso St., Brgy. Rosario, Pasig City",Luzon,Pasig City,1609,patch01
+ST-0623,Isabelle Hidalgo,10.10.4.122,MIKROTIK,RB951,Metro Manila,"Unit 2 & 3, Isabelle de Hidalgo Bldg. St., cor., Cancer St., Quiapo Manila",Luzon,City of Manila,1001,patch01
+ST-0627,BSA TOWER,10.10.14.242,MIKROTIK,RB951,Metro Manila,"G-4 BSA Tower Condominium, No. 108 Legaspi St. Legaspi Village, Makati City",Luzon,Makati City,1129,patch01
+ST-0629,Pansol,10.10.38.18,MIKROTIK,RB951,Laguna,"National Highway purok 1 Pansol Calamba, City of Laguna",Luzon,Calamba,4027,patch01
+ST-0630,Mayfair Tower,10.10.2.74,MIKROTIK,RB951,Metro Manila,"Commercial C, G/F Mayfair Tower, UN Ave., cor. Mabini St., Ermita Manila",Luzon,City of Manila,1004,patch01
+ST-0638,Carmelray,10.10.15.226,MIKROTIK,RB951,Laguna,"Makiling Drive., Carmelray Industrial Park II, Calamba Laguna",Luzon,Calamba,4027,patch01
+ST-0639,Lingayen 1,10.10.20.210,MIKROTIK,RB951,Pangasinan,"National Hi-way, Lingayen, Pangasinan",Luzon,Lingayen,2401,patch01
+ST-0640,Mangaldan,10.10.37.190,MIKROTIK,RB951,Pangasinan,"National Road,Mangaldan Town Proper,Pangasinan",Luzon,Mangaldan,2432,patch01
+ST-0648,Guadalupe 4,10.10.27.42,MIKROTIK,RB951,Metro Manila,"Kimston Plaza Building, P. Burgos St., Guadalupe, Makati City",Luzon,Makati City,1212,patch01
+ST-0651,Total Balanga,10.10.37.186,MIKROTIK,RB951,Bataan,"National Rd., Calero St., Brgy., Ibayo, Balanga, Bataan",Luzon,Balanga,2100,patch01
+ST-0653,Bacoor 2,10.10.9.126,MIKROTIK,RB951,Cavite,"141 Evangelista St. Daang Bukid, Bacoor Cavite",Luzon,Bacoor,4102,patch01
+ST-0654,Paniqui 2,10.10.36.162,MIKROTIK,RB951,Tarlac,"M. H Del Pilar cor., Luna St., Paniqui, Tarlac",Luzon,Paniqui,2307,patch01
+ST-0656,Marquinton Cordova Tower,10.10.20.2,MIKROTIK,RB951,Metro Manila,"C-101,C-102 Marquinton Cordova Tower Sumulong Highway,Marikina City",Luzon,Marikina City,1800,patch01
+ST-0657,G.Tuazon2,10.10.2.82,MIKROTIK,RB951,Metro Manila,"1850 G. Tuazon St., Sampaloc Manila",Luzon,City of Manila,1008,patch01
+ST-0660,Scout Tobias,10.10.14.178,MIKROTIK,RB951,Metro Manila,"Cedar Executive Bldg., # 26 Timog Ave., cor., Scout Tobias., Brgy Laging Handa, Q.C.",Luzon,Quezon City,1103,patch01
+ST-0663,Moriones*,10.10.8.174,MIKROTIK,RB951,Metro Manila,"551 Moriones cor. Nicolas Zamora Sts., Brgy 64 Zone 006, Tondo Manila",Luzon,City of Manila,1013,patch01
+ST-0664,Tejeron,10.10.15.70,MIKROTIK,RB951,Metro Manila,Tejeron St. Sta. Ana Manila,Luzon,City of Manila,1009,patch01
+ST-0665,A. Mabini (Ex-Banzai),10.10.2.86,MIKROTIK,RB951,Metro Manila,"2116-2117 A. Mabini St., Malate Manila",Luzon,City of Manila,1004,patch01
+ST-0668,V. Santos,10.10.20.42,MIKROTIK,RB951,Metro Manila,"16 V. Santos cor., Santos Sts. Sto. Ni�o, Marikina City",Luzon,Marikina City,1800,patch01
+ST-0672,Bauan 2,10.10.13.54,MIKROTIK,RB951,Batangas,"Manghinao Proper, Bauan Batangas",Luzon,Bauan,4201,patch01
+ST-0674,Zapanta MMDA,10.10.12.62,MIKROTIK,RB951,Metro Manila,"Santa Rita St., cor., Orense St., Makati City",Luzon,Makati City,1200,patch01
+ST-0675,Patts,10.10.5.210,MIKROTIK,RB951,Metro Manila,"Dr. A. Santos Avenue, San Isidro, Para�aque City",Luzon,Para�aque City,1700,patch01
+ST-0676,Rivercity,10.10.8.182,MIKROTIK,RB951,Metro Manila,2143 M. Carreon St. Cor. Delas Alas St. Sta. Manila Brgy. 866 zone 95 Landmank : infront Manila  Rivercity Residences,Luzon,City of Manila,1001,patch01
+ST-0677,Tugatog,10.10.14.10,MIKROTIK,RB951,Metro Manila,"17 M.H. Del Pilar Rd., cor. Pureza St.,Tugatog Malabon City",Luzon,Malabon City,1470,patch01
+ST-0679,NAIA,10.10.8.186,MIKROTIK,RB951,Metro Manila,"MIAA, 4th Level, Unit 37, Southwing offfice NAIA Terminal 3, Pasay City",Luzon,Pasay City,1301,patch01
+ST-0682,Lucao,10.10.35.178,MIKROTIK,RB951,Pangasinan,"National Rd. cor. Jose De Venecia Rd., Dagupan City, Pangasinan",Luzon,Dagupan City,2400,patch01
+ST-0684,Escoda,10.10.2.94,MIKROTIK,RB951,Metro Manila,Leon Guinto St. near cor. Escoda St. Ermita Manila,Luzon,City of Manila,1000,patch01
+ST-0685,Friendship Highway,10.10.26.18,MIKROTIK,RB951,Pampanga,"Lot 15, Blk 6, Frienship Hi-way, Brgy. Anunas, Angeles City",Luzon,Angeles City,2009,patch01
+ST-0686,Lubao,10.10.7.90,MIKROTIK,RB951,Pampanga,"#24 J.P. Rizal St., Sta. Cruz, Lubao, Pampanga",Luzon,Lubao,2005,patch01
+ST-0688,Cabanas Mall,10.10.9.234,MIKROTIK,RB951,Bulacan,"McArthur Hi-way,Brgy.Longos Malolos Bulacan",Luzon,Malolos,3000,patch01
+ST-0689,Burnham Park 2,10.10.8.190,MIKROTIK,RB951,Benguet,"Shanum St.cor. Otek St. cor. Lake Drive, Burnham Park, Baguio City",Luzon,Baguio City,2600,patch01
+ST-0692,Attivo,10.10.9.114,MIKROTIK,RB951,Pampanga,"Attivo Plaza, G/F 101B & 102B, Gapan-Olongapo Road, San Fernando, Pampanga",Luzon,San Fernando,2000,patch01
+ST-0694,Pili Cam Sur,10.10.2.174,MIKROTIK,RB951,Camarines Sur,"San Vicente,Pili,Camarines Sur",Luzon,Pili,4418,patch01
+ST-0696,Better Living4,10.10.2.134,MIKROTIK,RB951,Metro Manila,"Lot 18, Do�a Soledad Ave. Betterliving Subd. Para�aque City",Luzon,Para�aque City,1700,patch01
+ST-0699,Dagupan 5,10.10.23.94,MIKROTIK,RB951,Pangasinan,"Burgos St. cor. Bonifacio St. Dagupan City, Pangasinan",Luzon,Dagupan City,2400,patch01
+ST-0701,Sanrise M.H. Del Pilar,10.10.2.98,MIKROTIK,RB951,Metro Manila,"2164 M. H. del Pilar St., Malate Manila",Luzon,City of Manila,1004,patch01
+ST-0703,Mc Kinley1820,10.10.15.14,MIKROTIK,RB951,Metro Manila,"Unit A, McKinley Road McKinley Town Center, Fort Bonifacio, Taguig City",Luzon,Taguig City,1634,patch01
+ST-0704,Minadanao Avenue,10.10.5.242,MIKROTIK,RB951,Metro Manila,"547 Quirino Hi-way. cor. Mindanao Ave. Talipapa, Novaliches, Q.C.",Luzon,Quezon City,1123,patch01
+ST-0705,CWC,10.10.2.178,MIKROTIK,RB951,Camarines Sur,"Cadlan, Municipality of Pili, Province of Camarines Sur",Luzon,Pili,4418,patch01
+ST-0706,Aria,10.10.16.174,MIKROTIK,RB951,Metro Manila,Real St. cor. Aria St. Las Pi�as City,Luzon,Las Pi�as,1740,patch01
+ST-0707,Conception Uno,10.10.9.246,MIKROTIK,RB951,Metro Manila,"Bayan Bayanan Ave. Brgy. Concepcion 1, Marikina City",Luzon,Marikina City,1807,patch01
+ST-0708,Northwalk,10.10.3.234,MIKROTIK,RB951,Pampanga,"Unit 6A, Northwalk Clark, M.A. Roxas Highway cor. New Friendship Gate, Clark Freeport Zone, Angeles city",Luzon,Angeles City,2009,patch01
+ST-0709,Caltex Balibago,10.10.29.142,MIKROTIK,RB951,Laguna,Balibago cor. San Lorenzo Rd. Sta. Rosa Laguna,Luzon,Sta. Rosa,4026,patch01
+ST-0711,Tanauan 2,10.10.8.202,MIKROTIK,RB951,Batangas,"Brgy. Darasa, Tanauan City, Batangas",Luzon,Batangas City,4200,patch01
+ST-0712,Cardinal Santos Medical Center,10.10.13.250,MIKROTIK,RB951,Metro Manila,"Medical Arts Building Cardinal Santos Medical Canter, Wilson St. San Juan City",Luzon,San Juan City,1500,patch01
+ST-0713,Suburbia,10.10.13.122,MIKROTIK,RB951,Pampanga,McArthur Hi-way Brgy. Maimpis San Fernando Pampanga,Luzon,San Fernando,2000,patch01
+ST-0715,One Archer,10.10.5.178,MIKROTIK,RB951,Metro Manila,"Unit 6, G/F of One Archers Place, Taft Ave., Malate Manila",Luzon,City of Manila,1004,patch01
+ST-0716,Tumana Marikina,10.10.31.142,MIKROTIK,RB951,Metro Manila,"Farmers Ave., cor. J.P. Rizal St., Concepcion, Marikina",Luzon,Marikina City,1800,patch01
+ST-0717,Malasiqui,10.10.16.234,MIKROTIK,RB951,Pangasinan,"Montemayor St., Poblacion  Malasiqui, Calasiao Rd.  Pangasinan",Luzon,Malasiqui,2421,patch01
+ST-0719,Deparo,10.10.5.146,MIKROTIK,RB951,Metro Manila,Deparo rd. Samson Ave. Brg 168 North caloocan city,Luzon,Caloocan City,1400,patch01
+ST-0721,San Mateo,10.10.12.142,MIKROTIK,RB951,Rizal,"103 san mateo square ,Gen.Luna st. G.B.1,San Mateo ,Rizal",Luzon,San Mateo,1850,patch01
+ST-0722,Alimall 2,10.10.16.82,MIKROTIK,RB951,Metro Manila,"G/F Alimall, P. Tuazon, Araneta Center, Q.C.",Luzon,Quezon City,1100,patch01
+ST-0723,Angono 2,10.10.15.54,MIKROTIK,RB951,Rizal,"Manila East Road cor., Col. Guido St. Agono Rizal",Luzon,Angono,1930,patch01
+ST-0724,Manila Residence,10.10.4.130,MIKROTIK,RB951,Metro Manila,"Unit 101-102 and 127-128, The Manila Residences, 2320 Taft Ave., Malate Manila",Luzon,City of Manila,1004,patch01
+ST-0726,Paliparan 1,10.10.15.106,MIKROTIK,RB951,Cavite,"Mabuhay City, Paliparan Dasmari�as Cavite",Luzon,Dasmari�as,4114,patch01
+ST-0727,Agoo,10.10.9.250,MIKROTIK,RB951,La Union,"16 McArthur Highway, Agoo, La Union",Luzon,Agoo,2504,patch01
+ST-0728,University of Baguio,10.10.33.150,MIKROTIK,RB951,Benguet,"FB bldg., Assumption Rd., Baguio City",Luzon,Baguio City,2600,patch01
+ST-0729,Anabu Kostal,10.10.19.130,MIKROTIK,RB951,Cavite,"Anabu Wet and Dry Market, Aguinaldo Highway, Anabu II-A, Imus Cavite",Luzon,Imus,4103,patch01
+ST-0730,Washington,10.10.0.238,MIKROTIK,RB951,Metro Manila,"Unit 3, AGS Plaza, Washington St., Brgy. Pio Del Pilar, Makati City",Luzon,Makati City,1230,patch01
+ST-0731,Southwoods,10.10.1.22,MIKROTIK,RB951,Laguna,"Rosario Complex, San Vicente, San Pedro Laguna",Luzon,San Pedro,4023,patch01
+ST-0732,Bauang,10.10.42.22,MIKROTIK,RB951,La Union,"Central East, Bauang, La Union",Luzon,Bauang,2501,patch01
+ST-0733,Forest Hill,10.10.9.38,MIKROTIK,RB951,Metro Manila,"Quirino Highway and Forest Hills Drive. Forest Hills Subd., Novaliches, Quezon City",Luzon,Quezon City,1123,patch01
+ST-0735,West Rembo,10.10.11.206,MIKROTIK,RB951,Metro Manila,"Lot 1 Blk. 76, Brgy. West Rembo, Makati City",Luzon,Makati City,1200,patch01
+ST-0736,Tanedo,10.10.13.62,MIKROTIK,RB951,Tarlac,"F. Tanedo St., San Nicolas, Tarlac City",Luzon,Tarlac,2300,patch01
+ST-0744,F. Manalo,10.10.9.186,MIKROTIK,RB951,Metro Manila,"F. Blumentritt cor., F. Manalo, San Juan City",Luzon,San Juan City,1500,patch01
+ST-0745,Antel Spa,10.10.0.82,MIKROTIK,RB951,Metro Manila,"G/F Antel Spa Residences, Makati",Luzon,Makati City,1200,patch01
+ST-0746,General Luna Baguio,10.10.13.10,MIKROTIK,RB951,Benguet,"Gen. Luna St. Baguio City, Benguet",Luzon,Baguio City,2600,patch01
+ST-0748,Camp John Hay,10.10.13.14,MIKROTIK,RB951,Benguet,"Space 4, Baguio Technohub Retail Plaza BPO-A, Camp John Hay, Baguio",Luzon,Baguio City,2600,patch01
+ST-0749,Two E-Com,10.10.5.226,MIKROTIK,RB951,Metro Manila,"Retail 10 G/F, Two Ecom Center Ocean Drive, Mall of Asia Complex, Pasay City",Luzon,Pasay City,1300,patch01
+ST-0750,Soldado,10.10.0.254,MIKROTIK,RB951,Metro Manila,"G/F 1533 A. Mabini St., cor. Soldado St., Ermita, Manila",Luzon,City of Manila,1000,patch01
+ST-0751,Emar Suites,10.10.1.42,MIKROTIK,RB951,Metro Manila,"409 Shaw Blvd., Mandaluyong City",Luzon,Mandaluyong City,1552,patch01
+ST-0752,Bustos,10.10.17.114,MIKROTIK,RB951,Bulacan,Brgy. Poblacion Bustos Bulacan,Luzon,Bustos,3007,patch01
+ST-0753,F. Tanedo 2,10.10.16.238,MIKROTIK,RB951,Tarlac,"F. Ta�edo St., Tarlac City",Luzon,Tarlac,2300,patch01
+ST-0759,CDC,10.10.11.58,MIKROTIK,RB951,Pampanga,E .Quirino street Clark Freeport Zone,Luzon,"CSEZ, Clark",2016,patch01
+ST-0760,Comembo,10.10.11.226,MIKROTIK,RB951,Metro Manila,"Comembo Commercial Complex. JP Rizal Extension, Makati City",Luzon,Makati City,1217,patch01
+ST-0766,K-Zone,10.10.13.118,MIKROTIK,RB951,Metro Manila,"K-Zone Bldg., NIA-PDEA cor., EDSA, Brgy. Pinyahan, Quezon City",Luzon,Marikina City,1800,patch01
+ST-0767,Dagupan Lyceum (Caleb),10.10.16.10,MIKROTIK,RB951,Pangasinan,A.B Fernandez Ave. Dagupan City,Luzon,Dagupan City,2400,patch01
+ST-0768,Navotas,10.10.14.198,MIKROTIK,RB951,Metro Manila,"635 M. Naval St., cor. C-4 Rd., Bagumbayan North, Navotas City",Luzon,Navotas,1485,patch01
+ST-0769,San Fernando 3,10.10.13.170,MIKROTIK,RB951,Pampanga,"Gen. Hizon Avenue, San Fernando, Pampanga",Luzon,San Fernando,2000,patch01
+ST-0770,Manila Cityhall,10.10.5.186,MIKROTIK,RB951,Metro Manila,G/F Godino Bldg. Arroceros St. Ermita Manila,Luzon,City of Manila,1008,patch01
+ST-0773,Raon,10.10.10.14,MIKROTIK,RB951,Metro Manila,"G. Puyat cor., Quezon Blvd., Raon, Quiapo Manila",Luzon,City of Manila,1001,patch01
+ST-0775,Cabanatuan 4,10.10.8.70,MIKROTIK,RB951,Nueva Ecija,"Mahalika Highway, Cabanatuan City",Luzon,Cabanatuan City,3100,patch01
+ST-0776,CBD II Hotel,10.10.2.170,MIKROTIK,RB951,Camarines Sur,"G/F of CBD II Hotel, Ninoy and Cory Ave., Brgy. Triangulo, Naga City",Luzon,Naga City,4400,patch01
+ST-0780,Pulang Lupa Dos,10.10.5.158,MIKROTIK,RB951,Metro Manila,"B5 Lot 6 Guinto Park Subdivision, Naga Road cor., St. Joseph Ave., Pulang Lupa 11, Las Pinas City",Luzon,Las Pi�as,1742,patch01
+ST-0781,Kingsville,10.10.12.154,MIKROTIK,RB951,Rizal,"084 Marcos Hi Way, Barangay Mayamot Antipolo City",Luzon,Antipolo,1870,patch01
+ST-0782,Pretil,10.10.39.230,MIKROTIK,RB951,Metro Manila,"1688 Juan Luna St. Brgy. 61, Zone 005, Tondo, Manila",Luzon,City of Manila,1012,patch01
+ST-0786,BF Homes3,10.10.12.70,MIKROTIK,RB951,Metro Manila,G/F Omega Star Bldg. 112 Aguirre Ave.cor. Elizalde st. Bf Homes Para�aque City,Luzon,Para�aque City,1700,patch01
+ST-0789,Caltex BSU,10.10.16.138,MIKROTIK,RB951,Bulacan,"Caltex Gas Station; McArthur Highway , BO., Guinhawa, Malolos City, Bulacan",Luzon,Malolos,3000,patch01
+ST-0790,Sta Cruz 2,10.10.29.158,MIKROTIK,RB951,Laguna,"006 Sitio Sampaguita, Brgy. Bubukal, Sta Cruz, Laguna",Luzon,Sta. Cruz,4009,patch01
+ST-0795,Bf resort 2,10.10.30.226,MIKROTIK,RB951,Metro Manila,"Blk. 1 Lot 4 BF Drive BF Resort Village, Las Pi�as City",Luzon,Las Pi�as,1740,patch01
+ST-0802,Market Ave,10.10.0.86,MIKROTIK,RB951,Metro Manila,#96- A MH delPilar cor Market Ave.Pasig City,Luzon,Pasig City,1600,patch01
+ST-0805,East Ave.,10.10.6.2,MIKROTIK,RB951,Metro Manila,"G/F NCHP Bldg. EDSA cor. East Avenue, Brgy. Pinyahan, Quezon City",Luzon,Marikina City,1800,patch01
+ST-0806,Villaflor,10.10.12.18,MIKROTIK,RB951,Pangasinan,"National road Mc Arthur Highway,Mayombo District,Dagupan City,Pangasinan 2420",Luzon,Dagupan City,2400,patch01
+ST-0807,Urdaneta 3,10.10.16.2,MIKROTIK,RB951,Pangasinan,"Mc Arthur National Highway, San Vicente Urdaneta City",Luzon,Urdaneta,2428,patch01
+ST-0809,Paliparan 2,10.10.15.110,MIKROTIK,RB951,Cavite,"Paliparan road,Dasmarinas Cavite",Luzon,Dasmari�as,4114,patch01
+ST-0810,Macabebe,10.10.11.34,MIKROTIK,RB951,Pampanga,Sta. Rita Poblacion Macabebe Pampanga,Luzon,Macabebe,2018,patch01
+ST-0812,Paciano,10.10.15.222,MIKROTIK,RB951,Laguna,"Paciano Highway, Brgy. Paciano Rizal, Calamba, Laguna",Luzon,Calamba,4027,patch01
+ST-0813,Binan Caltex,10.10.22.166,MIKROTIK,RB951,Laguna,"Malvar St. Brgy. San Antonio, Bi�an Laguna",Luzon,Bi�an,4024,patch01
+ST-0814,Lian Batangas,10.10.10.178,MIKROTIK,RB951,Batangas,"J.P Laurel St., cor., Roxaco Landing Subd., Nasugbu, Batangas",Luzon,Batangas City,4200,patch01
+ST-0815,Pila Highway,10.10.5.90,MIKROTIK,RB951,Laguna,"Brg.Labuin,Pila,Laguna",Luzon,Pila,4010,patch01
+ST-0818,Lucban 2,10.10.15.242,MIKROTIK,RB951,Quezon,"Lucban- Tayabas Road, Lucban , Quezon",Luzon,Lucban,4328,patch01
+ST-0821,Cityplace Binondo,10.10.7.62,MIKROTIK,RB951,Metro Manila,"G/F City Place Square La Chambre St., Binondo Manila",Luzon,City of Manila,1006,patch01
+ST-0823,Binalonan,10.10.29.178,MIKROTIK,RB951,Pangasinan,Mc Arthur Highway Binalonan Pangasinan,Luzon,Binalonan,2436,patch01
+ST-0824,St. Aquinas Sto Tomas,10.10.19.210,MIKROTIK,RB951,Batangas,"General Malvar Avenue, Sto. Tomas, Batangas",Luzon,Sto. Tomas,4234,patch01
+ST-0825,Lucena 3,10.10.2.18,MIKROTIK,RB951,Quezon,"Quezon Avenue, Lucena City",Luzon,Lucena City,4301,patch01
+ST-0826,Phoenix,10.10.35.230,MIKROTIK,RB951,Quezon,"Maharlika Highway, Brgy. Ihabang Dupay, Lucena City",Luzon,Lucena City,4301,patch01
+ST-0829,Areza,10.10.1.78,MIKROTIK,RB951,Laguna,"Nat'l Highway, Brgy. Canlalay, Binan, Laguna",Luzon,Bi�an,4024,patch01
+ST-0830,Total Cutcut,10.10.6.78,MIKROTIK,RB951,Pampanga,"Friendship Hi-way corner Poinsenttia St.Angeles, Pampanga",Luzon,Angeles City,2009,patch01
+ST-0831,Marcos Highway,10.10.13.18,MIKROTIK,RB951,Benguet,"ECC Building Brgy. Bakekang, along Marcos Highway, Baguio City",Luzon,Baguio City,2600,patch01
+ST-0834,Remington,10.10.3.194,MIKROTIK,RB951,Metro Manila,"Ground Floor Shop 2, Remington Hotel, Newport City",Luzon,Pasay City,1309,patch01
+ST-0836,Torre Venecia,10.10.6.122,MIKROTIK,RB951,Metro Manila,"Sct. Santiago, corner Timog Ave., Quezon City",Luzon,Quezon City,1100,patch01
+ST-0837,Tiaong Stop Over,10.10.28.246,MIKROTIK,RB951,Quezon,"Villa Escudero, Maharlika H-way, Brgy. Lalig. Tiaong Quezon",Luzon,Tiaong,4325,patch01
+ST-0838,Mariveles,10.10.14.62,MIKROTIK,RB951,Bataan,"No. 91 Lakandula St., cor., P. Burgos St., Poblacion, Mariveles, Bataan",Luzon,Mariveles,2105,patch01
+ST-0839,Total Tarlac,10.10.20.226,MIKROTIK,RB951,Tarlac,"Mc Arthur Highway, Tarlac City, Tarlac",Luzon,Tarlac,2300,patch01
+ST-0841,United Paranaque,10.10.5.214,MIKROTIK,RB951,Metro Manila,"Tindalo corner E. Services Road, Paranaque City",Luzon,Para�aque City,1714,patch01
+ST-0842,Naguillan Poblacion,10.10.10.26,MIKROTIK,RB951,La Union,"Naguillan road corner Rimando St., Naguillan La union",Luzon,Naguilian,2511,patch01
+ST-0843,Mayapa 2,10.10.15.218,MIKROTIK,RB951,Laguna,"Mayapa Road, Brgy. Mayapa, Calamba Laguna",Luzon,Calamba,4027,patch01
+ST-0847,Alaminos -,10.10.15.66,MIKROTIK,RB951,Pangasinan,"Quezon Avenue,accross NEPO Mart,Poblacion,Alaminos City",Luzon,Alaminos,2404,patch01
+ST-0849,San Simon,10.10.16.18,MIKROTIK,RB951,Pampanga,"Mc Arthur Hi-way Sta. Monica,San Simon, Pampanga",Luzon,San simon,2015,patch01
+ST-0850,Airport Road 2,10.10.34.90,MIKROTIK,RB951,Metro Manila,"Roxas Boulevard coner Airport Road, Baclaran, Para�aque City",Luzon,Para�aque City,1702,patch01
+ST-0852,Bucandala,10.10.10.34,MIKROTIK,RB951,Cavite,"Patindig araw corner alapan road, bucandala Imus Cavite",Luzon,Imus,4103,patch01
+ST-0853,Tayug,10.10.21.146,MIKROTIK,RB951,Pangasinan,Bonifacio St. Brgy. B. Tayug Pangasinan,Luzon,Tayug,2445,patch01
+ST-0856,Guimba,10.10.10.38,MIKROTIK,RB951,Nueva Ecija,"No. 16 A Salvador St., Bargain St. Guimba, Nueva Ecija",Luzon,Guimba,3115,patch01
+ST-0863,Tanauan 4,10.10.28.226,MIKROTIK,RB951,Batangas,"A. Mabini Avenue, Tanauan City",Luzon,Tanauan,4232,patch01
+ST-0864,Legislative BLDG,10.10.11.198,MIKROTIK,RB951,Tarlac,"Rizal St., cor. Hilario St., Tarlac City",Luzon,Tarlac,2300,patch01
+ST-0865,Hugo Perez,10.10.18.218,MIKROTIK,RB951,Cavite,"Inong Building, Governor's Drive corner Hugo Perez Drive Trece Martirez, Cavite",Luzon,Trece Martirez City,4133,patch01
+ST-0866,Gumaca,10.10.13.94,MIKROTIK,RB951,Quezon,"Andres bonifacio Street, corner J.P Brgy Rizal, Gumaca, Quezon",Luzon,Plaridel,4306,patch01
+ST-0868,Armstrong,10.10.18.18,MIKROTIK,RB951,Metro Manila,160 Armstrong ave.cor E.Rodriguez Moonwalk Para�aque.City,Luzon,Para�aque City,1700,patch01
+ST-0869,Finman,10.10.11.202,MIKROTIK,RB951,Metro Manila,"117 Tordesillas St. Salcedo Village, Makati City, Metro Manila",Luzon,Makati City,1227,patch01
+ST-0870,SOHO,10.10.17.202,MIKROTIK,RB951,Metro Manila,"Unit 12/13 level 1, Soho Central Field District, Mandaluyong City",Luzon,Mandaluyong City,1550,patch01
+ST-0871,Almanza Uno,10.10.2.6,MIKROTIK,RB951,Metro Manila,"481 Real St., Alamanza 1, Las Pi�as City (across SM Southmall)",Luzon,Las Pi�as,1740,patch01
+ST-0872,Total San Pablo,10.10.16.126,MIKROTIK,RB951,Laguna,"Total Gas Station, Maharlika Highway San Pablo City Laguna",Luzon,San Pablo City,4000,patch01
+ST-0873,Lipa Cathedral,10.10.11.186,MIKROTIK,RB951,Batangas,"San Sebastian Cathedral, Lipa City",Luzon,Lipa City,4217,patch01
+ST-0874,Kidney Center,10.10.34.162,MIKROTIK,RB951,Metro Manila,National Kidney and transplant institute Quezon City,Luzon,Quezon City,1100,patch01
+ST-0875,Menzyland,10.10.11.190,MIKROTIK,RB951,Bulacan,Brgy. Mojon Malolos Bulacan,Luzon,Malolos,3000,patch01
+ST-0876,Magalang,10.10.11.38,MIKROTIK,RB951,Pampanga,"Sta. Cruz, Magalang Pampanga",Luzon,Magalang,2011,patch01
+ST-0877,Red Planet Malate,10.10.5.190,MIKROTIK,RB951,Metro Manila,"1740 A. Mabini Street, Malate, Manila, Phiippines",Luzon,City of Manila,1004,patch01
+ST-0882,Atimonan,10.10.13.254,MIKROTIK,RB951,Quezon,"G/F Renegado Property Rizal Street corner Quezon St., Atimonan, Quezon",Luzon,Atimonan,4331,patch01
+ST-0883,Madapdap,10.10.21.86,MIKROTIK,RB951,Pampanga,"San Fernando Avenue corner Porac Avenue Madapdap ,Mabalacat Pampanga",Luzon,Mabalacat,2010,patch01
+ST-0885,San Fabian,10.10.12.30,MIKROTIK,RB951,Pangasinan,"Quezon Highway,San Fabian,Pangasinan.",Luzon,San Fabian,2433,patch01
+ST-0886,Libmanan,10.10.9.210,MIKROTIK,RB951,Camarines Sur,G/F Dy property Poblacion st. Corner Bigaon st. Libmanan Camarines Sur,Luzon,Libmanan,4407,patch01
+ST-0887,San Antonio Zambales,10.10.13.190,MIKROTIK,RB951,Zambales,"San Marcelino-San Antonio-San Narciso Road, Poblacion San Antonio, Zambales",Luzon,San Antonio,2206,patch01
+ST-0890,Lima Tech,10.10.14.102,MIKROTIK,RB951,Batangas,"JP Laurel Highway, Malvar Batangas",Luzon,Malvar,4233,patch01
+ST-0896,Katipunan,10.10.18.2,MIKROTIK,RB951,Metro Manila,"48 Esteban Abada St.,  corner Rosa Alvero St., Loyola Heights, Katipunan, Quezon City",Luzon,Quezon City,1105,patch01
+ST-0897,Lucena 4,10.10.15.50,MIKROTIK,RB951,Quezon,"M.L Tagarao Street, Barangay Iyam, Lucena City",Luzon,Lucena City,4301,patch01
+ST-0899,Sotto,10.10.12.78,MIKROTIK,RB951,Metro Manila,"Unit 117 Sotto-Yuvienco Building, 910 Gonzales St., cor., Gen Luna St., Ermita, Manila",Luzon,City of Manila,1000,patch01
+ST-0900,Catanauan,10.10.15.246,MIKROTIK,RB951,Quezon,"Poblacion 10, Catanauan, Quezon",Luzon,Catanauan,4311,patch01
+ST-0901,Gen Trias Poblacion,10.10.21.110,MIKROTIK,RB951,Cavite,"Sampalukan St., Poblacion, Gen. Trias, Cavite",Luzon,Gen. Trias,4107,patch01
+ST-0902,Sitio Gitna,10.10.5.150,MIKROTIK,RB951,Metro Manila,"#986 Gen. Luis St. Cor P. Dela Cruz St. Brgy. Kaybiga, Caloocan City",Luzon,Caloocan City,1420,patch01
+ST-0906,Aseana,10.10.19.94,MIKROTIK,RB951,Metro Manila,"Aseana One,BRADCO Avenue, Para�aque",Luzon,Para�aque City,1700,patch01
+ST-0908,Dinalupihan,10.10.16.170,MIKROTIK,RB951,Bataan,"#3 San Ramon Highway, Dinalupihan, Bataan",Luzon,Dinalupihan,2110,patch01
+ST-0911,Balayan 2,10.10.25.206,MIKROTIK,RB951,Batangas,"Antorcha St.,Corner Paz St., Balayan, Batangas",Luzon,Balayan,4213,patch01
+ST-0912,Calamba Science Park,10.10.15.214,MIKROTIK,RB951,Laguna,"National Highway, Brgy Real, Calamba City",Luzon,Calamba,4027,patch01
+ST-0913,Pagsawitan,10.10.0.194,MIKROTIK,RB951,Laguna,"Brgy. Pagsawitan, Sta. Cruz, Laguna",Luzon,Sta. Cruz,4009,patch01
+ST-0914,Nabua,10.10.34.158,MIKROTIK,RB951,Camarines Sur,"Sampaguita Hotel.   building, San Roque Poblacion, Nabua Camarines Sur",Luzon,Nabua,4434,patch01
+ST-0916,GMA Poblacion,10.10.17.178,MIKROTIK,RB951,Cavite,"Congressional Ave., Poblacion, GMA, Cavite",Luzon,Cavite City,4100,patch01
+ST-0919,San Felipe Zambales,10.10.16.254,MIKROTIK,RB951,Zambales,"Poblacion, San Felipe, Zambales",Luzon,San Felipe,2204,patch01
+ST-0920,Malvar -,10.10.16.134,MIKROTIK,RB951,Batangas,"Poblacion, Malvar, Batangas",Luzon,Malvar,4233,patch01
+ST-0925,Tuy,10.10.6.86,MIKROTIK,RB951,Batangas,"Rizal St., Poblacion, Tuy, Batangas",Luzon,Tuy,4214,patch01
+ST-0927,Dasma 4,10.10.19.194,MIKROTIK,RB951,Cavite,"B61 L1 Brgy., San Juan, Dasmari�as City, Cavite",Luzon,Cavite City,4100,patch01
+ST-0928,Arayat 3,10.10.0.218,MIKROTIK,RB951,Pampanga,"Mangga-Cacutud, Poblacion, Arayat, Pampanga",Luzon,Arayat,2012,patch01
+ST-0930,Caltex Sto Tomas,10.10.4.178,MIKROTIK,RB951,Batangas,Maharlika Hway Brgy.San Antonio Sto.Tomas Bats.,Luzon,Sto. Tomas,4234,patch01
+ST-0931,Gagfa IT,10.10.36.246,MIKROTIK,RB951,Cebu,Gagfa Tower F Cabahug St. Brgy Kasambagan Cebu City,Cebu,Cebu City,6000,patch01
+ST-0932,IMEZ,10.10.2.198,MIKROTIK,RB951,Cebu,"Pueblo Verde in Mactan Economic zone II, Basak, Lapu-Lapu City",Cebu,Lapu-Lapu City,6015,patch01
+ST-0933,UCLM,10.10.27.54,MIKROTIK,RB951,Cebu,"MYFC1 Bldg. A.C. Cortez Avenue, Mandaue City",Cebu,Mandaue City,6014,patch01
+ST-0936,Pilar Bataan,10.10.14.70,MIKROTIK,RB951,Bataan,"Governor J. Linao Road, Panilao, Pilar, Bataan",Luzon,Pilar,2101,patch01
+ST-0938,Ibaan,10.10.10.166,MIKROTIK,RB951,Batangas,"J. Pastor St. Poblcion, Ibaan, Batangas",Luzon,Ibaan,4230,patch01
+ST-0939,Samal Bataan,10.10.15.234,MIKROTIK,RB951,Bataan,"Brgy Poblacion Samal, Bataan",Luzon,Pilar,2101,patch01
+ST-0941,Sariaya 2,10.10.34.58,MIKROTIK,RB951,Quezon,"Maharlika Highway, Brgy., Santo Cristo, Sariaya",Luzon,Sariaya,4322,patch01
+ST-0942,Mu�oz infanta,10.10.19.82,MIKROTIK,RB951,Nueva Ecija,D. Delos Santos Street Pulido Bldg. Poblacion East Science City of Munoz Nueva Ecija,Luzon,Mu�oz,3119,patch01
+ST-0951,San Agustin,10.10.4.182,MIKROTIK,RB951,Batangas,Brgy Sn.Agustin Sto.Tomas Batangas,Luzon,Sto. Tomas,4234,patch01
+ST-0955,Victoria Tarlac,10.10.1.126,MIKROTIK,RB951,Tarlac,"Tarlac-Victoria Highway, Victoria, Tarlac",Luzon,Victoria,2313,patch01
+ST-0956,Candaba,10.10.10.242,MIKROTIK,RB951,Pampanga,"14 Buas.  St,Poblacion,Pampanga",Luzon,Candaba,2013,patch01
+ST-0957,Bamban,10.10.19.14,MIKROTIK,RB951,Tarlac,"McArthur Highway, Bamban Crossing, Bamban Tarlac",Luzon,Bamban,2317,patch01
+ST-0962,Masapang,10.10.25.10,MIKROTIK,RB951,Laguna,"National Highway, Brgy. Masapang, Victoria, Laguna",Luzon,Victoria,4011,patch01
+ST-0968,Tagudin,10.10.15.190,MIKROTIK,RB951,Ilocos Sur,"Barangay Rizal, Tagudin, Ilocos Sur",Luzon,Tagudin,2714,patch01
+ST-0969,Entec,10.10.13.138,MIKROTIK,RB951,Pampanga,"Teresa Ave.Nepo Commercial Complex Angeles,Pampanga",Luzon,Angeles City,2009,patch01
+ST-0970,Orani Rural Bank,10.10.37.254,MIKROTIK,RB951,Bataan,"Poblacion brgy. Centro 1, Orani , Bataan.",Luzon,Orani,2112,patch01
+ST-0971,Pila Poblacion,10.10.5.94,MIKROTIK,RB951,Laguna,"Rizal St., Sta. Clara Sur, Pila, Laguna",Luzon,Pila,4010,patch01
+ST-0973,LP Hospital,10.10.1.62,MIKROTIK,RB951,Metro Manila,"G/F of 387-389 Padre Diego Cera Ave., Brgy. Pulang Lupa Las Pi�as City",Luzon,Las Pi�as,1742,patch01
+ST-0976,San Vicente Lipa,10.10.3.162,MIKROTIK,RB951,Batangas,Banay Banay San Vicente Lipa City Batangas,Luzon,Lipa City,4217,patch01
+ST-0977,Pansol 2,10.10.35.26,MIKROTIK,RB951,Laguna,"National Highway, Bagong Kalsada, Calamba, Laguna",Luzon,Calamba,4027,patch01
+ST-0978,Naic 2,10.10.35.194,MIKROTIK,RB951,Cavite,"A. Soriano Highway Naic, Cavite",Luzon,Naic,4110,patch01
+ST-0979,Phoenix Bacoor,10.10.11.86,MIKROTIK,RB951,Cavite,"Aguinaldo Highway cor. Hawaii St. Brgy. Salinas, Bacoor, Cavite",Luzon,Bacoor,4102,patch01
+ST-0980,V&0 Bldg Legaspi,10.10.11.158,MIKROTIK,RB951,Albay,Ground flr. V and O bldg. Lapu-Lapu St. cor. Quezon Ave. Legaspi City,Luzon,Legazpi City,4500,patch01
+ST-0981,LB Square,10.10.5.78,MIKROTIK,RB951,Laguna,"Lopez Drive, Brg. Batong Malake, Los Banos, Laguna",Luzon,Los Ba�os,4030,patch01
+ST-0985,Capitol Medical,10.10.6.126,MIKROTIK,RB951,Metro Manila,Sct. Magbanua Quezon City,Luzon,Quezon City,1100,patch01
+ST-0989,Caltex Mango Ave.,10.10.14.222,MIKROTIK,RB951,Cebu,"Gen. Maxilom Avenue (Mango Ave.), Corner Juana Osmena Street, Cebu City",Cebu,Cebu City,6000,patch01
+ST-0990,Banilad,10.10.17.94,MIKROTIK,RB951,Cebu,"AS Fortuna Street, Corner Gov. M. CuenCO, Banilad, Cebu City",Cebu,Cebu City,6000,patch01
+ST-0991,NRA,10.10.16.242,MIKROTIK,RB951,Cebu,"Ounao Ave., North Reclamation Area, Mandaue City",Cebu,Mandaue City,6014,patch01
+ST-0994,St. Theresa,10.10.17.98,MIKROTIK,RB951,Cebu,"101-F Aboitiz Street, Cebu City",Cebu,Cebu City,6000,patch01
+ST-0995,Pines City,10.10.21.250,MIKROTIK,RB951,Rizal,"ML Quezon Extension, Pines City Executive Village, Bgy San Roque, Antipolo City 1870",Luzon,Antipolo,1870,patch01
+ST-0997,Bf Almanza,10.10.1.58,MIKROTIK,RB951,Metro Manila,"Aragon Bldg. 212 CRM ave. cor. Cardinal St., BF Almanza, Las Pi�as City",Luzon,Las Pi�as,1750,patch01
+ST-1003,Tiaong 3,10.10.23.126,MIKROTIK,RB951,Quezon,"National Hway, brgy Lusacan, Tiaong Quezon",Luzon,Tiaong,4301,patch01
+ST-1006,Caltex Basak,10.10.9.150,MIKROTIK,RB951,Cebu,"M. C. Briones St, Ibabao Estancu, Mandaue City, 6014 Cebu",Cebu,Mandaue City,6014,patch01
+ST-1008,Alangilan,10.10.14.78,MIKROTIK,RB951,Batangas,"Brgy. Alangilan, Batangas City",Luzon,Batangas City,4200,patch01
+ST-1009,Lyceum,10.10.17.62,MIKROTIK,RB951,Metro Manila,"Km 20 National Hi-way, Tunasan, Muntinlupa City",Luzon,Muntinlupa City,1773,patch01
+ST-1012,Santa Rosa 3,10.10.3.50,MIKROTIK,RB951,Laguna,"F. Reyes St. Balibago, Sta. Rosa, Laguna",Luzon,Sta. Rosa,4026,patch01
+ST-1013,Batac City Proper,10.10.26.238,MIKROTIK,RB951,Ilocos Norte,"Batac College, Along Washington St., Batac City, Ilocos Norte",Luzon,Batac,2906,patch01
+ST-1016,ODE,10.10.16.166,MIKROTIK,RB951,Pampanga,"1st flr Tower B, Clark Ode County, C.M. Recto Highway, Clark Freeport Zone, Pampanga",Luzon,Angeles City,2009,patch01
+ST-1019,Banay - Banay,10.10.28.22,MIKROTIK,RB951,Laguna,"Brgy. Banay-Banay, Cabuyao, Laguna",Luzon,Cabuyao,4025,patch01
+ST-1020,SLC La Union,10.10.1.86,MIKROTIK,RB951,La Union,"Yabes Bldg, Lingsat , San Fernando City, La Union",Luzon,San Fernando,2500,patch01
+ST-1021,Talamban Crossing,10.10.2.202,MIKROTIK,RB951,Cebu,"ML Quezon Cor Gov CuenCO ave, Nasipit Talamban Cebu City",Cebu,Cebu City,6000,patch01
+ST-1022,Lucky 99,10.10.26.218,MIKROTIK,RB951,CEBU,"Colon st, Cor Pelaez st Cebu City",Luzon,cebu city,6000,patch01
+ST-1023,Cabanatuan Terminal,10.10.16.58,MIKROTIK,RB951,Nueva Ecija,"Along Circumferential Road,Cabanatuan Central Terminal Cabanatuan City, Nueva Ecija",Luzon,Cabanatuan City,3100,patch01
+ST-1025,Vigan Landmark,10.10.15.194,MIKROTIK,RB951,Ilocos Sur,"Vigan Landmark Jose Singson st, Vigan , Ilocos Sur",Luzon,Vigan,2700,patch01
+ST-1027,Candon City Poblacion,10.10.1.98,MIKROTIK,RB951,Ilocos Sur,"Samonte Road, Candon City, Ilocos Sur",Luzon,Candon,2710,patch01
+ST-1028,Bacalso,10.10.17.78,MIKROTIK,RB951,Cebu,"N. Bacalso Street, Cebu City",Cebu,Cebu City,6000,patch01
+ST-1029,Caltex Tipolo,10.10.9.158,MIKROTIK,RB951,Cebu,"MC Briones Street, Tipolo, Mandaue City",Cebu,Mandaue City,6014,patch01
+ST-1031,Santa Rosa 4,10.10.5.134,MIKROTIK,RB951,Laguna,"F Gomez St. Brgy. Kanluran, City of Sta Rosa, Laguna",Luzon,Sta. Rosa,4026,patch01
+ST-1033,San Isidro Nueva Ecija,10.10.16.46,MIKROTIK,RB951,Nueva Ecija,"Poblacion, San Isidro, Nueva Ecija",Luzon,San Isidro,3106,patch01
+ST-1034,Calamba 6,10.10.15.206,MIKROTIK,RB951,Laguna,"Brgy. Parian cor. Lawa Road, Calamba City, Laguna",Luzon,Calamba,4027,patch01
+ST-1035,Canlubang,10.10.16.114,MIKROTIK,RB951,Laguna,Blk 47 Phase 1 Kapayapaan Vill. Calamba City Laguna,Luzon,Calamba,4027,patch01
+ST-1036,Santa Rosa 5,10.10.34.78,MIKROTIK,RB951,Laguna,"Brgy. Amihan, City of Sta Rosa, Laguna",Luzon,Sta. Rosa,4026,patch01
+ST-1037,Ace Plaza,10.10.36.86,MIKROTIK,RB951,Metro Manila,"United Avenue cor. Brixton St., Pioneer, Pasig City.",Luzon,Pasig City,1600,patch01
+ST-1038,Total Lucena,10.10.12.202,MIKROTIK,RB951,Quezon,"National Highaway, Lucena City, Quezon Province",Luzon,Lucena City,4301,patch01
+ST-1041,Pureza 2,10.10.5.194,MIKROTIK,RB951,Metro Manila,"350 Pureza St.corner Araullo St., Sta. Mesa, Manila",Luzon,City of Manila,1016,patch01
+ST-1042,Espeleta,10.10.6.102,MIKROTIK,RB951,Cavite,"Avenida Rizal St. Espeleta, Imus, Cavite",Luzon,Imus,4103,patch01
+ST-1043,New York Residences,10.10.4.158,MIKROTIK,RB951,Metro Manila,"901 Leon Guinto St., cor., Estrada St., Malate",Luzon,City of Manila,1004,patch01
+ST-1044,Liliw,10.10.5.74,MIKROTIK,RB951,Laguna,"Gat Tayaw Street, Brg. Poblacion, Liliw Laguna",Luzon,Liliw,4004,patch01
+ST-1045,Mactan Newtown,10.10.5.26,MIKROTIK,RB951,Cebu,"GF Retail 2- The Mactan Ocean Town, Lapu-Lapu City",Cebu,Lapu-Lapu City,6015,patch01
+ST-1048,Conchita,10.10.9.162,MIKROTIK,RB951,Cebu,"COnchita Bldg., 311 Jones Avenue, Osmena Blvd. Cebu City",Cebu,Cebu City,6000,patch01
+ST-1053,Pabalan,10.10.5.70,MIKROTIK,RB951,Laguna,Pabalan st.corner elejordre Calamba city of Laguna,Luzon,Calamba,4027,patch01
+ST-1054,Grotto Vista Resort,10.10.23.30,MIKROTIK,RB951,Bulacan,"Sta. Maria Tungkong Mangga Road, Graceville, Tungko, SJDM, Bulacan",Luzon,San Jose Del Monte,3023,patch01
+ST-1056,Calaca,10.10.14.82,MIKROTIK,RB951,Batangas,"Poblacion 3 marasigan street, Calaca Batangas",Luzon,Calaca,4212,patch01
+ST-1057,AMC,10.10.0.202,MIKROTIK,RB951,Pampanga,"Lot 1 Ext.Cor.Burgos St. Agapito Del Rosario Angeles City,Pampanga",Luzon,Angeles City,2009,patch01
+ST-1058,Silang1,10.10.15.134,MIKROTIK,RB951,Cavite,"M.H. Del Pilar St., Poblacion,Silang  Cavite",Luzon,Silang,4118,patch01
+ST-1060,J. Centre,10.10.21.150,MIKROTIK,RB951,Cebu,"LGF-04 J. Center Mall, A.S. Fortuna, Brgy. Bakilid, Mandaue City",Cebu,Cebu City,6000,patch01
+ST-1061,Kingspoint,10.10.0.250,MIKROTIK,RB951,Metro Manila,"Kingspoint St. cor Quirino Highway, Novaliches, Quezon City",Luzon,Quezon City,1123,patch01
+ST-1063,Cuyapo,10.10.34.174,MIKROTIK,RB951,Nueva Ecija,"Quezon Avenue, Poblacion, Cuyapo, Nueva Ecija",Luzon,Cuyapo,3117,patch01
+ST-1069,Montillano 1,10.10.23.82,MIKROTIK,RB951,Metro Manila,#89 Montillano st. corner Ilaya st. Alabang Muntinlupa City,Luzon,Muntinlupa City,1799,patch01
+ST-1071,Savers Plaza,10.10.34.234,MIKROTIK,RB951,Cebu,Lopez Jaena St.Basak Lapu-Lapu City,Cebu,Lapu-Lapu City,6015,patch01
+ST-1074,New Sacred Heart Pharmacy,10.10.10.94,MIKROTIK,RB951,Cebu,"B. Rodriguez St. Brgy. Sambag 2, Cebu City",Cebu,Cebu City,6000,patch01
+ST-1076,Fortunata,10.10.1.2,MIKROTIK,RB951,Metro Manila,"MTF Building located at Dr. A. Santos Ave., Sucat, Para�aque",Luzon,Para�aque City,1700,patch01
+ST-1080,Soldier Hills,10.10.14.254,MIKROTIK,RB951,Metro Manila,"National Highway cor. Soldier Hills, Muntinlupa City",Luzon,Muntinlupa City,1770,patch01
+ST-1084,San Matias,10.10.20.190,MIKROTIK,RB951,Pampanga,"McArthur Hi-way, San Matias, Sto. Tomas, Pampanga",Luzon,Sto. Tomas,2020,patch01
+ST-1085,USC Main,10.10.10.98,MIKROTIK,RB951,Cebu,University GOLS COmputer Shop Jonquera St. Cebu City,Cebu,Cebu City,6000,patch01
+ST-1087,BU Main,10.10.11.162,MIKROTIK,RB951,Albay,"1106 Rizal St., Brgy. 1, EM's Barrio, Legazpi City",Luzon,Legazpi City,4500,patch01
