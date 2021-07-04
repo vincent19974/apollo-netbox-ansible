@@ -1,0 +1,39 @@
+{%  macro get_nat_data (INTF_NAME) %}
+{%      if INTF_NAME == 'VLAN 1' %}
+ ip nat inside
+ transparent
+{%      elif INTF_NAME == 'VLAN 501' %}
+ ip nat inside
+{%      elif INTF_NAME == 'VLAN 10' %}
+ ip nat outside
+ crypto map mymap2
+{%      elif INTF_NAME == 'VLAN 20' %}
+ ip nat outside
+ crypto map mymap3
+{%      elif INTF_NAME == 'Cellular 0/0' %}
+ ip nat outside
+ crypto map mymap4
+ service-policy input QoS-LEVEL-DOWNLOAD
+{%      endif %}
+{%  endmacro %}
+{#
+
+#}
+!
+{%  for l in cpe_links %}
+{%      set link = cpe_links[l] %}
+interface {{ l }}
+{%      if link.ip_addr is defined %}
+ ip address {{ link.ip_addr|ipaddr('address') }} {{ link.ip_addr|ipaddr('netmask') }}
+{%      endif %}
+{%      if link.type is defined %}
+{%          if link.type == 'access' %}
+ switchport access vlan {{link.vlans[0].vid }}
+{%          elif link.type == 'tagged' %}
+ switchport mode trunk
+ switchport trunk allowed vlan {{ (link.vlans | map(attribute='vid') | list) | join(',')  }}
+{%          endif %}
+{%      endif %}
+{{ get_nat_data (l) }}
+{%  endfor %}
+!

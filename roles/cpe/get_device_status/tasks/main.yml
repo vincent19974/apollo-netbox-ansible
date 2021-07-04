@@ -1,0 +1,35 @@
+- name: Set Failed Hosts
+  run_once: yes
+  set_fact:
+    failed_hosts: []
+    connection_status: false
+
+- name: Check connection
+  block:
+    - name: Check connection
+      wait_for:
+        host: "{{ ansible_host }}"
+        port: 22
+        timeout: 30
+      # vars:
+      #   ansible_connection: network_cli
+
+    - name: Set connection Status
+      set_fact:
+          connection_status: true 
+
+  rescue:
+    - name: Set connection Status
+      set_fact:
+          connection_status: false 
+
+    - name: add failed hosts to this hosts
+      run_once: yes
+      set_fact:
+        failed_hosts: "{{ failed_hosts + [item] }}"
+
+      when: not hostvars[item].connection_status
+      loop: "{{ ansible_play_hosts }}"
+    
+    - debug: var=failed_hosts
+      run_once: yes

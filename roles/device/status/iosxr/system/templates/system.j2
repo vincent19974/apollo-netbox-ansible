@@ -1,0 +1,13 @@
+os_type: "{{ ansible_net_system }}"
+os_version: "{{ ansible_net_version }}"
+memory:
+    free_mem: "{{ ansible_net_memfree_mb | int }}"
+    total_mem: "{{ ansible_net_memtotal_mb | int }}"
+cpu:
+{%  if 'node0_RP0_CPU0' in pyats_cpu['location'] %}
+    1m: "{{ pyats_cpu.location.node0_RP0_CPU0.one_min_cpu }}"
+    5m: "{{ pyats_cpu.location.node0_RP0_CPU0.five_min_cpu }}"
+{%  else %}
+    1m: 'N/A'
+    5m: ''N/A''
+{%  endif %}

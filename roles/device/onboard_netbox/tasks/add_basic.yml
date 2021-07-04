@@ -1,0 +1,85 @@
+---
+- name: Netbox -- Create CPE Location
+  netbox_site:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      name: "{{ device_site }}"
+    state: present
+
+- name: Netbox -- Create manufacturer 
+  run_once: yes
+  netbox_manufacturer:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      name: "{{ device_vendor }}"
+    state: present
+
+- name: Netbox --Create device role
+  run_once: yes
+  when: device_role is defined 
+  netbox_device_role:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      name: "{{ device_role }}"
+      color: FAB880
+    state: present
+
+- name: Netbox --Create device type
+  netbox_device_type:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      model: "{{ device_model }}"
+      manufacturer: "{{ device_vendor }}"
+    state: present
+
+
+- name: Netbox -- Create Device
+  netbox_device:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      name: "{{ device_name }}"
+      device_type: "{{ device_model }}"
+      device_role: "{{ device_role | default(omit) }}"
+      site: "{{ device_site }}"
+    state: present
+
+- name: Netbox -- Create  Dummy Mgmt Interface on a Device
+  netbox_device_interface:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      device: "{{ device_name }}"
+      name: "{{  device_dummy_mgmt_port }}"
+      type: 1000Base-T (1GE)
+      description: "Dummy Managment Port"
+      mgmt_only: true
+      mode: Access
+      enabled: true
+    state: present
+
+
+- name: Netbox -- Attach Mgmt IP Address on the Mgmt Interface
+  netbox_ip_address:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      address: "{{ device_mgmt_ip }}"
+      assigned_object:
+        name: "{{ device_dummy_mgmt_port }}"
+        device: "{{ device_name }}"
+    state: present
+
+- name: Netbox -- Setup Managment IP on Device
+  netbox_device:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      name: "{{ device_name }}"
+      site: "{{ device_site }}"
+      primary_ip4: "{{ device_mgmt_ip | default(omit) }}"
+    state: present

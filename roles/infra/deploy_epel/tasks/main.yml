@@ -1,0 +1,8 @@
+- name: Update YUM cache
+  yum:
+    update_cache: yes
+
+- name: Ensure EPEL Is installed
+  yum:
+    name: epel-release
+    state: present

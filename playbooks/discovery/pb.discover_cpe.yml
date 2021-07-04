@@ -1,0 +1,153 @@
+---
+
+- name: Discover CPEs
+  hosts: all
+  gather_facts: no
+  connection: local
+  vars:
+    ansible_python_interpreter: "{{ ansible_playbook_python }}"
+    var_ip: 
+      - '10.1.2.1/30'
+      - 'test'
+    # var_no_ip: 'not ip'
+  tasks:
+    # - debug:
+    #     msg:
+    #       - "{{ item | ipaddr }}"
+    #   loop: "{{ var_ip }}"
+    - name: Discover Online CPEs
+      # when:
+      #   - status is defined  
+      #   - status.value == 'active'
+      import_role:
+        name: netbox/discover_cpe
+
+# - name: Collect Device Facts
+#   hosts: mikrotik
+#   gather_facts: no
+#   connection: local
+#   collections:
+#     - netbox.netbox
+#   vars:
+#     ansible_python_interpreter: "{{ ansible_playbook_python }}"
+#   tasks:
+#     - name: Check
+#       when:
+#         - status is defined  
+#         - status.value == 'active'
+#       block:
+
+#         - name: Collect Facts
+#           tags: get_facts
+#           routeros_facts:
+#           register: mikrotik_facts
+#           vars:
+#             ansible_connection: network_cli
+#             ansible_network_os: routeros
+
+#         - name: Output Facts
+#           tags: get_facts
+#           debug: var=mikrotik_facts
+
+#         - name: Netbox -- Update Serial Number
+#           when:
+#             - ansible_net_serialnum is defined 
+#             - ansible_net_serialnum != ''
+#           netbox_device:
+#             netbox_url: "{{ netbox_url }}"
+#             netbox_token: "{{ netbox_token }}"
+#             data:
+#               name: "{{ inventory_hostname }}"
+#               serial: "{{ ansible_net_serialnum }}"
+#             state: present
+
+#         - name: Netbox -- Create  Device Interfaces
+#           when: "{{ 'null' not in item.key }}"
+#           netbox_device_interface:
+#             netbox_url: "{{ netbox_url }}"
+#             netbox_token: "{{ netbox_token }}"
+#             data:
+#               device: "{{ inventory_hostname }}"
+#               name: "{{  item.key }}"
+#               type: "Virtual"
+#               # description: "Dummy Managment Port"
+#               # mgmt_only: true
+#               # mode: Access
+#               enabled: true
+#             state: present
+#           with_dict: "{{ ansible_net_interfaces }}"
+#           loop_control:
+#             label: "{{ item.key }}"
+
+#         - name: Netbox -- Attach Mgmt IP Address on the Mgmt Interface
+#           when: "{{ item.value.ipv4 is defined }}"
+#           netbox_ip_address:
+#             netbox_url: "{{ netbox_url }}"
+#             netbox_token: "{{ netbox_token }}"
+#             data:
+#               address: "{{ item.value.ipv4[0].address + '/' + item.value.ipv4[0].subnet }}"
+#               assigned_object:
+#                 name: "{{ item.key }}"
+#                 device: "{{ inventory_hostname }}"
+#             state: present
+#           with_dict: "{{ ansible_net_interfaces }}"
+#           loop_control:
+#             label: "{{ item.key }}"
+
+#         - name: Netbox -- Delete Dummy Managment IP
+#           netbox_device_interface:
+#             netbox_url: "{{ netbox_url }}"
+#             netbox_token: "{{ netbox_token }}"
+#             data:
+#               device: "{{ inventory_hostname }}"
+#               name: "_mgmt"
+#             state: absent
+
+#         - name: Netbox -- Update Managment IP on Device
+#           netbox_device:
+#             netbox_url: "{{ netbox_url }}"
+#             netbox_token: "{{ netbox_token }}"
+#             data:
+#               name: "{{ inventory_hostname }}"
+#               primary_ip4: "{{ primary_ip4 }}"
+#             state: present
+
+
+# - name: Collect Ruijie Device Facts
+#   hosts: ruijie
+#   gather_facts: no
+#   connection: local
+#   collections:
+#     - netbox.netbox
+#   vars:
+#     ansible_python_interpreter: "{{ ansible_playbook_python }}"
+#   tasks:
+#     - name: Check
+#       when:
+#         - status is defined  
+#         - status.value == 'active'
+#       block:
+
+#         - name: Collect Facts
+#           tags: get_facts
+#           ios_facts:
+#           register: ruijie_facts
+#           vars:
+#             ansible_connection: network_cli
+#             ansible_network_os: ios
+        
+#         - name: Outpu Facts
+#           tags: get_facts
+#           debug: var=ruijie_facts
+
+#         - name: Netbox -- Update Serial Number
+#           when:
+#             - ansible_net_stacked_serialnums is defined
+#             - ansible_net_stacked_serialnums|length > 0
+#           netbox_device:
+#             netbox_url: "{{ netbox_url }}"
+#             netbox_token: "{{ netbox_token }}"
+#             data:
+#               name: "{{ inventory_hostname }}"
+#               serial: "{{ ansible_net_stacked_serialnums[0] }}"
+#             state: present

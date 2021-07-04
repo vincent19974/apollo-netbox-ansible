@@ -1,0 +1,50 @@
+---
+# This Playbook is Used to Onboard an Existing Node to Bondi
+# This Node is already In the Network and We want to Start Manage
+# it via Bondi
+
+- name: Add New Node to Bondi
+  hosts: all
+  gather_facts: no
+  connection: local
+  roles:
+    - ansible-pyats
+  vars:
+    GLOBAL_VRF: ['default']
+  tasks:
+    - name: Setup Netbox Data for Device
+      tags: always
+      set_fact:
+        device_site: "{{ netbox_site }}"
+        # netbox_host: "{{ netbox_host}}"
+        netbox_token: "{{ netbox_token }}"
+        device_name: "{{ inventory_hostname }}"
+        device_mgmt_ip: "{{ ansible_host }}"
+        device_model: "{{ device_model }}"
+        device_vendor: "{{ device_vendor }}"
+        device_role: "{{ device_role }}"
+    
+    - name: Onboard Device to Netbox
+      tags: onboard_netbox
+      delegate_to: localhost
+      import_role:
+        name: device/onboard_netbox
+      vars:
+        add_facts: false
+        onboard_device: true
+      
+    - name: Collect Device Interfaces
+      import_role:
+        name: device_status/collect_status
+      vars:
+        get_interfaces: true
+
+    - debug: var=interfaces_ips
+
+    - name: Onboard Device to Netbox
+      delegate_to: localhost
+      import_role:
+        name: device/onboard_netbox
+      vars:
+        add_facts: true
+        onboard_device: false

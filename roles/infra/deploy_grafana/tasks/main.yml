@@ -1,0 +1,34 @@
+- name: Add Grafana Repo
+  become: yes
+  blockinfile:
+    path: /etc/yum.repos.d/grafana.repo
+    create: yes
+    block: |
+      [grafana]
+      name=grafana
+      baseurl=https://packages.grafana.com/oss/rpm
+      repo_gpgcheck=1
+      enabled=1
+      gpgcheck=1
+      gpgkey=https://packages.grafana.com/gpg.key
+      sslverify=1
+      sslcacert=/etc/pki/tls/certs/ca-bundle.crt
+
+
+- name: Install Grafana
+  yum:
+    name: grafana
+    update_cache: yes
+
+- name: Enable and Start Service
+  service:
+    name: grafana-server
+    enabled: yes
+    state: started
+
+- name:  Open Ports for Grafana
+  firewalld:
+    port: 3000/tcp
+    permanent: true
+    state: enabled
+  notify: restart_firewalld

@@ -1,0 +1,15 @@
+/snmp community set [ find default=yes ] addresses=0.0.0.0/0
+/snmp set location="{{ item.store_location }}"
+/system logging action set 3 remote=202.60.8.245
+/system logging action add name=rsyslog remote=202.60.8.245 target=remote
+/ip dns set allow-remote-requests=yes servers=202.60.9.4,202.60.9.5
+/ip dns static add address=202.60.9.61 name=redeem.7-eleven.com.ph
+/ip service set telnet disabled=yes
+/ip service set ftp disabled=yes
+/ip service set www disabled=yes
+/ip service set api disabled=yes
+/ip service set api-ssl disabled=yes
+/ip service set winbox disabled=yes
+/ip ssh set forwarding-enabled=remote strong-crypto=yes
+/radius add address=202.60.9.174 secret=ap0ll0vpn-server service=hotspot timeout=10s
+/radius add address=202.60.10.183 secret=ap0ll0 service=login

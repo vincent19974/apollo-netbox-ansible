@@ -1,0 +1,13 @@
+---
+devices:
+  - hostname:
+    loopback1_ip:
+    loopback2_ip:
+    wan1_ip:
+    wan2_ip:
+    wan1_network:
+    wan2_network:
+    store_location:
+    wan1_gateway:
+    wan2_gateway:
+    store_number:

@@ -1,0 +1,24 @@
+---
+# This Playbook is Used to Onboard a CPE to Bondi
+# This Node is already In the Network and We want to Start Manage
+# it via Bondi
+
+- name: Add New Node to Bondi
+  hosts: CPE
+  gather_facts: no
+  connection: local
+  tasks:
+    - name: Setup Netbox Data for Device
+      set_fact:
+        netbox_url: "{{ netbox_host}}"
+        netbox_token: "{{ netbox_token }}"
+        device_name: "{{ inventory_hostname }}"
+    
+    - name: Onboard Device to Netbox
+      delegate_to: localhost
+      import_role:
+        name: netbox/onboard_netbox
+      vars:
+        netbox_url: "{{ netbox_host }}"
+      
+

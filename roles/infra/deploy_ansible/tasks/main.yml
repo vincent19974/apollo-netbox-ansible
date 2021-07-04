@@ -1,0 +1,52 @@
+- name: Update YUM cache
+  yum:
+    update_cache: yes
+
+- name: Install Python3
+  yum:
+    name: python3
+    state: present
+
+# - name: Install Python3-pip
+#   yum:
+#     name: python3-pip
+#     state: present
+
+# - name: Install Python2-pip
+#   yum:
+#     name: python-pip
+#     state: present
+
+# - name: Install SetupTools
+#   become: yes
+#   pip:
+#     name: setuptools
+#     executable: pip
+#     #virtualenv_python: /usr/bin/python3
+
+# - name: Install SetupTools
+#   become: yes
+#   pip:
+#     name: setuptools
+#     executable: pip3
+
+- name: Upgrade PIP3
+  become: yes
+  command: pip3 install --upgrade pip
+  # pip:
+  #   name: pip3
+  #   extra_args: --upgrade
+  #   executable: pip3
+
+- name: Install Ansible under python3
+  become: no
+  pip:
+    name: ansible==2.9.2
+    executable: pip3
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+
+# - name: Install Ansible 
+#   yum:
+#     name: ansible
+#     state: present

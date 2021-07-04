@@ -1,0 +1,15 @@
+{% for p , p_data in pyats_interface_ip.items() %}
+{{p}}:
+    intf_status: {{ p_data.int_status }}
+    oper_status: {{ p_data.oper_status }}
+{%  if pyats_interfaces is defined %}
+{%      if pyats_interfaces[p] is defined %}
+    description: {{ pyats_interfaces[p].description | default('') | quote }}
+{%      endif %}
+{%  endif %}
+    vrf: {{ p_data.vrf if p_data.vrf is defined else 'default' }}
+{%  if p_data.ipv4 is defined %}
+    ipv4: {{ p_data.ipv4.keys() | map('ipaddr') | reject('false') | list | first }}
+    ip_mtu: {{ p_data.ipv4.mtu }}
+{%  endif %}
+{%  endfor %}

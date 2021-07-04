@@ -1,0 +1,36 @@
+---
+- name: Get Device details
+  set_fact:
+    _cpe_ports: "{{ query('netbox.netbox.nb_lookup', 'interfaces',
+                    api_endpoint=netbox_url,
+                    api_filter='device=' + inventory_hostname ,
+                    token=netbox_token) | list  }}"
+
+    _cpe_ip_addrs: "{{ query('netbox.netbox.nb_lookup', 'ip-addresses',
+                    api_endpoint=netbox_url,
+                    api_filter='device=' + inventory_hostname ,
+                    token=netbox_token) | list  }}"
+
+
+- name: Build CPE Links Info
+  set_fact:
+    cpe_links: "{{ lookup('template','cpe_ports.j2') | from_yaml }}"
+
+- debug: var=cpe_links
+
+# - debug:
+#     msg: "{{ cpe_links|dict2items | selectattr('value.vlans','defined') | map(attribute='value.vlans') | list  | unique }}"
+
+# - set_fact:
+#     all_vlans: "{{ cpe_links|dict2items | selectattr('value.vlans','defined') | map(attribute='value.vlans') | list  | unique }}"
+
+# - debug:
+#     msg: "{{ data }}"
+#   vars:
+#     data: |
+#       {%  for port in all_vlans %}
+#       {%    for vlan in port %}
+#       vlan {{ vlan.vid }}
+#       name {{ vlan.name | quote }}
+#       {%    endfor %}
+#       {%  endfor %}

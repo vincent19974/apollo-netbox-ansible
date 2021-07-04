@@ -1,0 +1,6 @@
+/certificate import file-name=ca.crt passphrase=""
+/certificate import file-name=client.crt passphrase=""
+/certificate import file-name=client.key passphrase=""
+/certificate set name=cert_1 numbers=0
+/certificate set name=cert_2 numbers=1
+/interface ovpn-client add certificate=cert_2 connect-to=202.60.9.253 mac-address=FE:B3:D0:17:45:3F name=ovpn-out1 port=443 user=client

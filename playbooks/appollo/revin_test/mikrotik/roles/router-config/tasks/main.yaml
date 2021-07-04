@@ -1,0 +1,11 @@
+---
+- name: Generate configuration file
+  template:
+    src: Management.j2
+    dest: /home/revinsee/mikrotik/{{ item.hostname }}.txt
+  loop: "{{ devices }}"
+
+- name: Enter commands
+  community.routeros.command:
+    commands: ["{{ item }}"]
+  loop: "{{ lookup('file','/home/revinsee/mikrotik/{{ inventory_hostname }}.txt').splitlines() }}"

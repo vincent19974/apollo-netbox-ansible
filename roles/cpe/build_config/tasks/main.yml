@@ -1,0 +1,17 @@
+---
+- name: Base Temp Directory
+  set_fact:
+    config_dir: "{{ base_temp_dir + '/' + inventory_hostname|replace('-','_') }}"
+
+- name: Create Config Directory
+  file:
+    path: '{{ config_dir }}'
+    state: directory
+
+- name: Build Config for Ruijie Devices
+  when: "'ruijie' in group_names"
+  import_tasks: ruijie.yml
+
+- name: Build Config for Mikrotik Devices
+  when: "'mikrotik' in group_names"
+  import_tasks: mikrotik.yml

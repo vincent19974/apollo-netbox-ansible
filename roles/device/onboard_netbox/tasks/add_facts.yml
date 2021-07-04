@@ -1,0 +1,98 @@
+---
+
+- name: Set Mgmt IP address of the device
+  set_fact:
+    mgmt_ip: "{{ device_mgmt_ip }}"
+  when: device_mgmt_ip is defined
+
+- name: Set Mgmt IP address of the device
+  set_fact:
+    mgmt_ip: "{{ ansible_host }}"
+  when: device_mgmt_ip is not defined
+
+- debug: var=mgmt_ip
+
+- name: Create All Device interface 
+  netbox_device_interface:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      device: "{{ inventory_hostname }}"
+      description: "{{ item.value.description }}"
+      name: "{{ item.key }}"
+      enabled: "{{ true if item.value.oper_status == 'up' else false }}"
+      type: "{{ type.replace('\\n','') | trim }}"
+      mgmt_only: false
+    state: present
+  with_dict: "{{ interfaces_ips }}"
+  loop_control:
+    label: "{{ item.key }}"
+  vars:
+    type: >
+      {%  set intf_type = item.key[:3] | lower %}
+      {% if intf_type in INTF_TYPE %}
+      {{ INTF_TYPE[intf_type] }}
+      {%  else %}
+      Virtual
+      {%  endif %}
+
+- name: Add All IP addresses
+  when:
+    - item.value.vrf == 'default'
+    - item.value.ipv4 is defined and item.value.ipv4 != ''
+  netbox_ip_address:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      address: "{{ item.value.ipv4 }}"
+      assigned_object:
+        name: "{{ item.key }}"
+        device: "{{ inventory_hostname }}"
+    state: present
+  with_dict: "{{ interfaces_ips }}"
+  loop_control:
+    label: "{{ item.key }}"
+
+- name: Get all VRFs on the Box
+  set_fact:
+    all_vrfs: "{{ interfaces_ips|dict2items|map(attribute='value.vrf') | list | unique | difference(GLOBAL_VRF) }}"
+
+- debug: var=all_vrfs
+
+- name: Create the VRFs
+  when: all_vrfs | length > 0
+  netbox_vrf:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      name: "{{ item }}"
+      enforce_unique: yes
+    state: present
+  loop: "{{ all_vrfs }}"
+
+- name: Attach A New IP Address on the Mgmt Interface
+  when:
+    - item.value.vrf != 'default'
+    - item.value.ipv4 is defined and item.value.ipv4 != ''
+  netbox_ip_address:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      address: "{{ item.value.ipv4 }}"
+      vrf: "{{ item.value.vrf }}"
+      assigned_object:
+        name: "{{ item.key }}"
+        device: "{{ inventory_hostname }}"
+    state: present
+  with_dict: "{{ interfaces_ips }}"
+  loop_control:
+    label: "{{ item.key }}"
+
+- name: Set Primary IP Address for CPE
+  netbox_device:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      name: "{{ inventory_hostname }}"
+      primary_ip4: "{{ mgmt_ip }}"
+    state: present

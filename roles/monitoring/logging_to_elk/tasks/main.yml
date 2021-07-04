@@ -1,0 +1,18 @@
+---
+- name: Setup logging to Ruijie
+  when: "'ruijie' in group_names"
+  ios_config:
+    lines: "{{ ruijie_logging_commands }}"
+  vars:
+    ruijie_logging_commands: "{{ ruijie_cmds + extra_ruijie_cmds }}"
+    ansible_network_os: ios
+    ansible_connection: network_cli
+
+- name: Setup logging to Mikrotik
+  when: "'mikrotik' in group_names"
+  routeros_command:
+    commands: "{{ mikrotik_logging_commands }}"
+  vars:
+    mikrotik_logging_commands: "{{ mikrotik_cmds + extra_mikrotik_cmds }}"
+    ansible_network_os: routeros
+    ansible_connection: network_cli

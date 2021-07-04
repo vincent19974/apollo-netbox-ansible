@@ -1,0 +1,10 @@
+ruijie_cmds:
+  - logging server 202.60.10.77
+
+mikrotik_cmds:
+  - /system logging action add name=rsyslogl2x remote=202.60.10.77 target=remote
+  - /system logging add action=rsyslogl2x topics=system,info
+  - /system logging add action=rsyslogl2x topics=radius,!debug
+
+extra_ruijie_cmds: []
+extra_mikrotik_cmds: []

@@ -1,0 +1,9 @@
+
+---
+- name: Onboard Device into Netbox
+  import_tasks: add_basic.yml
+  when: onboard_device
+
+- name: Add Device Status into Netbox
+  import_tasks: add_facts.yml
+  when: add_facts|default('false')

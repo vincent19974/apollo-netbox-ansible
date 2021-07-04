@@ -1,0 +1,15 @@
+input {
+  udp {
+    port => 5514
+    type => syslog
+  }
+}
+
+
+output {
+  elasticsearch {
+      hosts => ["http://elasticsearch:9200"]
+      index => "{{ logstash_index_name }}"
+      document_type => "net_syslog"
+  }
+}

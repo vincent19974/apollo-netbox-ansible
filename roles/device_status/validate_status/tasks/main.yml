@@ -1,0 +1,14 @@
+---
+# tasks file for validate_status
+
+- name: Validate Interfaces
+  import_tasks: interfaces.yml
+  when: 
+    - baseline_status.intf_ips is defined
+    - interfaces_ips is defined
+
+- name: Validate BGP
+  import_tasks: bgp.yml
+  # when: 
+  #   - baseline_status.bgp_peers is defined
+  #   - bgp_peers is defined

@@ -1,0 +1,11 @@
+- name: Add a CPE to Grafana
+  hosts: all
+  gather_facts: no
+  vars:
+    grafana_server: '202.60.10.86'
+    # ansible_python_interpreter: "{{ ansible_playbook_python }}"
+  tasks:
+   - name: Add to Grafana
+     delegate_to: "{{ grafana_server }}"
+     import_role:
+        name: monitoring/add_to_grafana

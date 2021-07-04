@@ -1,0 +1,14 @@
+---
+device_dummy_mgmt_port: _mgmt
+
+onboard_device: true
+
+add_facts: false
+
+GLOBAL_VRF: ['default']
+
+INTF_TYPE:
+  gig: "SFP (1GE)"
+  ten: "SFP+ (10GE)"
+  hun: "100gbase-x-qsfp28"
+  mgm: "1000BASE-T (1GE)"

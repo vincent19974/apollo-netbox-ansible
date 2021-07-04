@@ -1,0 +1,19 @@
+---
+- name: Update APT cache
+  yum:
+    update_cache: yes
+
+- name: Install DHCP Packages
+  yum:
+    name: dhcp
+
+- name: Create the DHCP Configuration
+  template:
+    src: dhcpd.j2
+    dest: /etc/dhcp/dhcpd.conf
+    
+- name: Start DHCP Service
+  service:
+    name: dhcpd
+    enabled: yes
+    state: started

@@ -1,0 +1,82 @@
+---
+- name: Rand Flap interfaces
+  hosts: localhost
+  gather_facts: no
+  vars:
+    nodes_city_id: [a,b,c]
+    node_id: ['1','2']
+  tasks:
+  - name: Setup Random Values
+    set_fact:
+      random_node_city: "{{ nodes_city_id | random }}"
+      random_node_id: "{{ node_id | random }}"
+
+  - name: set device Name
+    set_fact:
+      node_name: "{{ 'bl' + random_node_city + '0' + random_node_id|string }}"
+
+  - debug : var=node_name
+
+  - name: Create Group
+    changed_when: false
+    add_host:
+      name: "{{ node_name }}"
+      groups: target_node
+
+- name: Rand Flap interfaces
+  hosts: target_node
+  gather_facts: no
+  connection: local
+  vars:
+    port_id: ['1','0','2','3','4']
+    core_loopbacks:
+        bla01: 103.37.102.1
+        bla02: 103.37.102.2
+        blb01: 103.37.102.3
+        blb02: 103.37.102.4
+        blc01: 103.37.102.5
+        blc02: 103.37.102.6
+
+  tasks:
+  - name: Get all Core Loopbacks
+    set_fact:
+        all_loopbacks: "{{ core_loopbacks|dict2items|map(attribute='value')| list }}"
+
+  - name: Setup Random Values
+    set_fact:
+      random_port_id: "{{ port_id | random }}"
+      flap_peer: "{{ all_loopbacks|difference([core_loopbacks[inventory_hostname]]) | random }}"
+
+  - name: set Port Id
+    set_fact:
+      flap_port: "{{ 'GigabitEthernet0/0/0/' + random_port_id  }}"
+  
+  - debug: var=flap_port
+  - debug: var=flap_peer
+
+  - name: Shutdown interface
+    tags: flap
+    iosxr_config:
+      lines:
+        - interface {{ flap_port }} shutdown
+        - router bgp 9659 neighbor {{ flap_peer }} shutdown
+    vars:
+      ansible_connection: network_cli
+      ansible_network_os: iosxr
+  
+
+  - name: Pause for 30 sec
+    tags: flap
+    pause:
+      seconds: 30
+
+  - name: Enable interface
+    tags: flap
+    iosxr_config:
+      lines:
+        - no interface {{ flap_port }} shutdown
+        - no router bgp 9659 neighbor {{ flap_peer }} shutdown
+    vars:
+      ansible_connection: network_cli
+      ansible_network_os: iosxr
+

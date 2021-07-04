@@ -1,0 +1,62 @@
+---
+  - name: Check Telegraf folder
+    run_once: yes
+    become: yes
+    stat:
+      path: '/etc/telegraf/telegraf.d'
+    register: folder_stat
+
+
+  - name: Remove The Device if offline
+    run_once: yes
+    when:
+      - hostvars[item].status.value != 'active'
+    file:
+      path: /etc/telegraf/telegraf.d/{{ item }}.conf
+      state: absent
+    loop: "{{ ansible_play_hosts }}"
+
+  - name: Mikrotik -- Create Telegraf File for mikrotik CPE
+    run_once: yes
+    when:
+      - folder_stat.stat.exists
+      - "'mikrotik' in hostvars[cpe].group_names"
+      - hostvars[cpe].status.value == 'active'
+    include_tasks: mikrotik.yml
+    loop: "{{ ansible_play_hosts }}"
+    loop_control:
+      loop_var: cpe
+
+  - name: Ruijie -- Create Telegraf File for mikrotik CPE
+    run_once: yes
+    when:
+      - folder_stat.stat.exists
+      - "'ruijie' in hostvars[cpe].group_names"
+      - hostvars[cpe].status.value == 'active'
+    include_tasks: ruijie.yml
+    loop: "{{ ansible_play_hosts }}"
+    loop_control:
+      loop_var: cpe
+
+  # - name: Ruijie -- Create Telegraf File for ruijie CPE
+  #   become: yes
+  #   run_once: yes
+  #   when:
+  #     - folder_stat.stat.exists
+  #     - "'ruijie' in hostvars[item].group_names"
+  #     - hostvars[item].status.value == 'active'
+  #   template:
+  #     src: 'ruijie.j2'
+  #     dest: /etc/telegraf/telegraf.d/{{ item }}.conf
+  #   loop: "{{ ansible_play_hosts }}"
+  
+
+  - debug: var=failed_cpe
+    when: failed_cpe is defined 
+
+  - name: Restart Telegraf Service
+    become: yes
+    run_once: yes
+    service:
+      name: telegraf
+      state: restarted

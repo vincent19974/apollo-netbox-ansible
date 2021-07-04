@@ -1,0 +1,11 @@
+{%  set all_cpe_vlans = cpe_links|dict2items | selectattr('value.vlans','defined') | map(attribute='value.vlans') | list  | unique %}
+!
+{%  for port in all_cpe_vlans %}
+{%      for v in port %}
+vlan {{ v.vid }}
+ name {{ v.name | quote }}
+{%      endfor%}
+{%  endfor %}
+!
+svi-interface detecting
+transparent manage-interface VLAN 1

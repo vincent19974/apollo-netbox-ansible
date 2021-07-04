@@ -1,0 +1,54 @@
+- name: Perfrom Pre and Post Validation
+  hosts: all
+  gather_facts: no
+  connection: local
+  roles:
+    - ansible-pyats
+  collections:
+    - netbox.netbox
+  tasks:
+  - name: Get Netbox Device Status
+    set_fact:
+      netbox_device: "{{ query('netbox.netbox.nb_lookup', 'devices',
+                    api_endpoint=netbox_url,
+                    api_filter='name=' + inventory_hostname ,
+                    token=netbox_token)  }}"
+
+  # - debug: var=netbox_device
+
+  - name: Set Device Baseline Status
+    when: 
+      - netbox_device | length == 1
+      - netbox_device[0].value.config_context is defined
+      - netbox_device[0].value.config_context.status is defined
+
+    set_fact:
+      baseline_status: "{{netbox_device[0].value.config_context.status }}"
+  
+  # - debug: var=baseline_status
+
+  - name: Initialize Validation Errors
+    set_fact:
+      validation_erros: {}
+
+  - name: Collect Device Status
+    import_role:
+      name: device_status/collect_status
+    vars:
+      get_system: false
+      get_ospf: false
+      
+  # - name: Collect Device Interface Status
+  #   import_role:
+  #     name: device/status/iosxr/interfaces
+
+  # - name: Collect Device Interface Status
+  #   import_role:
+  #     name: device/status/iosxr/bgp
+
+
+  - name: Validate Status (PRE/Post)
+    import_role:
+      name: device_status/validate_status
+      
+  - debug: var=validation_errors

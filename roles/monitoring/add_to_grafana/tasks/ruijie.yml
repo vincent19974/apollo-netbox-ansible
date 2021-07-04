@@ -1,0 +1,26 @@
+---
+- name: Create Telegraf File for CPE
+  block:
+    - name: Build All Ping Destinations to Monitorfor the CPE
+      when: 
+        - hostvars[cpe].ansible_net_interfaces is defined
+        - item.key in ['loopback 0','loopback 1','loopback 2','Cellular 0/0']
+        - item.value.ipv4 is defined
+      set_fact:
+        telegraf_ping_hosts: "{{ telegraf_ping_hosts|default({}) | combine({ item.key: item.value.ipv4[0].address  }) }}"
+      
+      with_dict: "{{ hostvars[cpe].ansible_net_interfaces }}"
+      loop_control:
+        label: "{{ item.key }}"
+
+
+    - name: Ruijie -- Create Telegraf File for CPE {{ cpe }}
+      become: yes
+      template:
+        src: 'ruijie.j2'
+        dest: /etc/telegraf/telegraf.d/{{ cpe }}.conf
+  
+  rescue:
+    - name: Collect Failed CPEs
+      set_fact:
+        failed_cpe: "{{ failed_cpe| default([]) + [cpe] }}"

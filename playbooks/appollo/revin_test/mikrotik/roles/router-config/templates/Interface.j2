@@ -1,0 +1,33 @@
+/interface bridge add comment=lan fast-forward=no mtu=1598 name=bridge1
+/interface bridge add fast-forward=no name=loopback1
+/interface bridge add fast-forward=no name=loopback2
+/interface bridge add fast-forward=no name=null1
+/interface bridge add fast-forward=no name=null2
+/interface ethernet set [ find default-name=ether1 ] advertise=10M-half,10M-full,100M-half,100M-full,1000M-half,1000M-full name=port1
+/interface ethernet set [ find default-name=ether2 ] advertise=10M-half,10M-full,100M-half,100M-full,1000M-half,1000M-full comment=vpn name=port2
+/interface ethernet set [ find default-name=ether3 ] advertise=10M-half,10M-full,100M-half,100M-full,1000M-half,1000M-full name=port3
+/interface ethernet set [ find default-name=ether4 ] advertise=10M-half,10M-full,100M-half,100M-full,1000M-half,1000M-full name=port4
+/interface ethernet set [ find default-name=ether5 ] advertise=10M-half,10M-full,100M-half,100M-full,1000M-half,1000M-full name=port5
+/interface wireless security-profiles set [ find default=yes ] authentication-types=wpa-psk,wpa2-psk eap-methods="" supplicant-identity=MikroTik wpa-pre-shared-key=4AC802C22A36 wpa2-pre-shared-key=4AC802C22A36
+/interface wireless security-profiles add name=lan
+/interface wireless security-profiles set [ find name="lan" ] authentication-types=wpa-psk,wpa2-psk wpa-pre-shared-key=psc10270013 wpa2-pre-shared-key=psc10270013
+/interface wireless security-profiles set [ find name="lan" ] eap-methods="" mode=dynamic-keys supplicant-identity="" unicast-ciphers=tkip,aes-ccm group-ciphers=tkip,aes-ccm management-protection=allowed
+/interface wireless set [ find default-name=wlan1 ] antenna-gain=0 comment=wifi-lan country=no_country_set disabled=no frequency-mode=manual-txpower mode=ap-bridge mtu=2290 security-profile=lan ssid=pscwifi-store station-roaming=enabled
+/interface wireless add comment=wifi-internet disabled=no mac-address=D6:CA:6D:F1:59:51 master-interface=wlan1 mtu=2290 name=wlan2 ssid="CLiQQ WiFi" station-roaming=enabled
+/interface wireless manual-tx-power-table set wlan1 comment=wifi-lan
+/interface wireless manual-tx-power-table set wlan2 comment=wifi-internet
+/interface wireless nstreme set wlan1 comment=wifi-lan
+/interface wireless nstreme set *9 comment=wifi-internet
+/ip address add address=192.168.14.100/24 comment=lan interface=bridge1 network=192.168.14.0
+/ip address add address=192.168.15.1/24 comment=wifi interface=wlan2 network=192.168.15.0
+/ip address add address={{ item.loopback1_ip }} interface=loopback1 network={{ item.loopback1_ip }}
+/ip address add address={{ item.loopback2_ip }} interface=loopback2 network={{ item.loopback2_ip }}
+/ip address add address={{ item.wan2_ip }} interface=port1 network={{ item.wan2_network }}
+/ip address add address={{ item.wan1_ip }} interface=port2 network={{ item.wan1_network }}
+/interface bridge port add bridge=bridge1 hw=no interface=port3
+/interface bridge port add bridge=bridge1 hw=no interface=port4
+/interface bridge port add bridge=bridge1 hw=no interface=port5
+/interface bridge port add bridge=bridge1 interface=wlan1
+/ip dhcp-client add add-default-route=no disabled=yes interface=port1
+/ip dhcp-client add add-default-route=no disabled=yes interface=port2
+/ip dhcp-server network add address=192.168.15.0/24 dns-server=202.60.9.4,202.60.9.5 gateway=192.168.15.1

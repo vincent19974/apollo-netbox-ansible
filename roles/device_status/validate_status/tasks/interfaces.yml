@@ -1,0 +1,63 @@
+---
+- name: Initialize Pre and Post Snapshots
+  set_fact:
+    pre: "{{ baseline_status.intf_ips }}"
+    post: "{{ interfaces_ips }}"
+
+- name: Initialize Interface Valdiation Errors
+  set_fact:
+    intf_validation_errors: []
+
+- name: Build Diff between Pre and Post
+  set_fact:
+    pre_state_validate: "{{ pre|dict2items|difference(post|dict2items) }}"
+    post_state_validate: "{{ post|dict2items|difference(pre|dict2items) }}"
+
+
+- name: Validate Against Pre State
+  when: pre_state_validate | default([])  
+  block:
+    - name: Validate Ports have been removed
+      set_fact:
+        intf_validation_errors: "{{ intf_validation_errors + ['!! Port Has been Removed: ' + item.key + ' Port description: ' + pre[item.key].description ]  }}"
+
+      when: item.key not in post
+      loop: "{{ pre_state_validate | default([]) }}"
+      loop_control:
+        label: "{{ item.key }}"
+
+    - name: Validate Port Status has Changed
+      vars:
+        pre_state: "{{ pre[item.key].oper_status }}"
+        post_state: "{{ post[item.key].oper_status }}"
+      set_fact:
+        intf_validation_errors: "{{ intf_validation_errors + ['!! Port Status Changed: ' + item.key + ' WAS: ' + pre_state + ' NOW: ' + post_state + ' Port Description: ' + pre[item.key].description ] }}"
+
+      when: 
+        - item.key in post
+        - pre[item.key].oper_status != post[item.key].oper_status
+
+      loop: "{{ pre_state_validate | default([]) }}"
+      loop_control:
+        label: "{{ item.key }}"
+
+
+- name: Post Status Check
+  when: post_state_validate | default([])  
+  block:
+    - name: Validate Ports Will be Added
+      vars:
+        post_state: "{{ post[item.key].oper_status }}"
+      set_fact:
+        intf_validation_errors: "{{ intf_validation_errors + ['!! New Port Has been Added: ' + item.key + ' Status: ' + post_state  + ' Port Description: ' + post[item.key].description ] }}"
+
+      when: item.key not in pre
+      loop: "{{ post_state_validate | default([]) }}"
+      loop_control:
+        label: "{{ item.key }}"
+
+- name: Add Interface Validation
+  set_fact:
+    validation_errors: "{{ validation_errors | combine({'interfaces': intf_validation_errors }) }}"
+    
+  when: intf_validation_errors | length > 0

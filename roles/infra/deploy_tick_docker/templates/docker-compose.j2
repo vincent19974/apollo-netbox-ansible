@@ -1,0 +1,60 @@
+version: '3.2'
+
+services:
+  grafana:
+    image: grafana/grafana:{{ grafana_version | default('latest') }}
+    container_name: grafana
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - tick_net
+    # volumes:
+    #   - type: volume
+    #     source: grafana-volume
+    #     target: TBD
+  influxdb:
+    image: influxdb:{{ influxdb_version | default('latest') }}
+    container_name: influxdb
+    restart: always
+    ports:
+      - 8086:8086
+    networks:
+      - tick_net
+    volumes:
+      # - type: bind
+      #   source: $PWD/influxdb/influxdb.conf
+      #   target: /etc/influxdb/influxdb.conf
+      #   read_only: true
+      - type: volume
+        source: influxdb-data
+        target: /var/lib/influxdb
+    environment:
+      - INFLUXDB_DB=telegraf
+      - INFLUXDB_USER=telegraf
+      - INFLUXDB_ADMIN_ENABLED=true
+      - INFLUXDB_ADMIN_USER=admin
+      - INFLUXDB_ADMIN_PASSWORD=password
+  telegraf:
+    image: telegraf
+    container_name: telegraf
+    restart: always
+
+    volumes:
+      - type: bind
+        source: $PWD/configs/telegraf.conf
+        target: /etc/telegraf/telegraf.conf
+        read_only: true
+      - type: bind
+        source: $PWD/telegraf_plugines
+        target: /etc/telegraf/telegraf.d
+        read_only: true
+
+networks:
+  tick_net:
+    name: tick_net
+    driver: bridge
+
+volumes:
+  influxdb-data:
+    driver: local

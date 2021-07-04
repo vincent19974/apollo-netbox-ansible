@@ -1,0 +1,21 @@
+---
+- name: Set email receipts
+  run_once: yes
+  delegate_to: localhost
+  set_fact:
+    email_to: "{{ extra_email_to + default_email_to }}"
+
+- name: Send e-mail to a bunch of users, attaching files
+  run_once: yes
+  mail:
+    host: smtp.office365.com
+    port: 587
+    subtype: "{{ email_type }}"
+    username: kokasha@layer2.com.au
+    password: "{{ email_user_passwd }}"
+    from: bordex@layer2.com.au
+    to: "{{ email_to }}"
+    subject: "{{ email_title }}" 
+    body: "{{ email_body | default('') }}"
+    attach: "{{ files_to_attach | default(omit) }}"
+  delegate_to: localhost

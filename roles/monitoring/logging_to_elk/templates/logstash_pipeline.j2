@@ -1,0 +1,83 @@
+input {
+  elasticsearch {
+   hosts => ["http://elasticsearch:9200"]
+   index => "net_syslog"
+   user => "layer2"
+   password => "@layer2"
+  }
+}
+filter {
+    ##########################
+    # Ruijie section
+    ##########################
+    grok {
+        match => {
+            "message" => ".*%{CISCOTIMESTAMP:log_date}\s+%{GREEDYDATA:device}:\s+%%{GREEDYDATA:facility}:\s+%{GREEDYDATA:log_message}"
+        }
+        add_tag => ["ruijie_parsed"]
+    }
+    ##########################
+    # Mikrotik section
+    ##########################
+    grok {
+        match => {
+            "message" => "%{WORD:device},%{WORD:facility},{0,1}\s{0,1}%{GREEDYDATA:log_message}"
+        }
+        add_tag => ["mikrotik_parsed"]
+    }
+    ###################################
+    # User Login  section
+    ###################################
+    if "ruijie_parsed" in [tags] and "LOGIN-5-LOGIN_SUCCESS" in [facility]  {
+        grok {
+            match => {
+                "log_message" => "User\(%{GREEDYDATA:login_user}\)\s+login.*\(%{GREEDYDATA:login_src_ip}\)"
+            }
+            add_tag => ["login_success"]
+            tag_on_failure => ["_grokparsefailure", "_loginparsefailure"]
+        }
+    }
+    if "ruijie_parsed" in [tags] and "LOGIN-5-LOGIN_FAIL" in [facility]  {
+        grok {
+            match => {
+                "log_message" => "User\s+login.*\(%{GREEDYDATA:login_src_ip}\)"
+            }
+            add_tag => ["login_fail"]
+            tag_on_failure => ["_grokparsefailure", "_loginparsefailure"]
+        }
+    }
+    ###################################
+    # IP SLA state change section
+    ###################################
+    if "ruijie_parsed" in [tags] and "TRACK" in [facility] {
+        grok {
+            match => {
+                "log_message" => "Track\s+%{GREEDYDATA:sla_track_id},\s+changed\s+state\s+to\s+%{GREEDYDATA:sla_track_state}"
+            }
+
+            tag_on_failure => ["_grokparsefailure", "_slaparsefailure"]
+        }
+    }
+    ###################################
+    # Interface State change section
+    ###################################
+    if "ruijie_parsed" in [tags] and "LINEPROTO" in [facility] and "UPDOWN" in [facility] {
+        grok {
+            match => {
+                "log_message" => "Interface\s+%{GREEDYDATA:interface},\s+changed\s+state\s+to\s+%{WORD:interface_status}"
+            }
+
+            tag_on_failure => ["_grokparsefailure", "_interfaceparsefailure"]
+        }
+    }
+}
+
+output {
+  elasticsearch {
+      hosts => ["http://elasticsearch:9200"]
+      index => "7eleven_syslog"
+      document_type => "system_logs"
+      user => "layer2"
+      password => "@layer2"
+  }
+}

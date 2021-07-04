@@ -1,0 +1,15 @@
+---
+- name: Build VLAN Configs
+  template:
+    src: 'ruijie/VLANs.j2'
+    dest: "{{config_dir}}/01_VLANs.conf"
+
+- name: Build Interface Configs
+  template:
+    src: 'ruijie/interfaces.j2'
+    dest: "{{config_dir}}/02_Interfaces.conf"
+
+- name: Assemble Final Config
+  assemble:
+      src: "{{config_dir}}"
+      dest: "{{base_temp_dir}}/FINAL.txt"

@@ -1,0 +1,6 @@
+---
+NETBOX_INTF_TYPE:
+  gig: "SFP (1GE)"
+  ten: "SFP+ (10GE)"
+  hun: "100gbase-x-qsfp28"
+  mgm: "1000BASE-T (1GE)"

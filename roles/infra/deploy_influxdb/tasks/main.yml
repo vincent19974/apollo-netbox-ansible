@@ -1,0 +1,62 @@
+---
+- name: Add InfluxDB Repo
+  become: yes
+  blockinfile:
+    path: /etc/yum.repos.d/influxdb.repo
+    create: yes
+    block: |
+      [influxdb]
+      name = InfluxDB Repository - RHEL \$releasever
+      baseurl = https://repos.influxdata.com/rhel/\$releasever/\$basearch/stable
+      enabled = 1
+      gpgcheck = 1
+      gpgkey = https://repos.influxdata.com/influxdb.key
+
+- name: Install Influxdb
+  yum:
+    name: influxdb
+    update_cache: yes
+
+- name: Enalbe and Start Service
+  service:
+    name: influxdb
+    enabled: yes
+    state: started
+
+# - name: Install Requested Packages
+#   yum:
+#     name: python-pip
+#     state: present
+
+- name: Install Python3
+  yum:
+    name: python3
+    state: present
+
+- name: Upgrade PIP3
+  become: yes
+  command: pip3 install --upgrade pip
+
+- name: Install required Python Packages
+  pip:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - requests
+    - influxdb
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+
+- name: Create InfluxDB DB
+  influxdb_database:
+    hostname: "{{ansible_host}}"
+    #username: "{{influxdb_username}}"
+    #password: "{{influxdb_password}}"
+    database_name: "{{influxdb_database_name}}"
+    use_udp: no
+    udp_port: 4444
+    port: 8086
+    ssl: no
+    validate_certs: no
+  vars:
+    ansible_python_interpreter: /usr/bin/python3

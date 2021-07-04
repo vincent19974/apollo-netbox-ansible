@@ -1,0 +1,19 @@
+- name: logstash -- Setup Input Syslog 
+  become: yes
+  template:
+    src: 'pipelines/input_syslog.j2'
+    dest: /etc/logstash/conf.d/01_input_syslog.conf
+
+
+- name: logstash -- Setup Output Elasticsearch 
+  become: yes
+  template:
+    src: 'pipelines/output_elastic.j2'
+    dest: /etc/logstash/conf.d/02_output_elasticsearch.conf
+
+
+- name: Restart Logstash
+  become: yes
+  service:
+    name: logstash
+    state: restarted

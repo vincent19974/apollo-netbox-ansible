@@ -1,0 +1,11 @@
+---
+# defaults file for deploy_elk
+
+use_docker: true
+
+elk_version: 7.6.2
+elk_configs_folder: elk_configs
+xpack_enabled: false
+elk_cluster_name: demo_cluster
+logstash_index_name: net_syslog
+

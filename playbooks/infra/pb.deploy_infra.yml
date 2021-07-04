@@ -1,0 +1,245 @@
+- name: Setup Hostname
+  hosts: nms_stack
+  tags: hostname, never
+  tasks:
+    - name: Set Hostname
+      become: yes
+      hostname:
+        name: "{{ inventory_hostname }}"
+
+- name: Setup Eth1 Ports
+  hosts: all
+  tags: intfs, never
+  become: yes
+  tasks:
+    - name: Install needed network manager libs
+      package:
+        name:
+          - NetworkManager-libnm
+          - nm-connection-editor
+          - libsemanage-python
+          - policycoreutils-python
+        state: present
+
+    - name: Setup IP address on eth1
+      nmcli:
+        type: ethernet
+        conn_name: 'eth1'
+        ip4: "{{ eth1_port_ip }}"
+        state: present
+
+- name: Deploy NetBox
+  hosts: netbox
+  become: yes
+  # gather_facts: no
+  tasks:
+    - name: Install EPEL
+      include_role:  
+        name: infra/deploy_epel
+      tags: [epel, netbox]
+
+    - name: Install Docker
+      include_role:  
+        name: infra/deploy_docker
+        apply:
+          tags: [docker, netbox]
+      tags: [docker, netbox]
+
+    - name: Install NetBox
+      include_role:
+        name: infra/deploy_netbox
+        apply:
+          tags: [install_netbox, netbox]
+      vars:
+        netbox_docker_version: '0.25.0'
+        netbox_version: 'v2.9.2'
+        #netbox_version: 'v2.11.2'
+      tags: [install_netbox, netbox]
+
+    - name: Open Firewall Ports
+      import_role:
+        name: infra/open_firewall
+      vars:
+        port: '80/tcp'
+      tags: [firewall, netbox]
+
+- name: Deploy AWX
+  hosts: awx
+  become: yes
+  tasks:
+    - name: Install EPEL
+      include_role:  
+        name: infra/deploy_epel
+        apply:
+          tags: [epel, awx]
+      tags: [epel, awx]
+
+    - name: Install Docker
+      include_role:  
+        name: infra/deploy_docker
+        apply:
+          tags: [docker, awx]
+      tags: [docker, awx]
+
+    - name: Install Ansible
+      import_role:  
+        name: infra/deploy_ansible
+      tags: [ansible, awx]
+
+    - name: Disable SELinux
+      import_role:
+        name: infra/toggle_selinux
+      tags: [selinux, awx]
+
+    - name: Install AWX
+      import_role:
+        name: infra/deploy_awx
+      vars:
+        awx_version: '15.0.0'
+      tags: [install_awx, awx]
+    
+    - name: Open Firewall Ports
+      import_role:
+        name: infra/open_firewall
+      vars:
+        port: '80/tcp'
+      tags: [firewall, awx]
+
+- name: Deploy ELK
+  hosts: elk
+  gather_facts: no
+  become: no
+  tasks:
+    - name: Install EPEL
+      become: yes
+      import_role:  
+        name: infra/deploy_epel
+      tags: [epel, elk]
+
+    - name: Install Docker
+      become: yes
+      import_role:  
+        name: infra/deploy_docker
+      tags: [docker, elk]
+
+    - name: Install ELK
+      import_role:  
+        name: infra/deploy_elk
+      tags: [install_elk, elk]
+
+    - name: Open Firewall Ports
+      # become: yes
+      include_role:
+        name: infra/open_firewall
+        apply:
+          tags: [firewall, elk]
+      vars:
+        port: "{{ item }}"
+      loop:
+        - '5601/tcp'
+        - '9200/tcp'
+        - '514/udp'
+        - '80/tcp'
+      tags: [firewall, elk]
+
+- name: Deploy DHCP Server
+  hosts: dhcp_server
+  become: yes
+  tags: dhcp
+  tasks:
+    - name: Install needed network manager libs
+      package:
+        name:
+          - NetworkManager-libnm
+          - nm-connection-editor
+          - libsemanage-python
+          - policycoreutils-python
+        state: present
+
+    - name: Setup IP address on eth1
+      nmcli:
+        type: ethernet
+        conn_name: 'eth1'
+        ip4: "{{ ztp_port  + '/24' }}"
+        state: present
+
+    - name: Install EPEL
+      include_role:  
+        name: infra/deploy_epel
+
+    - name: Install DHCP
+      include_role:  
+        name: infra/deploy_dhcp
+
+- name: Deploy Grafana
+  hosts: grafana
+  become: yes
+  tags: nms
+  # vars:
+  #   ansible_python_interpreter: "{{ ansible_playbook_python }}"
+  tasks:
+
+    - name: Install EPEL
+      import_role:  
+        name: infra/deploy_epel
+
+    - name: Install Telegraf
+      tags: telegraf
+      import_role:  
+        name: infra/deploy_telegraf
+
+    - name: Install Influxdb
+      tags: influx
+      import_role:  
+        name: infra/deploy_influxdb
+
+    - name: Install grafana
+      tags: grafana
+      import_role:  
+        name: infra/deploy_grafana
+      tags: [grafana] 
+
+    # - name: Open Firewall Ports
+    #   become: yes
+    #   import_role:
+    #     name: infra/open_firewall
+    #   vars:
+    #     port: '3000/tcp'
+    #   tags: [firewall, grafana]    
+
+- name: Deploy Grafana using Docker
+  hosts: grafana_docker
+  become: yes
+  tasks:
+    - name: Install EPEL
+      include_role:  
+        name: infra/deploy_epel
+        apply:
+          tags: [epel, tick]
+      tags: [epel, tick]
+
+    - name: Install Docker
+      include_role:  
+        name: infra/deploy_docker
+        apply:
+          tags: [docker, tick]
+      tags: [docker, tick]
+
+    - name: Install Docker
+      include_role:  
+        name: infra/deploy_tick_docker
+        apply:
+          tags: [install_tick, tick]
+      tags: [install_tick, tick]
+
+    # - name: Disable SELinux
+    #   import_role:
+    #     name: infra/toggle_selinux
+    #   tags: [selinux, awx]
+    
+    # - name: Open Firewall Ports
+    #   import_role:
+    #     name: infra/open_firewall
+    #   vars:
+    #     port: '80/tcp'
+    #   tags: [firewall, awx]

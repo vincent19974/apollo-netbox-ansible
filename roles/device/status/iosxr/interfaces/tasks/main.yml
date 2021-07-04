@@ -1,0 +1,26 @@
+---
+- name: XR -- Collect Inteface info
+  iosxr_command:
+    commands: 
+      - show ipv4 vrf all interface
+      - show interfaces
+  register: xr_interface_raw
+  vars:
+    ansible_connection: network_cli
+  
+
+- name: Parse XR Data via PyATS
+  delegate_to: localhost
+  set_fact:
+    pyats_interface_ip: "{{ xr_interface_raw.stdout[0] | pyats_parser('show ipv4 vrf all interface', 'iosxr') }}"
+    pyats_interfaces: "{{ xr_interface_raw.stdout[1] | pyats_parser('show interfaces', 'iosxr') }}"
+
+
+- name: Set Node Interfaces IP
+  delegate_to: localhost
+  set_fact:
+    interfaces_ips: "{{ lookup('template','xr_intfs.j2') | from_yaml }}"
+    cachable: yes
+
+# - debug: var=interfaces_ips
+

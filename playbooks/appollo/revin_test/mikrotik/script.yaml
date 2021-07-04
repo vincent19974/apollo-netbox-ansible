@@ -1,0 +1,6 @@
+---
+- name: Generate config file and configure device
+  hosts: mikrotik
+  
+  roles:
+    - router-config

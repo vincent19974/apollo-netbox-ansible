@@ -1,0 +1,78 @@
+
+---
+- name: Netbox --Create device role
+  when: device_role is defined 
+  netbox_device_role:
+    netbox_url: https://202.60.12.108/
+    netbox_token: 6d44005d0d0e9ea3725b47cf47b0aa2b3d7f8fba
+    data:
+      name: "{{ device_role }}"
+      color: FAB880
+    state: present
+    validate_certs: False
+
+- name: Netbox -- Create Tenant for CPE
+  netbox_tenant:
+    netbox_url: https://202.60.12.108/
+    netbox_token: 6d44005d0d0e9ea3725b47cf47b0aa2b3d7f8fba
+    data:
+      name: "{{ device_tenant }}"
+    state: present
+    validate_certs: False
+
+
+
+- name: Netbox -- Create Virtual Machine
+  netbox.netbox.netbox_virtual_machine:
+    netbox_url: https://202.60.12.108/
+    netbox_token: 6d44005d0d0e9ea3725b47cf47b0aa2b3d7f8fba
+    data:
+      name: "{{ device_name }}"
+      vcpus: "{{ vcpus }}"
+      disk: "{{ disk }}"
+      memory: "{{ memory }}"
+#      virtual_machine_role: "{{ vmrole }}"
+      cluster: "{{ device_cluster }}"
+      tenant: "{{ device_tenant }}"
+#      primary_ip4: "{{ ipv4 }}"
+#      virtual_machine_role: "{{ vm_role }}"
+#      primary_ip4: "{{ device_mgmt_private_ip }}"
+    state: present
+    validate_certs: False
+
+#- name: Netbox -- Create MGMT Public IP Address of Node
+#  tags: ip
+#  netbox_ip_address:
+#    netbox_url: https://202.60.12.108/
+#    netbox_token: 6d44005d0d0e9ea3725b47cf47b0aa2b3d7f8fba
+#    data:
+#      address: "{{ public }}"
+#      tenant: "{{ device_tenant }}"
+#    state: present
+#    validate_certs: False
+
+#- name: Attach IP to Virtual Machines
+#  netbox_ip_address:
+#    netbox_url: https://202.60.12.108/
+#    netbox_token: 6d44005d0d0e9ea3725b47cf47b0aa2b3d7f8fba
+#    data:
+#      interface:
+#        virtual_machine: "{{ device_name }}"
+
+#    state: new
+#    validate_certs: False
+- name: Assign Custom Field data to Virtual Machine
+  netbox.netbox.netbox_virtual_machine:
+    netbox_url: https://202.60.12.108/
+    netbox_token: 6d44005d0d0e9ea3725b47cf47b0aa2b3d7f8fba
+    data:
+      name: "{{ device_name }}"
+      custom_fields:
+        Public IP: "{{ public }}"
+        Private IP: "{{ private }}"
+        Owner: "{{ device_owner }}"
+        Group: "{{ device_groups }}"
+        Active Status: "{{ device_status }}"
+    state: present
+    validate_certs: False
+      

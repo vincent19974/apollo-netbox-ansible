@@ -1,0 +1,74 @@
+---
+- name: Collect Device Facts
+  hosts: all
+  gather_facts: no
+  connection: local
+  roles:
+    - ansible-pyats
+  collections:
+    - netbox.netbox
+  # vars:
+  #   ansible_python_interpreter: "{{ ansible_playbook_python }}"
+  tasks:
+    - debug: var=get_bgp
+      
+    - name: Collect Status
+      import_role:
+        name: device_status/collect_status
+      vars:
+        get_interfaces: true
+        get_system: true
+        # get_bgp: true
+
+    # - name: DEBUG
+    #   ignore_errors: yes
+    #   run_once: yes
+    #   debug:
+    #     msg:
+    #       - "{{ ansible_playbook_python }}"
+    #       - "{{ playbook_dir }}"
+
+    # - name: Collect System Facts from Nodes
+    #   include_role:
+    #     name: "device/status/{{ ansible_network_os }}/system"
+
+    # - name: Collect Interface Facts from Nodes
+    #   include_role:
+    #     name: "device/status/{{ ansible_network_os }}/interfaces"
+
+    # - name: Collect OSPF Facts from Nodes
+    #   include_role:
+    #     name: "device/status/{{ ansible_network_os }}/ospf"
+
+    # - name: Collect BGP Facts from Nodes
+    #   include_role:
+    #     name: "device/status/{{ ansible_network_os }}/bgp"
+
+    # - name: Build Status Record
+    #   delegate_to: localhost
+    #   set_fact:
+    #     status: "{{ status | default({}) | combine({ 'bgp_peers': bgp_peers | default({}), 
+    #                                                 'ospf_peers': ospf_peers | default({}),
+    #                                                 'ospf_ports': ospf_ports| default({}),
+    #                                                 'system': system | default({}),
+    #                                                 'intf_ips': interfaces_ips| default({}) }) }}"
+
+
+    # - name: Update Status to Netbox
+    #   tags: netbox
+    #   delegate_to: localhost
+    #   netbox_device:
+    #     netbox_url: "{{ netbox_url }}"
+    #     netbox_token: "{{ netbox_token }}"
+    #     data:
+    #       name: "{{ inventory_hostname }}"
+    #       local_context_data:
+    #         status: "{{ status | default( {} ) }}"
+    #     state: present
+    #     validate_certs: false
+      # vars:
+      #   ansible_connection: local
+
+    # - name: Update Status in Netbox
+    #   import_role:
+    #     name: update_status_netbox

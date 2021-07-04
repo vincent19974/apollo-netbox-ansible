@@ -1,0 +1,27 @@
+/ip route add check-gateway=ping comment="Default Route v2020" distance=1 gateway=8.8.4.4
+/ip route add check-gateway=ping comment="Secondary Route2 v2020" distance=2 gateway=8.8.8.8
+/ip route add comment="Gateway2 v2020" distance=1 dst-address=8.8.4.4/32 gateway={{ item.wan2_gateway }} scope=10
+/ip route add comment="Gateway1 v2020" distance=1 dst-address=8.8.8.8/32 gateway={{ item.wan1_gateway }} scope=10
+/ip route add comment="apollo vpn users v2020" distance=1 dst-address=10.8.0.0/22 gateway=ovpn-out1
+/ip route add comment="Traffic to 7-11 is through OpenVPN v2020" distance=1 dst-address=192.168.1.0/24 gateway=ovpn-out1
+/ip route add comment="Traffic to 7-11 is through OpenVPN" disabled=yes distance=1 dst-address=192.168.1.0/24 gateway=ovpn-out1
+/ip route add comment="Null route. No OpenVPN, no connection." disabled=yes distance=2 dst-address=192.168.1.0/24 gateway=192.168.20.200
+/ip route add comment="ftp v2020" distance=1 dst-address=192.168.1.26/32 gateway=ovpn-out1
+/ip route add comment="intranet v2020" distance=1 dst-address=192.168.1.27/32 gateway=ovpn-out1
+/ip route add comment="igate v2020" distance=1 dst-address=192.168.1.30/32 gateway=ovpn-out1
+/ip route add comment="finance portal v2020" distance=1 dst-address=192.168.1.50/32 gateway=ovpn-out1
+/ip route add comment="osa v2020" distance=1 dst-address=192.168.1.134/32 gateway=ovpn-out1
+/ip route add comment="audit v2020" distance=1 dst-address=192.168.1.225/32 gateway=ovpn-out1
+/ip route add comment="Traffic to 7-11 is through OpenVPN v2020" distance=1 dst-address=192.168.7.1/32 gateway=ovpn-out1
+/ip route add comment="robot kiosk v2020" distance=1 dst-address=192.168.17.202/32 gateway=ovpn-out1
+/ip route add disabled=yes distance=1 dst-address=192.168.18.185/32 gateway=ovpn-out1
+/ip route add comment="Null route. No OpenVPN, no connection." disabled=yes distance=1 dst-address=192.168.18.185/32 gateway=192.168.20.200
+/ip route add comment="Connection to Apollo goes through OpenVPN v2020" distance=1 dst-address=202.60.8.0/21 gateway=ovpn-out1
+/ip route add comment="Null route. If the OpenVPN tunnel is down, no connection to Apollo" disabled=yes distance=2 dst-address=202.60.8.0/21 gateway=192.168.20.200
+/ip route add check-gateway=ping comment="Primary OpenVPN Route v2020" distance=1 dst-address=202.60.9.253/32 gateway=8.8.8.8
+/ip route add check-gateway=ping comment="Secondary OpenVPN Route v2020" distance=2 dst-address=202.60.9.253/32 gateway=8.8.4.4
+/ip route add comment="Null route.If both Internet links fail, there will be no connection to the OVPN server." disabled=yes distance=5 dst-address=202.60.9.253/32 gateway=192.168.20.200
+/ip route add comment="IPSEC Tunnel1 v2020" distance=1 dst-address=202.60.10.5/32 gateway=8.8.8.8
+/ip route add comment="IPSEC Tunnel2 v2020" distance=1 dst-address=202.60.10.6/32 gateway=8.8.4.4
+/ip route add comment=IPSECviaPORT1HUAWEI disabled=yes distance=1 dst-address=202.60.10.6/32 gateway=192.168.30.1
+/ip route add comment=IPSECviaPORT1HUAWEI disabled=yes distance=1 dst-address=202.60.10.6/32 gateway=192.168.30.1

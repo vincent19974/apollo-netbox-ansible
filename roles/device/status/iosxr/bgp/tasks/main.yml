@@ -1,0 +1,25 @@
+---
+- name: IOSXR -- Collect BGP Peers
+  iosxr_command:
+    commands: 
+      - show bgp neighbors
+  register: xr_bgp_peers
+  vars:
+    ansible_connection: network_cli
+  
+
+- name: Parse XR Data via PyATS
+  when: xr_bgp_peers.stdout
+  delegate_to: localhost
+  set_fact:
+    pyats_bgp_peers: "{{ xr_bgp_peers.stdout[0] | pyats_parser('show bgp neighbors', 'iosxr') }}"
+
+
+- name: Parse BGP Peers
+  when: xr_bgp_peers.stdout
+  delegate_to: localhost
+  set_fact:
+    bgp_peers: "{{ lookup('template','bgp.j2') | from_yaml }}"
+    cachable: yes
+
+# - debug: var=bgp_peers

@@ -1,0 +1,11 @@
+Value Required INTERFACE (.*?)
+Value LINK_STATUS (UP|DOWN|administratively down)
+Value PROTOCOL_STATUS (UP|DOWN)
+Value DESCRIPTION (.*?)
+Value IP_ADDRESS (\d+\.\d+\.\d+\.\d+\/\d+|.+)
+
+Start
+  ^\=+\s*${INTERFACE}\s*\=+\s*$$
+  ^.*?\s+is\s+${LINK_STATUS}\s+,\s+line\s+protocol\s+is\s+${PROTOCOL_STATUS}\s+$$
+  ^\s*Description:\s+${DESCRIPTION}\s*$$
+  ^\s*Interface\s+address\s+is\:\s+${IP_ADDRESS}\s* -> Record

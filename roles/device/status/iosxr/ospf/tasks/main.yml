@@ -1,0 +1,37 @@
+---
+- name: IOSXR -- Collect OSPF Peers
+  iosxr_command:
+    commands: 
+      - show ospf vrf all-inclusive neighbor detail
+      - show ospf vrf all-inclusive interface
+  register: xr_ospf_info
+  vars:
+    ansible_connection: network_cli
+
+- name: Set OSPF Interfaces
+  when: xr_ospf_info.stdout[1]
+  block:
+    - name: Parse XR Data via PyATS
+      delegate_to: localhost
+      set_fact:
+        pyats_ospf_ports: "{{ xr_ospf_info.stdout[1] | pyats_parser('show ospf vrf all-inclusive interface', 'iosxr') if xr_ospf_info.stdout[1] != '' else '' }}"
+
+    - name: Parse OSPF Peers
+      delegate_to: localhost
+      set_fact:
+        ospf_ports: "{{ lookup('template','ospf_ports.j2') | from_yaml }}"
+        cachable: yes
+
+- name: Set OSPF Peers
+  when: xr_ospf_info.stdout[0]
+  block:
+    - name: Parse XR Data via PyATS
+      delegate_to: localhost
+      set_fact:
+        pyats_ospf_peers: "{{ xr_ospf_info.stdout[0] | pyats_parser('show ospf vrf all-inclusive neighbor detail', 'iosxr') }}"
+
+    - name: Parse OSPF Peers
+      delegate_to: localhost
+      set_fact:
+        ospf_peers: "{{ lookup('template','ospf_peers.j2') | from_yaml }}"
+        cachable: yes

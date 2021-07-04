@@ -1,0 +1,5 @@
+---
+  
+OSPF_AREA: '0.0.0.0'
+
+OSPF_INSTANCE: '100'

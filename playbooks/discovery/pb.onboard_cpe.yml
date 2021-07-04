@@ -1,0 +1,63 @@
+---
+- name: Load CPE list from CSV
+  hosts: netbox
+  gather_facts: no
+  tags: from_csv , never
+  vars:
+    csv_data_file: 'vm_compute1.csv'
+    
+  tasks:
+
+    - name: Setup base Data folder
+      set_fact:
+        base_data_folder: "{{ playbook_dir.split('playbooks') | first }}"
+
+    # - name: Read CSV File
+    #   set_fact:
+    #     cvs_import_data: "{{ lookup('file', base_data_folder + '/net_data/711_cebu.csv') }}"
+
+    - name: Read CSV File
+      delegate_to: localhost
+      read_csv:
+        path: "{{ base_data_folder + 'net_data/' + csv_data_file }}"
+      register: csv_file_data
+        
+- name: Onboard into Netbox
+  hosts: netbox
+  gather_facts: no
+  connection: local
+  vars:
+    ansible_python_interpreter: "{{ ansible_playbook_python }}"
+    tenant: 'AGC SysOps / Engineering'
+  tasks:
+    - name: Add nodes to netbox from CSV File
+      ignore_errors: yes
+      tags: from_csv
+      when: csv_file_data is defined     
+      loop: "{{ csv_file_data.list }}"
+      include_role:
+        name: netbox/onboard_netbox
+        apply:
+          tags: from_csv
+      vars:
+        netbox_url: https://202.60.12.108/
+        device_name: "{{ item['name'] }}"
+        vcpus: "{{ item['vcpus'] }}"
+        memory: "{{ item['memory'] }}"
+        disk: "{{ item['disk']}}"
+        public: "{{ item['cf_Public IP'] }}"
+        private: "{{ item['cf_Private IP'] }}"
+        vmrole: "{{ item['role'] }}"
+        device_groups: "{{ item['cf_Group'] }}"
+#        vmtype: "{{ item['type'] }}"
+#        device_mgmt_private_ip: "{{ item['cf_Private IP'] }}"
+        device_owner: "{{ item['cf_Owner'] }}"
+        device_cluster: "{{ item['cluster'] }}"
+        device_status: "{{ item['cf_Active Status'] }}"
+        device_tenant: "{{ item['tenant'] }}"
+        device_role: 'CPE'
+        
+        
+      
+      
+    # - debug: var=cvs_import_data

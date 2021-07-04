@@ -1,0 +1,29 @@
+:global HSCOUNT [/file print count-only where name=hotspot]
+if ($HSCOUNT = 1) do={ file remove hotspot }
+/ip pool add name=dhcp_pool1 ranges=192.168.15.2-192.168.15.254
+/ip dhcp-server add address-pool=dhcp_pool1 authoritative=after-2sec-delay disabled=no interface=wlan2 lease-time=3h name=dhcp1
+/ip hotspot add address-pool=dhcp_pool1 disabled=no idle-timeout=20m interface=wlan2 name=hotspot1 profile=hsprof1
+/ip hotspot profile add dns-name=cliqqwifi hotspot-address=192.168.15.1 login-by=http-chap,http-pap name=hsprof1 use-radius=yes
+/ip hotspot user profile set [ find default=yes ] keepalive-timeout=10m
+/ip hotspot user add disabled=yes name=admin
+/ip hotspot walled-garden add comment="place hotspot rules here" disabled=yes
+/ip hotspot walled-garden add dst-host=*.7-eleven.com.ph
+/ip hotspot walled-garden add comment=7-eleven.com.ph dst-host=*.7-eleven.com.ph server=hotspot1
+/ip hotspot walled-garden add comment=cliqq.net dst-host=*.cliqq.net server=hotspot1
+/ip hotspot walled-garden ip add action=accept disabled=no dst-host=api.rappler.net server=hotspot1
+/ip hotspot walled-garden ip add action=accept disabled=no dst-address=202.60.9.174 server=hotspot1
+/ip hotspot walled-garden ip add action=accept disabled=no dst-address=202.60.9.61 server=hotspot1
+/ip hotspot walled-garden ip add action=accept disabled=no dst-address=192.168.7.237 server=hotspot1
+/ip hotspot walled-garden ip add action=accept comment="for cdn.7-eleven.com.ph" disabled=no dst-address=202.60.9.120
+/ip hotspot walled-garden ip add action=accept disabled=no dst-address=192.168.18.185 server=hotspot1
+/ip hotspot walled-garden ip add action=accept disabled=no dst-host=redeem.7-eleven.com.ph server=hotspot1
+/ip hotspot walled-garden ip add action=accept disabled=no dst-host=www.7-eleven.com.ph server=hotspot1
+/ip hotspot walled-garden ip add action=accept disabled=no dst-host=pay.7-eleven.com.ph server=hotspot1
+/ip hotspot walled-garden ip add action=accept disabled=no dst-host=wifi.7-eleven.com.ph server=hotspot1
+/ip hotspot walled-garden ip add action=accept disabled=no dst-host=cdn.7-eleven.com.ph server=hotspot1
+/ip hotspot walled-garden ip add action=accept disabled=no dst-host=api.cliqq.net server=hotspot1
+/ip hotspot walled-garden ip add action=accept disabled=no dst-host=cdn.cliqq.net server=hotspot1
+/ip hotspot walled-garden ip add action=accept disabled=no dst-host=redeem.cliqq.net server=hotspot1
+/ip hotspot walled-garden ip add action=accept disabled=no dst-host=rewards.cliqq.net server=hotspot1
+/ip hotspot walled-garden ip add action=accept disabled=no dst-host=wallet.cliqq.net server=hotspot1
+/ip hotspot walled-garden ip add action=accept disabled=no dst-host=wifi.cliqq.net server=hotspot1

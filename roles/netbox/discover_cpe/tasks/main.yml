@@ -1,0 +1,10 @@
+---
+- debug: var=role_path
+
+- name: Discover Mikrotik CPE
+  when: "'mikrotik' in group_names"
+  import_tasks: mikrotik.yml
+
+- name: Discover Ruijie CPE
+  when: "'ruijie' in group_names"
+  import_tasks: ruijie.yml

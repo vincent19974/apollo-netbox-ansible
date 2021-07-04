@@ -1,0 +1,9 @@
+/ip ipsec profile add dh-group=modp1536 enc-algorithm=aes-128 lifetime=1h name=profile_1
+/ip ipsec profile add dh-group=modp1536 enc-algorithm=aes-128 lifetime=1h name=profile_2
+/ip ipsec peer add address=202.60.10.6/32 name=peer2 profile=profile_2
+/ip ipsec peer add address=202.60.10.5/32 name=peer1 profile=profile_1
+/ip ipsec identity add mode-config=request-only peer=peer1 remote-id=ignore secret=ap0ll02k17!
+/ip ipsec identity add mode-config=request-only peer=peer2 remote-id=ignore secret=ap0ll02k17!
+/ip ipsec proposal add enc-algorithms=aes-128-cbc lifetime=1h name=APOLLO-7ELEVENSTORE pfs-group=modp1536
+/ip ipsec policy add dst-address=0.0.0.0/0 peer=peer1 proposal=APOLLO-7ELEVENSTORE sa-dst-address=202.60.10.5 sa-src-address=0.0.0.0 src-address={{ item.loopback1_ip }} tunnel=yes
+/ip ipsec policy add dst-address=0.0.0.0/0 peer=peer2 proposal=APOLLO-7ELEVENSTORE sa-dst-address=202.60.10.6 sa-src-address=0.0.0.0 src-address={{ item.loopback2_ip }} tunnel=yes

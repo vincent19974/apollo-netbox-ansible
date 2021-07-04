@@ -1,0 +1,95 @@
+---
+- name: NetBox -- OnBoarding a New CPE
+  hosts: netbox
+  gather_facts: no
+  tags: netbox
+  connection: local
+  vars:
+    # ansible_connection: local
+    netbox_url: http://{{ansible_host}}:8080
+    netbox_token: 0123456789abcdef0123456789abcdef01234567
+    ansible_python_interpreter: "{{ ansible_playbook_python }}"
+  collections:
+    - netbox.netbox
+  tasks:
+    - debug: var=netbox_url
+    - debug: var=ansible_python_interpreter
+    # - debug: var=vars
+    
+    - include_vars: "{{inventory_dir}}/vars/demo_netbox_info.yml"
+    - debug: var=cpe_vendor
+
+    - name: Create manufacturer 
+      run_once: yes
+      netbox_manufacturer:
+        netbox_url: "{{ netbox_url }}"
+        netbox_token: "{{ netbox_token }}"
+        data:
+          name: "{{ cpe_vendor }}"
+        state: present
+
+    - name: Create device role
+      run_once: yes
+      netbox_device_role:
+        netbox_url: "{{ netbox_url }}"
+        netbox_token: "{{ netbox_token }}"
+        data:
+          name: "{{ cpe_role }}"
+          color: FFF880
+        state: present
+      vars:
+        ansible_connection: local
+
+    - name: Create device type
+      netbox_device_type:
+        netbox_url: "{{ netbox_url }}"
+        netbox_token: "{{ netbox_token }}"
+        data:
+          # slug: test-device-type
+          model: "{{ cpe_model }}"
+          manufacturer: "{{ cpe_vendor }}"
+        state: present
+
+    - name: Create IPAM Roles
+      tags: prefix
+      run_once: yes
+      netbox_ipam_role:
+        netbox_url: "{{ netbox_url }}"
+        netbox_token: "{{ netbox_token }}"
+        data:
+          name: "cpe_mgmt"
+        state: present
+
+    - name: Create Prefix
+      tags: prefix
+      run_once: yes
+      netbox_prefix:
+        netbox_url: "{{ netbox_url }}"
+        netbox_token: "{{ netbox_token }}"
+        data:
+          prefix: "{{ cpe_mgmt_subnet }}"
+          prefix_role: "cpe_mgmt"
+        state: present
+
+    - name: Create All reserved IPs within Subnet
+      tags: ip
+      netbox_ip_address:
+        netbox_url: "{{ netbox_url }}"
+        netbox_token: "{{ netbox_token }}"
+        data:
+          address: "{{ item }}"
+        state: present
+      loop:
+        - 172.20.4.1  # Gateway
+        - 172.20.4.100 # DHCP Server
+        - 172.20.4.101 # HTTP Server
+
+    - name: Create CPE Location
+      when: demo_sites is defined
+      netbox_site:
+        netbox_url: "{{ netbox_url }}"
+        netbox_token: "{{ netbox_token }}"
+        data:
+          name: "{{ item }}"
+        state: present
+      loop: "{{ demo_sites }}"

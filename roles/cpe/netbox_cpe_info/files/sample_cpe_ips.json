@@ -1,0 +1,264 @@
+{
+    "intf_ip_data": [
+        {
+            "key": 1469,
+            "value": {
+                "address": "10.250.250.1/32",
+                "assigned_object": {
+                    "cable": null,
+                    "connection_status": null,
+                    "device": {
+                        "display_name": "demo-layer02-cpe01",
+                        "id": 208,
+                        "name": "demo-layer02-cpe01",
+                        "url": "http://202.60.10.71/api/dcim/devices/208/"
+                    },
+                    "id": 2379,
+                    "name": "Loopback 0",
+                    "url": "http://202.60.10.71/api/dcim/interfaces/2379/"
+                },
+                "assigned_object_id": 2379,
+                "assigned_object_type": "dcim.interface",
+                "created": "2021-05-23",
+                "custom_fields": {},
+                "description": "",
+                "dns_name": "",
+                "family": {
+                    "label": "IPv4",
+                    "value": 4
+                },
+                "id": 1469,
+                "last_updated": "2021-05-23T01:02:20.004894Z",
+                "nat_inside": null,
+                "nat_outside": null,
+                "role": null,
+                "status": {
+                    "label": "Active",
+                    "value": "active"
+                },
+                "tags": [],
+                "tenant": null,
+                "url": "http://202.60.10.71/api/ipam/ip-addresses/1469/",
+                "vrf": null
+            }
+        },
+        {
+            "key": 1470,
+            "value": {
+                "address": "10.250.251.1/32",
+                "assigned_object": {
+                    "cable": null,
+                    "connection_status": null,
+                    "device": {
+                        "display_name": "demo-layer02-cpe01",
+                        "id": 208,
+                        "name": "demo-layer02-cpe01",
+                        "url": "http://202.60.10.71/api/dcim/devices/208/"
+                    },
+                    "id": 2380,
+                    "name": "Loopback 1",
+                    "url": "http://202.60.10.71/api/dcim/interfaces/2380/"
+                },
+                "assigned_object_id": 2380,
+                "assigned_object_type": "dcim.interface",
+                "created": "2021-05-23",
+                "custom_fields": {},
+                "description": "",
+                "dns_name": "",
+                "family": {
+                    "label": "IPv4",
+                    "value": 4
+                },
+                "id": 1470,
+                "last_updated": "2021-05-23T00:58:00.683421Z",
+                "nat_inside": null,
+                "nat_outside": null,
+                "role": null,
+                "status": {
+                    "label": "Active",
+                    "value": "active"
+                },
+                "tags": [],
+                "tenant": null,
+                "url": "http://202.60.10.71/api/ipam/ip-addresses/1470/",
+                "vrf": null
+            }
+        },
+        {
+            "key": 1471,
+            "value": {
+                "address": "10.250.252.1/32",
+                "assigned_object": {
+                    "cable": null,
+                    "connection_status": null,
+                    "device": {
+                        "display_name": "demo-layer02-cpe01",
+                        "id": 208,
+                        "name": "demo-layer02-cpe01",
+                        "url": "http://202.60.10.71/api/dcim/devices/208/"
+                    },
+                    "id": 2381,
+                    "name": "Loopback 2",
+                    "url": "http://202.60.10.71/api/dcim/interfaces/2381/"
+                },
+                "assigned_object_id": 2381,
+                "assigned_object_type": "dcim.interface",
+                "created": "2021-05-23",
+                "custom_fields": {},
+                "description": "",
+                "dns_name": "",
+                "family": {
+                    "label": "IPv4",
+                    "value": 4
+                },
+                "id": 1471,
+                "last_updated": "2021-05-23T00:58:18.368378Z",
+                "nat_inside": null,
+                "nat_outside": null,
+                "role": null,
+                "status": {
+                    "label": "Active",
+                    "value": "active"
+                },
+                "tags": [],
+                "tenant": null,
+                "url": "http://202.60.10.71/api/ipam/ip-addresses/1471/",
+                "vrf": null
+            }
+        },
+        {
+            "key": 1473,
+            "value": {
+                "address": "100.67.0.1/26",
+                "assigned_object": {
+                    "cable": null,
+                    "connection_status": null,
+                    "device": {
+                        "display_name": "demo-layer02-cpe01",
+                        "id": 208,
+                        "name": "demo-layer02-cpe01",
+                        "url": "http://202.60.10.71/api/dcim/devices/208/"
+                    },
+                    "id": 2385,
+                    "name": "VLAN 501",
+                    "url": "http://202.60.10.71/api/dcim/interfaces/2385/"
+                },
+                "assigned_object_id": 2385,
+                "assigned_object_type": "dcim.interface",
+                "created": "2021-05-23",
+                "custom_fields": {},
+                "description": "",
+                "dns_name": "",
+                "family": {
+                    "label": "IPv4",
+                    "value": 4
+                },
+                "id": 1473,
+                "last_updated": "2021-05-23T01:00:27.279930Z",
+                "nat_inside": null,
+                "nat_outside": null,
+                "role": null,
+                "status": {
+                    "label": "Active",
+                    "value": "active"
+                },
+                "tags": [],
+                "tenant": null,
+                "url": "http://202.60.10.71/api/ipam/ip-addresses/1473/",
+                "vrf": null
+            }
+        },
+        {
+            "key": 1474,
+            "value": {
+                "address": "192.168.1.100/24",
+                "assigned_object": {
+                    "cable": null,
+                    "connection_status": null,
+                    "device": {
+                        "display_name": "demo-layer02-cpe01",
+                        "id": 208,
+                        "name": "demo-layer02-cpe01",
+                        "url": "http://202.60.10.71/api/dcim/devices/208/"
+                    },
+                    "id": 2383,
+                    "name": "VLAN 10",
+                    "url": "http://202.60.10.71/api/dcim/interfaces/2383/"
+                },
+                "assigned_object_id": 2383,
+                "assigned_object_type": "dcim.interface",
+                "created": "2021-05-23",
+                "custom_fields": {},
+                "description": "",
+                "dns_name": "",
+                "family": {
+                    "label": "IPv4",
+                    "value": 4
+                },
+                "id": 1474,
+                "last_updated": "2021-05-23T01:03:25.606988Z",
+                "nat_inside": null,
+                "nat_outside": null,
+                "role": null,
+                "status": {
+                    "label": "Active",
+                    "value": "active"
+                },
+                "tags": [
+                    {
+                        "color": "ffeb3b",
+                        "id": 1,
+                        "name": "wan_link",
+                        "slug": "wan_link",
+                        "url": "http://202.60.10.71/api/extras/tags/1/"
+                    }
+                ],
+                "tenant": null,
+                "url": "http://202.60.10.71/api/ipam/ip-addresses/1474/",
+                "vrf": null
+            }
+        },
+        {
+            "key": 1472,
+            "value": {
+                "address": "192.168.14.100/24",
+                "assigned_object": {
+                    "cable": null,
+                    "connection_status": null,
+                    "device": {
+                        "display_name": "demo-layer02-cpe01",
+                        "id": 208,
+                        "name": "demo-layer02-cpe01",
+                        "url": "http://202.60.10.71/api/dcim/devices/208/"
+                    },
+                    "id": 2382,
+                    "name": "VLAN 1",
+                    "url": "http://202.60.10.71/api/dcim/interfaces/2382/"
+                },
+                "assigned_object_id": 2382,
+                "assigned_object_type": "dcim.interface",
+                "created": "2021-05-23",
+                "custom_fields": {},
+                "description": "",
+                "dns_name": "",
+                "family": {
+                    "label": "IPv4",
+                    "value": 4
+                },
+                "id": 1472,
+                "last_updated": "2021-05-23T00:59:12.438371Z",
+                "nat_inside": null,
+                "nat_outside": null,
+                "role": null,
+                "status": {
+                    "label": "Active",
+                    "value": "active"
+                },
+                "tags": [],
+                "tenant": null,
+                "url": "http://202.60.10.71/api/ipam/ip-addresses/1472/",
+                "vrf": null
+            }
+        }
+    ]
+}

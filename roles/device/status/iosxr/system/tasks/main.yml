@@ -1,0 +1,42 @@
+---
+- name: Get Device Facts
+  iosxr_facts:
+    gather_subset:
+      - hardware
+  vars:
+    ansible_connection: network_cli
+
+- name: IOSXR -- Collect CPU Status
+  iosxr_command:
+    commands: 
+      - show processes cpu
+  register: xr_cpu
+  vars:
+    ansible_connection: network_cli
+  
+
+- name: Parse XR Data via PyATS
+  delegate_to: localhost
+  set_fact:
+    pyats_cpu: "{{ xr_cpu.stdout[0] | pyats_parser('show processes cpu', 'iosxr') }}"
+
+# - debug: var=pyats_cpu
+
+- name: Initialize CPU 
+  set_fact:
+    cpu : {}
+
+- name: Set CPU Status
+  set_fact:
+    cpu: "{{ cpu | combine({ '1m': pyats_cpu.location.node0_RP0_CPU0.one_min_cpu,
+                             '5m': pyats_cpu.location.node0_RP0_CPU0.five_min_cpu
+                            }) }}"
+
+- name: Build System Data
+  set_fact:
+      system: "{{ lookup('template','system.j2') | from_yaml }}"
+
+# - debug: var=system
+# - debug: var=cpu
+# - name: debug
+#   debug: var=ansible_facts

@@ -1,0 +1,224 @@
+/ip firewall connection tracking set icmp-timeout=2s
+/ip firewall address-list add address=10.10.0.0/19 list="OpenVPN client block"
+/ip firewall address-list add address=192.168.14.110 comment="CLIQQ users from Ruijie AP" list=CLIQQ
+/ip firewall address-list add address=192.168.15.0/24 comment="CLIQQ users from Mikrotik AP" list=CLIQQ
+/ip firewall filter add chain=forward comment="Allow CLIQQ users to Apollo web servers" dst-address=202.60.8.0/21 port=80,8080,443,8443 protocol=tcp src-address-list=CLIQQ
+/ip firewall filter add action=drop chain=forward comment="Deny CLIQQ users to access internal network" out-interface=ovpn-out1 src-address-list=CLIQQ
+/ip firewall filter add action=drop chain=forward comment="Deny CLIQQ users to access store network" dst-address=192.168.0.0/16 src-address-list=CLIQQ
+/ip firewall address-list add address=202.60.8.0/21 comment="Apollo Network" list=PRIORITY
+/ip firewall address-list add address=121.97.80.13 comment=ecpay.ph list=PRIORITY
+/ip firewall address-list add address=158.69.226.234 comment="Email Server" list=PRIORITY
+/ip firewall address-list add address=35.201.214.74 comment="RT Server" list=PRIORITY
+/ip firewall mangle add action=mark-connection chain=prerouting comment="Match connection for Priority Traffic" connection-mark=no-mark dst-address-list=PRIORITY in-interface=bridge1 new-connection-mark=conn-highp passthrough=yes src-address=192.168.14.0/24
+/ip firewall address-list add address=139.162.8.113 comment=Antivirus list=MID-PRIORITY
+/ip firewall address-list add address=121.58.212.85 comment="TV Server" list=MID-PRIORITY
+/ip firewall mangle add action=mark-connection chain=prerouting comment="Match connection for Non-Priority store traffic" connection-mark=no-mark dst-address-list=MID-PRIORITY in-interface=bridge1 new-connection-mark=conn-midp passthrough=yes src-address=192.168.14.0/24
+/ip firewall address-list add address=192.168.14.110 comment="Ruijie AP" list=LOW-PRIORITY-DEVICES
+/ip firewall address-list add address=192.168.14.12 comment=HT list=LOW-PRIORITY-DEVICES
+/ip firewall mangle add action=mark-connection chain=prerouting comment="Match connection for Low Priority Devices Traffic" connection-mark=no-mark in-interface=bridge1 new-connection-mark=conn-lowp passthrough=yes src-address-list=LOW-PRIORITY-DEVICES
+/ip firewall address-list add address=202.60.8.0/24 list=SSH_IN
+/ip firewall address-list add address=202.60.9.0/24 list=SSH_IN
+/ip firewall address-list add address=202.60.10.0/24 list=SSH_IN
+/ip firewall filter add chain=input src-address=SSH_IN dst-port=22 protocol=tcp
+/ip firewall filter add chain=input src-address=0.0.0.0/0 dst-port=22 protocol=tcp action=drop
+/ip firewall address-list add address=31.13.24.0/21 list=FB_Workplace
+/ip firewall address-list add address=31.13.64.0/18 list=FB_Workplace
+/ip firewall address-list add address=45.64.40.0/22 list=FB_Workplace
+/ip firewall address-list add address=66.220.144.0/20 list=FB_Workplace
+/ip firewall address-list add address=69.63.176.0/20 list=FB_Workplace 
+/ip firewall address-list add address=69.171.224.0/19 list=FB_Workplace
+/ip firewall address-list add address=74.119.76.0/22 list=FB_Workplace 
+/ip firewall address-list add address=103.4.96.0/22 list=FB_Workplace
+/ip firewall address-list add address=129.134.0.0/16 list=FB_Workplace 
+/ip firewall address-list add address=157.240.0.0/16 list=FB_Workplace 
+/ip firewall address-list add address=173.252.64.0/18 list=FB_Workplace
+/ip firewall address-list add address=179.60.192.0/22 list=FB_Workplace
+/ip firewall address-list add address=185.60.216.0/22 list=FB_Workplace
+/ip firewall address-list add address=204.15.20.0/22 list=FB_Workplace 
+/ip firewall address-list add address=120.28.0.0/16 list=FB_Workplace
+/ip firewall filter add chain=forward comment="Allow FB Workplace for SBS" dst-address-list=FB_Workplace port=443 protocol=tcp src-address=192.168.14.10
+/ip firewall address-list add address=0.0.0.0/8 list=Bogons
+/ip firewall address-list add address=127.0.0.0/8 list=Bogons
+/ip firewall address-list add address=224.0.0.0/8 list=Bogons
+/ip firewall filter add chain=forward src-address-list=Bogons action=drop
+/ip firewall filter add chain=forward dst-address-list=Bogons action=drop
+/ip firewall address-list add list=GOOGLE  address=35.190.247.0/24
+/ip firewall address-list add list=GOOGLE  address=64.233.160.0/19
+/ip firewall address-list add list=GOOGLE  address=66.102.0.0/20
+/ip firewall address-list add list=GOOGLE  address=66.249.80.0/20
+/ip firewall address-list add list=GOOGLE  address=72.14.192.0/18
+/ip firewall address-list add list=GOOGLE  address=74.125.0.0/16
+/ip firewall address-list add list=GOOGLE  address=108.177.8.0/21
+/ip firewall address-list add list=GOOGLE  address=173.194.0.0/16
+/ip firewall address-list add list=GOOGLE  address=209.85.128.0/17
+/ip firewall address-list add list=GOOGLE  address=216.58.192.0/19
+/ip firewall address-list add list=GOOGLE  address=216.239.32.0/19
+/ip firewall address-list add list=GOOGLE  address=172.217.0.0/19
+/ip firewall address-list add list=GOOGLE  address=172.217.32.0/20
+/ip firewall address-list add list=GOOGLE  address=172.217.128.0/19
+/ip firewall address-list add list=GOOGLE  address=172.217.160.0/20
+/ip firewall address-list add list=GOOGLE  address=172.217.192.0/19
+/ip firewall address-list add list=GOOGLE  address=172.253.56.0/21
+/ip firewall address-list add list=GOOGLE  address=172.253.112.0/20
+/ip firewall address-list add list=GOOGLE  address=108.177.96.0/19
+/ip firewall address-list add list=GOOGLE  address=35.191.0.0/16
+/ip firewall address-list add list=GOOGLE  address=130.211.0.0/22
+/ip firewall address-list add list=GOOGLE address=8.8.4.0/24
+/ip firewall address-list add list=GOOGLE address=8.8.8.0/24
+/ip firewall address-list add list=GOOGLE address=8.34.208.0/20
+/ip firewall address-list add list=GOOGLE address=8.35.192.0/20
+/ip firewall address-list add list=GOOGLE address=23.236.48.0/20
+/ip firewall address-list add list=GOOGLE address=23.251.128.0/19
+/ip firewall address-list add list=GOOGLE address=34.64.0.0/10
+/ip firewall address-list add list=GOOGLE address=35.184.0.0/13
+/ip firewall address-list add list=GOOGLE address=35.192.0.0/14
+/ip firewall address-list add list=GOOGLE address=35.196.0.0/15
+/ip firewall address-list add list=GOOGLE address=35.198.0.0/16
+/ip firewall address-list add list=GOOGLE address=35.199.0.0/17
+/ip firewall address-list add list=GOOGLE address=35.199.128.0/18
+/ip firewall address-list add list=GOOGLE address=35.200.0.0/13
+/ip firewall address-list add list=GOOGLE address=35.208.0.0/12
+/ip firewall address-list add list=GOOGLE address=35.224.0.0/12
+/ip firewall address-list add list=GOOGLE address=35.240.0.0/13
+/ip firewall address-list add list=GOOGLE address=64.15.112.0/20
+/ip firewall address-list add list=GOOGLE address=64.233.160.0/19
+/ip firewall address-list add list=GOOGLE address=66.102.0.0/20
+/ip firewall address-list add list=GOOGLE address=66.249.64.0/19
+/ip firewall address-list add list=GOOGLE address=70.32.128.0/19
+/ip firewall address-list add list=GOOGLE address=72.14.192.0/18
+/ip firewall address-list add list=GOOGLE address=74.114.24.0/21
+/ip firewall address-list add list=GOOGLE address=74.125.0.0/16
+/ip firewall address-list add list=GOOGLE address=104.154.0.0/15
+/ip firewall address-list add list=GOOGLE address=104.196.0.0/14
+/ip firewall address-list add list=GOOGLE address=104.237.160.0/19
+/ip firewall address-list add list=GOOGLE address=107.167.160.0/19
+/ip firewall address-list add list=GOOGLE address=107.178.192.0/18
+/ip firewall address-list add list=GOOGLE address=108.59.80.0/20
+/ip firewall address-list add list=GOOGLE address=108.170.192.0/18
+/ip firewall address-list add list=GOOGLE address=108.177.0.0/17
+/ip firewall address-list add list=GOOGLE address=130.211.0.0/16
+/ip firewall address-list add list=GOOGLE address=136.112.0.0/12
+/ip firewall address-list add list=GOOGLE address=142.250.0.0/15
+/ip firewall address-list add list=GOOGLE address=146.148.0.0/17
+/ip firewall address-list add list=GOOGLE address=162.216.148.0/22
+/ip firewall address-list add list=GOOGLE address=162.222.176.0/21
+/ip firewall address-list add list=GOOGLE address=172.110.32.0/21
+/ip firewall address-list add list=GOOGLE address=172.217.0.0/16
+/ip firewall address-list add list=GOOGLE address=172.253.0.0/16
+/ip firewall address-list add list=GOOGLE address=173.194.0.0/16
+/ip firewall address-list add list=GOOGLE address=173.255.112.0/20
+/ip firewall address-list add list=GOOGLE address=192.158.28.0/22
+/ip firewall address-list add list=GOOGLE address=192.178.0.0/15
+/ip firewall address-list add list=GOOGLE address=193.186.4.0/24
+/ip firewall address-list add list=GOOGLE address=199.36.154.0/23
+/ip firewall address-list add list=GOOGLE address=199.36.156.0/24
+/ip firewall address-list add list=GOOGLE address=199.192.112.0/22
+/ip firewall address-list add list=GOOGLE address=199.223.232.0/21
+/ip firewall address-list add list=GOOGLE address=207.223.160.0/20
+/ip firewall address-list add list=GOOGLE address=208.65.152.0/22
+/ip firewall address-list add list=GOOGLE address=208.68.108.0/22
+/ip firewall address-list add list=GOOGLE address=208.81.188.0/22
+/ip firewall address-list add list=GOOGLE address=208.117.224.0/19
+/ip firewall address-list add list=GOOGLE address=209.85.128.0/17
+/ip firewall address-list add list=GOOGLE address=216.58.192.0/19
+/ip firewall address-list add list=GOOGLE address=216.73.80.0/20
+/ip firewall address-list add list=GOOGLE address=216.239.32.0/19
+/ip firewall filter add chain=forward comment="Google443" dst-address-list=GOOGLE port=443 protocol=tcp src-address=192.168.14.10 place-before=4
+/ip firewall filter add chain=forward comment="Google80" dst-address-list=GOOGLE port=80 protocol=tcp src-address=192.168.14.10 place-before=4
+/ip firewall filter add action=accept chain=forward comment="Allow Ruijie AP to access Internet" in-interface=bridge1 src-address=192.168.14.110
+/ip firewall filter add action=accept chain=forward dst-address=66.70.179.134 log-prefix="" src-address=192.168.14.10
+/ip firewall filter add action=accept chain=forward dst-address=192.168.14.10 log-prefix="" src-address=66.70.179.134
+/ip firewall filter add chain=forward comment="Allow PC to access public emails" dst-port=587,995 protocol=tcp src-address=192.168.14.10
+/ip firewall filter add chain=forward comment="Allow HT TO ANY" protocol=tcp src-address=192.168.14.12
+/ip firewall filter add chain=forward comment="Allow PC to Mailcheap" disabled=yes dst-address=158.69.77.74 src-address=192.168.14.10
+/ip firewall filter add chain=forward comment="Allow Reply Traffic for Mailcheap" disabled=yes dst-address=192.168.14.10 src-address=158.69.77.74
+/ip firewall filter add chain=forward comment="Allow PC to Mailcheap" disabled=yes dst-address=158.69.77.74 src-address=192.168.14.10
+/ip firewall filter add chain=forward comment="Allow Reply Traffic for Mailcheap" disabled=yes dst-address=192.168.14.10 src-address=35.236.183.126
+/ip firewall filter add action=passthrough chain=unused-hs-chain comment="place hotspot rules here" disabled=yes
+/ip firewall filter add chain=forward comment="to ecpay.ph" dst-address=121.97.80.13 src-address=192.168.14.0/24
+/ip firewall filter add chain=forward comment="to cliqq.epass.com.ph" dst-address=119.92.118.194 src-address=192.168.14.0/24
+/ip firewall filter add chain=input comment="The OVPN server is trusted for everything" src-address=10.255.255.249
+/ip firewall filter add chain=input comment="Keep winbox for IPVPN and OVPN" dst-port=8291 protocol=tcp src-address=202.60.8.0/21
+/ip firewall filter add chain=input dst-port=8291 protocol=tcp src-address=165.220.4.0/24
+/ip firewall filter add chain=input comment="Keep telnet for IPVPN and OVPN" dst-port=23 protocol=tcp src-address=202.60.8.0/21
+/ip firewall filter add chain=input dst-port=23 protocol=tcp src-address=165.220.4.0/24
+/ip firewall filter add chain=input dst-port=443 protocol=tcp
+/ip firewall filter add action=drop chain=input dst-port=8291 protocol=tcp src-address=0.0.0.0/0
+/ip firewall filter add chain=forward comment="Allow PC for AV Updates" dst-address=139.162.8.113 dst-port=3128 protocol=tcp src-address=192.168.14.0/24
+/ip firewall filter add chain=forward comment="Allow Reply Traffic for AV Updates" dst-address=192.168.14.0/24 protocol=tcp src-address=139.162.8.113 src-port=3128
+/ip firewall filter add chain=forward comment="Ping PC for AV Updates" dst-address=139.162.8.113 protocol=icmp src-address=192.168.14.0/24
+/ip firewall filter add chain=forward comment="Ping Reply Traffic for AV Updates" dst-address=192.168.14.0/24 protocol=icmp src-address=139.162.8.113
+/ip firewall filter add chain=forward dst-address=202.60.8.0/21 src-address=192.168.14.0/24
+/ip firewall filter add chain=forward dst-address=192.168.1.0/24 src-address=192.168.14.0/24
+/ip firewall filter add chain=forward dst-address=192.168.7.1 src-address=192.168.14.0/24
+/ip firewall filter add disabled=yes action=drop chain=forward comment="Default DENY from Store Network" out-interface=port2 src-address=192.168.14.0/24
+/ip firewall filter add disabled=yes action=drop chain=forward comment="Default DENY from Store Network" out-interface=port1 src-address=192.168.14.0/24
+/ip firewall mangle add action=mark-connection chain=prerouting comment="Match connection for Mikrotik AP Cliqq traffic" connection-mark=no-mark in-interface=wlan2 new-connection-mark=conn-lowp passthrough=yes src-address=192.168.15.0/24
+/ip firewall mangle add action=mark-connection chain=prerouting comment="Match connection for all other traffic" connection-mark=no-mark in-interface=bridge1 new-connection-mark=conn-midp passthrough=yes
+/ip firewall mangle add action=mark-packet chain=forward comment="Mark priority packets for OVPN Download" in-interface=ovpn-out1 new-packet-mark=ovpn-dn-highp passthrough=no
+/ip firewall mangle add action=mark-packet chain=forward comment="Mark priority packets for OVPN Upload" new-packet-mark=ovpn-up-highp out-interface=ovpn-out1 passthrough=no
+/ip firewall mangle add action=mark-packet chain=forward comment="Mark priority packets Primary Link Download" connection-mark=conn-highp in-interface=port2 new-packet-mark=pri-dn-highp passthrough=no
+/ip firewall mangle add action=mark-packet chain=forward comment="Mark mid priority packets Primary Link Download" connection-mark=conn-midp in-interface=port2 new-packet-mark=pri-dn-midp passthrough=no
+/ip firewall mangle add action=mark-packet chain=forward comment="Mark low priority packets Primary Link Download" connection-mark=conn-lowp in-interface=port2 new-packet-mark=pri-dn-lowp passthrough=no
+/ip firewall mangle add action=mark-packet chain=forward comment="Mark priority packets Backup Link Download" connection-mark=conn-highp in-interface=port1 new-packet-mark=backup-dn-highp passthrough=no
+/ip firewall mangle add action=mark-packet chain=forward comment="Mark mid priority packets Backup Link Download" connection-mark=conn-midp in-interface=port1 new-packet-mark=backup-dn-midp passthrough=no
+/ip firewall mangle add action=mark-packet chain=forward comment="Mark low priority packets Backup Link Download" connection-mark=conn-lowp in-interface=port1 new-packet-mark=backup-dn-lowp passthrough=no
+/ip firewall mangle add action=mark-packet chain=forward comment="Mark priority packets Primary Link Upload" connection-mark=conn-highp new-packet-mark=pri-up-highp out-interface=port2 passthrough=no
+/ip firewall mangle add action=mark-packet chain=forward comment="Mark mid priority packets Primary Link Upload" connection-mark=conn-midp new-packet-mark=pri-up-midp out-interface=port2 passthrough=no
+/ip firewall mangle add action=mark-packet chain=forward comment="Mark low priority packets Primary Link Upload" connection-mark=conn-lowp new-packet-mark=pri-up-lowp out-interface=port2 passthrough=no
+/ip firewall mangle add action=mark-packet chain=forward comment="Mark priority packets Backup Link Upload" connection-mark=conn-highp new-packet-mark=backup-up-highp out-interface=port1 passthrough=no
+/ip firewall mangle add action=mark-packet chain=forward comment="Mark mid priority packets Backup Link Upload" connection-mark=conn-midp new-packet-mark=backup-up-midp out-interface=port1 passthrough=no
+/ip firewall mangle add action=mark-packet chain=forward comment="Mark low priority packets Backup Link Upload" connection-mark=conn-lowp new-packet-mark=backup-up-lowp out-interface=port1 passthrough=no
+/ip firewall layer7-protocol add name=Facebook regexp="^.+(facebook.com).*\$"
+/ip firewall layer7-protocol add name=Messenger regexp="^.+(messenger.com).*\$"
+/ip firewall layer7-protocol add name=Youtube regexp="^.+(youtube.com).*\$"
+/ip firewall filter add action=drop chain=forward comment="Block Messenger" layer7-protocol=Messenger place-before=1
+/ip firewall filter add action=drop chain=forward comment="Block Youtube" layer7-protocol=Youtube place-before=1
+/ip firewall filter add action=drop chain=forward comment="Block Facebook" layer7-protocol=Facebook place-before=1
+/ip firewall address-list add list=EMPLEYADO  address=157.52.211.217
+/ip firewall address-list add list=EMPLEYADO  address=209.160.33.82
+/ip firewall address-list add list=EMPLEYADO  address=199.255.159.226
+/ip firewall address-list add list=EMPLEYADO  address=134.73.56.133
+/ip firewall address-list add list=EMPLEYADO  address=173.236.35.240/29
+/ip firewall address-list add list=EMPLEYADO  address=151.139.128.10
+/ip firewall address-list add list=EMPLEYADO  address=103.107.159.220
+/ip firewall address-list add list=EMPLEYADO  address=13.107.246.10
+/ip firewall address-list add list=EMPLEYADO  address=18.141.94.10
+/ip firewall filter add action=accept chain=forward comment=Forecast_Access dst-address=34.80.63.164 src-address=192.168.14.10
+/ip firewall filter add chain=forward comment="Allow EMPLEYADO for SBS-443" dst-address-list=EMPLEYADO port=443 protocol=tcp src-address=192.168.14.10
+/ip firewall filter move [find where comment="Allow EMPLEYADO for SBS-443"] [find where comment="Allow HT TO ANY"]
+/ip firewall filter add chain=forward comment="Allow EMPLEYADO for SBS-80" dst-address-list=EMPLEYADO port=80 protocol=tcp src-address=192.168.14.10
+/ip firewall filter move [find where comment="Allow EMPLEYADO for SBS-80"] [find where comment="Allow EMPLEYADO for SBS-443"]
+/ip firewall filter add action=accept chain=forward src-address=192.168.14.10 dst-address=103.107.159.220 comment="CLK"
+/ip firewall filter add action=accept chain=forward src-address=103.107.159.220 dst-address=192.168.14.10 comment="CLK"
+/ip firewall nat add action=passthrough chain=unused-hs-chain comment="place hotspot rules here" disabled=yes
+/ip firewall nat add action=passthrough chain=unused-hs-chain comment="place hotspot rules here" disabled=yes
+/ip firewall nat add action=passthrough chain=unused-hs-chain comment="place hotspot rules here" disabled=yes
+/ip firewall nat add action=masquerade chain=srcnat out-interface=port2
+/ip firewall nat add action=masquerade chain=srcnat out-interface=port1
+/ip firewall nat add action=masquerade chain=srcnat out-interface=ovpn-out1
+/ip firewall nat add chain=dstnat in-interface=port2 protocol=icmp
+/ip firewall nat add chain=dstnat in-interface=port1 protocol=icmp
+/ip firewall nat add action=dst-nat chain=dstnat comment="port forward - ssh to pc" dst-port=7100 in-interface=ovpn-out1 protocol=tcp to-addresses=192.168.14.10 to-ports=22
+/ip firewall nat add action=dst-nat chain=dstnat comment="port forward - ssh to pos1" dst-port=7101 in-interface=ovpn-out1 protocol=tcp to-addresses=192.168.14.1 to-ports=22
+/ip firewall nat add action=dst-nat chain=dstnat comment="port forward - ssh to pos2" dst-port=7102 in-interface=ovpn-out1 protocol=tcp to-addresses=192.168.14.2 to-ports=22
+/ip firewall nat add action=dst-nat chain=dstnat comment="port forward - ssh to pos3" dst-port=7103 in-interface=ovpn-out1 protocol=tcp to-addresses=192.168.14.3 to-ports=22
+/ip firewall nat add action=dst-nat chain=dstnat comment="port forward - ssh to kiosk" dst-port=7120 in-interface=ovpn-out1 protocol=tcp to-addresses=192.168.14.20 to-ports=22
+/ip firewall nat add action=dst-nat chain=dstnat comment="port forward - ssh to digital" dst-port=7150 in-interface=ovpn-out1 protocol=tcp to-addresses=192.168.14.50 to-ports=22
+/ip firewall nat add action=dst-nat chain=dstnat comment="port forward - vnc to pc" dst-port=7200 in-interface=ovpn-out1 protocol=tcp to-addresses=192.168.14.10 to-ports=5900
+/ip firewall nat add action=dst-nat chain=dstnat comment="port forward - vnc to pos1" dst-port=7201 in-interface=ovpn-out1 protocol=tcp to-addresses=192.168.14.1 to-ports=5900
+/ip firewall nat add action=dst-nat chain=dstnat comment="port forward - vnc to pos2" dst-port=7202 in-interface=ovpn-out1 protocol=tcp to-addresses=192.168.14.2 to-ports=5900
+/ip firewall nat add action=dst-nat chain=dstnat comment="port forward - vnc to pos3" dst-port=7203 in-interface=ovpn-out1 protocol=tcp to-addresses=192.168.14.3 to-ports=5900
+/ip firewall nat add action=dst-nat chain=dstnat comment="port forward - vnc to kiosk" dst-port=7220 in-interface=ovpn-out1 protocol=tcp to-addresses=192.168.14.20 to-ports=5900
+/ip firewall nat add action=dst-nat chain=dstnat comment="port forward - vnc to digital" dst-port=7250 in-interface=ovpn-out1 protocol=tcp to-addresses=192.168.14.50 to-ports=5900
+/ip firewall nat add chain=dstnat dst-port=8291 in-interface=port2 protocol=tcp
+/ip firewall nat add chain=dstnat dst-port=23 in-interface=port2 protocol=tcp
+/ip firewall nat add action=dst-nat chain=dstnat in-interface=port2 to-addresses=192.168.14.10
+/ip firewall nat add chain=dstnat dst-port=8291 in-interface=port1 protocol=tcp
+/ip firewall nat add chain=dstnat dst-port=23 in-interface=port1 protocol=tcp
+/ip firewall nat add action=dst-nat chain=dstnat in-interface=port1 to-addresses=192.168.14.10
+/ip firewall nat add chain=dstnat in-interface=ovpn-out1 protocol=icmp
+/ip firewall nat add chain=dstnat dst-port=8291 in-interface=ovpn-out1 protocol=tcp
+/ip firewall nat add chain=dstnat dst-port=23 in-interface=ovpn-out1 protocol=tcp
+/ip firewall nat add chain=dstnat dst-port=22 in-interface=ovpn-out1 protocol=tcp
+/ip firewall nat add action=dst-nat chain=dstnat in-interface=ovpn-out1 to-addresses=192.168.14.10

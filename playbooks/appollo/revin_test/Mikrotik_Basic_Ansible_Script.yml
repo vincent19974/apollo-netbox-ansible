@@ -1,0 +1,26 @@
+---
+- name: RouterOS test with network_cli connection
+  hosts: mikrotik
+  gather_facts: false
+  tasks:
+
+  - community.routeros.command:
+      commands:
+#show ip int brief
+        - ip address print without-paging
+#show interface description
+        - interface print without-paging
+#show vlan brief
+        - interface vlan print without-paging
+#show interface (with more details)
+        - interface print stats-detail without-paging
+#show memory, show cpu
+        - system resource print without-paging
+#show ip route static
+        - ip route print without-paging where static
+#show crypto isakmp sa
+        - ip ipsec active-peers print detail without-paging
+
+    register: results_print
+  - debug:
+      msg: "{{ results_print }}"

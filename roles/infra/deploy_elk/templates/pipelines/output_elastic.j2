@@ -1,0 +1,9 @@
+output {
+  elasticsearch {
+      hosts => ["http://localhost:9200"]
+      index => "net_syslog-%{+YYYY.MM.dd}"
+      document_type => "system_logs"
+      user => "layer2"
+      password => "@layer2"
+  }
+}

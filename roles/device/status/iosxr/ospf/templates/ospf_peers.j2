@@ -1,0 +1,13 @@
+{%  set _ospf_peers = pyats_ospf_peers.vrf.default.address_family.ipv4.instance[OSPF_INSTANCE].areas[OSPF_AREA].interfaces %}
+{%  for port in _ospf_peers | default([]) %}
+{%      set port_data = _ospf_peers[port].neighbors %}
+    {{ port }}:
+{#      I am Only Assuming Point to Point Peers #}
+{%      set peer = port_data.keys() | list | first %}
+{%      set peer_data = port_data[peer] %}
+        peer_ip: {{peer_data.address }}
+        peer_router_id: {{ peer_data.neighbor_router_id }}
+        state: {{ 'up' if peer_data.state == 'full' else 'down' }}
+        uptime: {{ peer_data.neighbor_uptime }}
+        retransmission: {{ peer_data.statistics.total_retransmission }}
+{%  endfor %}

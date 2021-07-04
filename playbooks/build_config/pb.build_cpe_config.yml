@@ -1,0 +1,31 @@
+- name: Discover CPEs
+  hosts: all
+  gather_facts: no
+  connection: local
+  vars:
+    ansible_python_interpreter: "{{ ansible_playbook_python }}"
+    netbox_url: 'http://202.60.10.71'
+    netbox_token: '09a5d41772cd2fbb96c49a9f7c14a96554d0689b'
+    base_temp_dir: '/Users/kokasha/Documents/Layer2/automation_projects/appollo_automation/tmp'
+  tasks:
+    - debug: var=playbook_dir
+
+    - name: Get CPE data from Netbox
+      import_role:
+        name: cpe/netbox_cpe_info
+
+    - name: Build Config for CPE
+      import_role:
+        name: cpe/build_config
+
+    - name: Send Email
+      import_role:
+        name: send_email
+      vars:
+        files_to_attach: "{{base_temp_dir}}/FINAL.txt"
+        email_title: 'Appollo -- Final Config for {{ inventory_hostname }}'
+    
+    - name: Clean Config folder
+      file:
+        path: "{{config_dir}}"
+        state: absent

@@ -1,0 +1,17 @@
+---
+- name: Stop selinx
+  become: yes
+  selinux:
+    state: disabled
+  # notify: "Reboot System"
+  register: selinux_change
+
+- name: Reboot System
+  when: selinux_change.changed
+  reboot:
+    msg: "Reboot initiated by Ansible"
+    reboot_timeout: 600
+    pre_reboot_delay: 0
+    post_reboot_delay: 30
+    test_command: uptime
+

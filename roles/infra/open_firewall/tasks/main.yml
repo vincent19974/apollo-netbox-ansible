@@ -1,0 +1,7 @@
+- name:  Open Ports on Firewall
+  become: yes
+  firewalld:
+    port: "{{ port }}"
+    permanent: true
+    state: enabled
+  notify: restart_firewalld

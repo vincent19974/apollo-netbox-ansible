@@ -1,0 +1,531 @@
+{
+    "intf_device_data": [
+        {
+            "key": 2373,
+            "value": {
+                "cable": null,
+                "connected_endpoint": null,
+                "connected_endpoint_type": null,
+                "connection_status": null,
+                "count_ipaddresses": 0,
+                "description": "",
+                "device": {
+                    "display_name": "demo-layer02-cpe01",
+                    "id": 208,
+                    "name": "demo-layer02-cpe01",
+                    "url": "http://202.60.10.71/api/dcim/devices/208/"
+                },
+                "enabled": true,
+                "id": 2373,
+                "label": "",
+                "lag": null,
+                "mac_address": null,
+                "mgmt_only": false,
+                "mode": null,
+                "mtu": null,
+                "name": "Cellular 0/0",
+                "tagged_vlans": [],
+                "tags": [
+                    {
+                        "color": "ffeb3b",
+                        "id": 1,
+                        "name": "wan_link",
+                        "slug": "wan_link",
+                        "url": "http://202.60.10.71/api/extras/tags/1/"
+                    },
+                    {
+                        "color": "ff9800",
+                        "id": 2,
+                        "name": "wireless_link",
+                        "slug": "wireless_link",
+                        "url": "http://202.60.10.71/api/extras/tags/2/"
+                    }
+                ],
+                "type": {
+                    "label": "Virtual",
+                    "value": "virtual"
+                },
+                "untagged_vlan": null,
+                "url": "http://202.60.10.71/api/dcim/interfaces/2373/"
+            }
+        },
+        {
+            "key": 2374,
+            "value": {
+                "cable": null,
+                "connected_endpoint": null,
+                "connected_endpoint_type": null,
+                "connection_status": null,
+                "count_ipaddresses": 0,
+                "description": "",
+                "device": {
+                    "display_name": "demo-layer02-cpe01",
+                    "id": 208,
+                    "name": "demo-layer02-cpe01",
+                    "url": "http://202.60.10.71/api/dcim/devices/208/"
+                },
+                "enabled": true,
+                "id": 2374,
+                "label": "",
+                "lag": null,
+                "mac_address": null,
+                "mgmt_only": false,
+                "mode": {
+                    "label": "Access",
+                    "value": "access"
+                },
+                "mtu": null,
+                "name": "FastEthernet 1/0",
+                "tagged_vlans": [],
+                "tags": [
+                    {
+                        "color": "ffeb3b",
+                        "id": 1,
+                        "name": "wan_link",
+                        "slug": "wan_link",
+                        "url": "http://202.60.10.71/api/extras/tags/1/"
+                    }
+                ],
+                "type": {
+                    "label": "1000BASE-T (1GE)",
+                    "value": "1000base-t"
+                },
+                "untagged_vlan": {
+                    "display_name": "7-ELEVEN LAN (1)",
+                    "id": 4,
+                    "name": "7-ELEVEN LAN",
+                    "url": "http://202.60.10.71/api/ipam/vlans/4/",
+                    "vid": 1
+                },
+                "url": "http://202.60.10.71/api/dcim/interfaces/2374/"
+            }
+        },
+        {
+            "key": 2375,
+            "value": {
+                "cable": null,
+                "connected_endpoint": null,
+                "connected_endpoint_type": null,
+                "connection_status": null,
+                "count_ipaddresses": 0,
+                "description": "",
+                "device": {
+                    "display_name": "demo-layer02-cpe01",
+                    "id": 208,
+                    "name": "demo-layer02-cpe01",
+                    "url": "http://202.60.10.71/api/dcim/devices/208/"
+                },
+                "enabled": true,
+                "id": 2375,
+                "label": "",
+                "lag": null,
+                "mac_address": null,
+                "mgmt_only": false,
+                "mode": {
+                    "label": "Access",
+                    "value": "access"
+                },
+                "mtu": null,
+                "name": "FastEthernet 1/1",
+                "tagged_vlans": [],
+                "tags": [
+                    {
+                        "color": "ffeb3b",
+                        "id": 1,
+                        "name": "wan_link",
+                        "slug": "wan_link",
+                        "url": "http://202.60.10.71/api/extras/tags/1/"
+                    }
+                ],
+                "type": {
+                    "label": "1000BASE-T (1GE)",
+                    "value": "1000base-t"
+                },
+                "untagged_vlan": {
+                    "display_name": "WAN01_link (10)",
+                    "id": 5,
+                    "name": "WAN01_link",
+                    "url": "http://202.60.10.71/api/ipam/vlans/5/",
+                    "vid": 10
+                },
+                "url": "http://202.60.10.71/api/dcim/interfaces/2375/"
+            }
+        },
+        {
+            "key": 2376,
+            "value": {
+                "cable": null,
+                "connected_endpoint": null,
+                "connected_endpoint_type": null,
+                "connection_status": null,
+                "count_ipaddresses": 0,
+                "description": "",
+                "device": {
+                    "display_name": "demo-layer02-cpe01",
+                    "id": 208,
+                    "name": "demo-layer02-cpe01",
+                    "url": "http://202.60.10.71/api/dcim/devices/208/"
+                },
+                "enabled": true,
+                "id": 2376,
+                "label": "",
+                "lag": null,
+                "mac_address": null,
+                "mgmt_only": false,
+                "mode": {
+                    "label": "Access",
+                    "value": "access"
+                },
+                "mtu": null,
+                "name": "FastEthernet 1/2",
+                "tagged_vlans": [],
+                "tags": [],
+                "type": {
+                    "label": "1000BASE-T (1GE)",
+                    "value": "1000base-t"
+                },
+                "untagged_vlan": {
+                    "display_name": "WAN02_LINK (20)",
+                    "id": 6,
+                    "name": "WAN02_LINK",
+                    "url": "http://202.60.10.71/api/ipam/vlans/6/",
+                    "vid": 20
+                },
+                "url": "http://202.60.10.71/api/dcim/interfaces/2376/"
+            }
+        },
+        {
+            "key": 2377,
+            "value": {
+                "cable": null,
+                "connected_endpoint": null,
+                "connected_endpoint_type": null,
+                "connection_status": null,
+                "count_ipaddresses": 0,
+                "description": "",
+                "device": {
+                    "display_name": "demo-layer02-cpe01",
+                    "id": 208,
+                    "name": "demo-layer02-cpe01",
+                    "url": "http://202.60.10.71/api/dcim/devices/208/"
+                },
+                "enabled": true,
+                "id": 2377,
+                "label": "",
+                "lag": null,
+                "mac_address": null,
+                "mgmt_only": false,
+                "mode": null,
+                "mtu": null,
+                "name": "FastEthernet 1/3",
+                "tagged_vlans": [],
+                "tags": [],
+                "type": {
+                    "label": "1000BASE-T (1GE)",
+                    "value": "1000base-t"
+                },
+                "untagged_vlan": null,
+                "url": "http://202.60.10.71/api/dcim/interfaces/2377/"
+            }
+        },
+        {
+            "key": 2378,
+            "value": {
+                "cable": null,
+                "connected_endpoint": null,
+                "connected_endpoint_type": null,
+                "connection_status": null,
+                "count_ipaddresses": 0,
+                "description": "",
+                "device": {
+                    "display_name": "demo-layer02-cpe01",
+                    "id": 208,
+                    "name": "demo-layer02-cpe01",
+                    "url": "http://202.60.10.71/api/dcim/devices/208/"
+                },
+                "enabled": true,
+                "id": 2378,
+                "label": "",
+                "lag": null,
+                "mac_address": null,
+                "mgmt_only": false,
+                "mode": {
+                    "label": "Tagged",
+                    "value": "tagged"
+                },
+                "mtu": null,
+                "name": "FastEthernet 1/4",
+                "tagged_vlans": [
+                    {
+                        "display_name": "WIFI_AP_VLAN (501)",
+                        "id": 7,
+                        "name": "WIFI_AP_VLAN",
+                        "url": "http://202.60.10.71/api/ipam/vlans/7/",
+                        "vid": 501
+                    }
+                ],
+                "tags": [
+                    {
+                        "color": "ff9800",
+                        "id": 2,
+                        "name": "wireless_link",
+                        "slug": "wireless_link",
+                        "url": "http://202.60.10.71/api/extras/tags/2/"
+                    }
+                ],
+                "type": {
+                    "label": "1000BASE-T (1GE)",
+                    "value": "1000base-t"
+                },
+                "untagged_vlan": null,
+                "url": "http://202.60.10.71/api/dcim/interfaces/2378/"
+            }
+        },
+        {
+            "key": 2379,
+            "value": {
+                "cable": null,
+                "connected_endpoint": null,
+                "connected_endpoint_type": null,
+                "connection_status": null,
+                "count_ipaddresses": 1,
+                "description": "",
+                "device": {
+                    "display_name": "demo-layer02-cpe01",
+                    "id": 208,
+                    "name": "demo-layer02-cpe01",
+                    "url": "http://202.60.10.71/api/dcim/devices/208/"
+                },
+                "enabled": true,
+                "id": 2379,
+                "label": "",
+                "lag": null,
+                "mac_address": null,
+                "mgmt_only": false,
+                "mode": null,
+                "mtu": null,
+                "name": "Loopback 0",
+                "tagged_vlans": [],
+                "tags": [],
+                "type": {
+                    "label": "Virtual",
+                    "value": "virtual"
+                },
+                "untagged_vlan": null,
+                "url": "http://202.60.10.71/api/dcim/interfaces/2379/"
+            }
+        },
+        {
+            "key": 2380,
+            "value": {
+                "cable": null,
+                "connected_endpoint": null,
+                "connected_endpoint_type": null,
+                "connection_status": null,
+                "count_ipaddresses": 1,
+                "description": "",
+                "device": {
+                    "display_name": "demo-layer02-cpe01",
+                    "id": 208,
+                    "name": "demo-layer02-cpe01",
+                    "url": "http://202.60.10.71/api/dcim/devices/208/"
+                },
+                "enabled": true,
+                "id": 2380,
+                "label": "",
+                "lag": null,
+                "mac_address": null,
+                "mgmt_only": false,
+                "mode": null,
+                "mtu": null,
+                "name": "Loopback 1",
+                "tagged_vlans": [],
+                "tags": [],
+                "type": {
+                    "label": "Virtual",
+                    "value": "virtual"
+                },
+                "untagged_vlan": null,
+                "url": "http://202.60.10.71/api/dcim/interfaces/2380/"
+            }
+        },
+        {
+            "key": 2381,
+            "value": {
+                "cable": null,
+                "connected_endpoint": null,
+                "connected_endpoint_type": null,
+                "connection_status": null,
+                "count_ipaddresses": 1,
+                "description": "",
+                "device": {
+                    "display_name": "demo-layer02-cpe01",
+                    "id": 208,
+                    "name": "demo-layer02-cpe01",
+                    "url": "http://202.60.10.71/api/dcim/devices/208/"
+                },
+                "enabled": true,
+                "id": 2381,
+                "label": "",
+                "lag": null,
+                "mac_address": null,
+                "mgmt_only": false,
+                "mode": null,
+                "mtu": null,
+                "name": "Loopback 2",
+                "tagged_vlans": [],
+                "tags": [],
+                "type": {
+                    "label": "Virtual",
+                    "value": "virtual"
+                },
+                "untagged_vlan": null,
+                "url": "http://202.60.10.71/api/dcim/interfaces/2381/"
+            }
+        },
+        {
+            "key": 2382,
+            "value": {
+                "cable": null,
+                "connected_endpoint": null,
+                "connected_endpoint_type": null,
+                "connection_status": null,
+                "count_ipaddresses": 1,
+                "description": "",
+                "device": {
+                    "display_name": "demo-layer02-cpe01",
+                    "id": 208,
+                    "name": "demo-layer02-cpe01",
+                    "url": "http://202.60.10.71/api/dcim/devices/208/"
+                },
+                "enabled": true,
+                "id": 2382,
+                "label": "",
+                "lag": null,
+                "mac_address": null,
+                "mgmt_only": false,
+                "mode": null,
+                "mtu": null,
+                "name": "VLAN 1",
+                "tagged_vlans": [],
+                "tags": [],
+                "type": {
+                    "label": "Virtual",
+                    "value": "virtual"
+                },
+                "untagged_vlan": null,
+                "url": "http://202.60.10.71/api/dcim/interfaces/2382/"
+            }
+        },
+        {
+            "key": 2383,
+            "value": {
+                "cable": null,
+                "connected_endpoint": null,
+                "connected_endpoint_type": null,
+                "connection_status": null,
+                "count_ipaddresses": 1,
+                "description": "",
+                "device": {
+                    "display_name": "demo-layer02-cpe01",
+                    "id": 208,
+                    "name": "demo-layer02-cpe01",
+                    "url": "http://202.60.10.71/api/dcim/devices/208/"
+                },
+                "enabled": true,
+                "id": 2383,
+                "label": "",
+                "lag": null,
+                "mac_address": null,
+                "mgmt_only": false,
+                "mode": null,
+                "mtu": null,
+                "name": "VLAN 10",
+                "tagged_vlans": [],
+                "tags": [
+                    {
+                        "color": "ffeb3b",
+                        "id": 1,
+                        "name": "wan_link",
+                        "slug": "wan_link",
+                        "url": "http://202.60.10.71/api/extras/tags/1/"
+                    }
+                ],
+                "type": {
+                    "label": "Virtual",
+                    "value": "virtual"
+                },
+                "untagged_vlan": null,
+                "url": "http://202.60.10.71/api/dcim/interfaces/2383/"
+            }
+        },
+        {
+            "key": 2384,
+            "value": {
+                "cable": null,
+                "connected_endpoint": null,
+                "connected_endpoint_type": null,
+                "connection_status": null,
+                "count_ipaddresses": 0,
+                "description": "",
+                "device": {
+                    "display_name": "demo-layer02-cpe01",
+                    "id": 208,
+                    "name": "demo-layer02-cpe01",
+                    "url": "http://202.60.10.71/api/dcim/devices/208/"
+                },
+                "enabled": true,
+                "id": 2384,
+                "label": "",
+                "lag": null,
+                "mac_address": null,
+                "mgmt_only": false,
+                "mode": null,
+                "mtu": null,
+                "name": "VLAN 20",
+                "tagged_vlans": [],
+                "tags": [],
+                "type": {
+                    "label": "Virtual",
+                    "value": "virtual"
+                },
+                "untagged_vlan": null,
+                "url": "http://202.60.10.71/api/dcim/interfaces/2384/"
+            }
+        },
+        {
+            "key": 2385,
+            "value": {
+                "cable": null,
+                "connected_endpoint": null,
+                "connected_endpoint_type": null,
+                "connection_status": null,
+                "count_ipaddresses": 1,
+                "description": "",
+                "device": {
+                    "display_name": "demo-layer02-cpe01",
+                    "id": 208,
+                    "name": "demo-layer02-cpe01",
+                    "url": "http://202.60.10.71/api/dcim/devices/208/"
+                },
+                "enabled": true,
+                "id": 2385,
+                "label": "",
+                "lag": null,
+                "mac_address": null,
+                "mgmt_only": false,
+                "mode": null,
+                "mtu": null,
+                "name": "VLAN 501",
+                "tagged_vlans": [],
+                "tags": [],
+                "type": {
+                    "label": "Virtual",
+                    "value": "virtual"
+                },
+                "untagged_vlan": null,
+                "url": "http://202.60.10.71/api/dcim/interfaces/2385/"
+            }
+        }
+    ]
+}

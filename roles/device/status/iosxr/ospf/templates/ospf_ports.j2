@@ -1,0 +1,7 @@
+{%  set _ospf_ports = pyats_ospf_ports.vrf.default.address_family.ipv4.instance[OSPF_INSTANCE].areas[OSPF_AREA].interfaces %}
+{%  for port in _ospf_ports | default([]) %}
+{%      set port_data = _ospf_ports[port] %}
+    {{ port }}:
+        cost: {{ port_data.cost }}
+        ip_address: {{ port_data.ip_address | ipaddr('address') }}
+{%  endfor %}

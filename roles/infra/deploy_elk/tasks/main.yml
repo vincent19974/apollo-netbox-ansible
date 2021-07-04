@@ -1,0 +1,10 @@
+---
+# tasks file for deploy_elk
+
+- name: Install Using Docker
+  import_tasks: elk_docker.yml
+  when: use_docker|bool
+  
+- name: Install via System Packages
+  import_tasks: elk.yml
+  when: not use_docker|bool

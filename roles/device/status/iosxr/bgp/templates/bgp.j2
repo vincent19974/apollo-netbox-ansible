@@ -1,0 +1,32 @@
+{%  set GlobalBgpPeers = pyats_bgp_peers.instance.all.vrf.default.neighbor %}
+{%  for peer in GlobalBgpPeers %}
+{%      set peer_data = GlobalBgpPeers[peer] %}
+{{ peer }}:
+    description: {{ peer_data.description | default('') | quote }}
+    state: {{ peer_data.session_state }}
+    uptime: {{ peer_data.up_time | default('') }}
+    remote_as: {{ peer_data.remote_as }}
+    local_as: {{ peer_data.local_as_as_no }}
+    type: {{ 'ibgp' if peer_data.remote_as == peer_data.local_as_as_no else 'ebgp' }}
+    afs:
+{%      if peer_data.address_family['ipv4 unicast'] is defined %}
+        ipv4:
+            advertised_prefixes: {{ peer_data.address_family['ipv4 unicast'].prefix_advertised }}
+            received_prefixes: {{ peer_data.address_family['ipv4 unicast'].accepted_prefixes }}
+{%      endif %}
+{%      if peer_data.address_family['vpnv4 unicast'] is defined %}
+        vpnv4:
+            advertised_prefixes: {{ peer_data.address_family['vpnv4 unicast'].prefix_advertised }}
+            received_prefixes: {{ peer_data.address_family['vpnv4 unicast'].accepted_prefixes }}
+{%      endif %}
+{%      if peer_data.address_family['l2vpn evpn'] is defined %}
+        evpn:
+            advertised_prefixes: {{ peer_data.address_family['l2vpn evpn'].prefix_advertised }}
+            received_prefixes: {{ peer_data.address_family['l2vpn evpn'].accepted_prefixes }}
+{%      endif %}
+{%      if peer_data.address_family['l2vpn vpls'] is defined %}
+        vpls:
+            advertised_prefixes: {{ peer_data.address_family['l2vpn vpls'].prefix_advertised }}
+            received_prefixes: {{ peer_data.address_family['l2vpn vpls'].accepted_prefixes }}
+{%      endif %}
+{%  endfor %}

@@ -1,0 +1,3 @@
+# DHCP Configuration for ZTP
+subnet {{ ztp_subnet|ipaddr('network')}} netmask {{ ztp_subnet|ipaddr('netmask') }} {
+}

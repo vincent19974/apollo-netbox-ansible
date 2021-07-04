@@ -1,0 +1,64 @@
+---
+- name: Create ELK Folder to store all Configs
+  become: no
+  file:
+    path: "{{ tick_configs_folder }}/{{ item }}" 
+    state: directory
+  loop:
+    - configs
+    - telegraf_plugines
+
+- name: Create Telegraf Config File
+  become: no
+  template:
+    src: 'configs/telegraf.conf.j2'
+    dest: "{{ tick_configs_folder }}/configs/telegraf.conf"
+
+# - name: Create logstash Pipelines File
+#   template:
+#     src: 'pipelines/net_syslog.j2'
+#     dest: "{{ tick_configs_folder }}/logstash/pipeline/net_syslog.conf"
+
+
+- name: Build Docker Compose File
+  become: no
+  template:
+    src: 'docker-compose.j2'
+    dest: "{{ tick_configs_folder }}/docker-compose.yml"
+
+- name: Install Python3
+  become: yes
+  yum:
+    name: python3
+    state: present
+
+- name: Upgrade PIP3
+  become: yes
+  command: pip3 install --upgrade pip
+
+- name: Install Required Python Packages
+  become: yes
+  pip:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - docker
+    - docker-compose
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+
+- name: Start ELK Containers
+  become: no
+  docker_compose:
+    project_src: "{{ tick_configs_folder }}"
+    state: present
+  register: docker_compose_output
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+
+# - debug: var=docker_compose_output
+# - name: Start Containers
+#   shell: "docker-compose up -d "
+#   args:
+#     chdir: "{{ tick_configs_folder }}"
+

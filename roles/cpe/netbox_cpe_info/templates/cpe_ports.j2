@@ -1,0 +1,41 @@
+{%  for port in _cpe_ports %}
+{{ port.value.name }}:
+{%      set all_tags = port.value.tags | map(attribute='name') | list %}
+{%      if 'wan_link' in all_tags %}
+{%          set link_type = 'WAN' %}
+{%      else %}
+{%          set link_type = 'LAN' %}
+{%      endif %}
+    link_type: {{ link_type }}
+    enabled: {{ port.value.enabled }}
+{#  Get VLAN Info #}
+{%      if port.value.mode %}
+    type: {{ port.value.mode.value }}
+    vlans:
+{%          if port.value.tagged_vlans %}
+{%              for vlan in port.value.tagged_vlans %}
+        - vid: {{ vlan.vid }}
+          name: {{ vlan.name }}
+{%              endfor %}
+{%          endif %}
+{%          if port.value.untagged_vlan %}
+        - vid: {{ port.value.untagged_vlan.vid }}
+          name: {{ port.value.untagged_vlan.name }}
+{%          endif %}
+{%      endif %}
+{#                #}
+{#  Get IP Information #}
+{%      if port.value.count_ipaddresses %}
+{%         set port_ip = _cpe_ip_addrs | selectattr('value.assigned_object.name','equalto',port.value.name) | list | first %}
+    ip_addr: {{ port_ip.value.address }}
+{%      endif %}
+{#                #}
+{#  Get Tags #}
+{%      if port.value.tags %}
+    tags:
+{%          for tags in port.value.tags %}
+      - {{ tags.name }}
+{%          endfor %}
+{%      endif %}
+{#                #}
+{%  endfor %}

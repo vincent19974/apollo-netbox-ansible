@@ -1,0 +1,14 @@
+- name: Add a CPE ELK logging
+  hosts: all
+  gather_facts: no
+  connection: local
+  # vars:
+  #   ansible_python_interpreter: "{{ ansible_playbook_python }}"
+  tasks:
+   # Push config only to Active Devices
+   - name: Add to ELK
+     when:
+      - status is defined  
+      - status.value == 'active'
+     import_role:
+        name: monitoring/logging_to_elk

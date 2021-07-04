@@ -1,0 +1,56 @@
+---
+- name: Add InfluxDB Repo
+  become: yes
+  blockinfile:
+    path: /etc/yum.repos.d/influxdb.repo
+    create: yes
+    block: |
+      [influxdb]
+      name = InfluxDB Repository - RHEL \$releasever
+      baseurl = https://repos.influxdata.com/rhel/\$releasever/\$basearch/stable
+      enabled = 1
+      gpgcheck = 1
+      gpgkey = https://repos.influxdata.com/influxdb.key
+
+- name: Install Telgraf
+  yum:
+    name: telegraf
+    update_cache: yes
+
+- name: Enable and Start Service
+  service:
+    name: telegraf
+    enabled: yes
+    state: started
+
+- name: Backup telegraf Config File
+  ignore_errors: yes
+  command: mv /etc/telegraf/telegraf.conf /etc/telegraf/telegraf.conf.bkp
+
+- name: Generate Telegraf Config File
+  template:
+    src: telegraf.conf.j2
+    dest: /etc/telegraf/telegraf.conf
+  notify: restart_telegraf
+
+- name: Setup Plugins
+  block:
+    - name: Add Influx as Output
+      template:
+        src: output.influx.j2
+        dest: /etc/telegraf/telegraf.d/influxdb.conf
+      notify: restart_telegraf
+
+    - name: Add Cisco MDT as Input
+      template:
+        src: input.cisco_mdt.j2
+        dest: /etc/telegraf/telegraf.d/cisco_mdt.conf
+      notify: restart_telegraf
+
+# - name:  Open Ports for Telegraf
+#   firewalld:
+#     port: 57000/tcp
+#     permanent: true
+#     state: enabled
+#   notify: restart_firewalld
+  

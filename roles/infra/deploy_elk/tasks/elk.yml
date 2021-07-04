@@ -1,0 +1,77 @@
+---
+- name: Install JAVA
+  become: yes
+  yum:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - java-11-openjdk-devel
+    - java-openjdk
+
+- name: Add ElasticSearch Repo
+  become: yes
+  blockinfile:
+    path: /etc/yum.repos.d/elasticsearch.repo
+    create: yes
+    block: |
+      [elasticsearch-7.x]
+      name=Elasticsearch repository for 7.x packages
+      baseurl=https://artifacts.elastic.co/packages/7.x/yum
+      gpgcheck=1
+      gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+      enabled=1
+      autorefresh=1
+      type=rpm-md
+
+
+- name: Import GPG Key for Elastic
+  become: yes
+  rpm_key:
+    state: present
+    key: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+
+- name: Update APT cache
+  become: yes
+  yum:
+    update_cache: yes
+
+- name: Install Elasticsearch
+  become: yes
+  yum:
+    name: elasticsearch
+    state: present
+
+- name: Start Elasticsearch service
+  become: yes
+  service:
+    name: elasticsearch
+    state: started
+    enabled: true
+
+- name: Install Kibana and Logstash
+  become: yes
+  yum:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - kibana
+    - logstash
+
+- name: Start Kibana and Logstash service
+  become: yes
+  service:
+    name: "{{ item }}"
+    state: started
+    enabled: true
+  loop:
+    - kibana
+    - logstash
+
+- name: Setup ELK
+  import_tasks: setup_elk.yml
+  tags: setup_elk
+
+- name: Setup logstash pipeline
+  import_tasks: setup_logstash.yml
+  tags: setup_logstash
+  

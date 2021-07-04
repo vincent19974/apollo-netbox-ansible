@@ -1,0 +1,95 @@
+# - name: Collect Facts
+#   tags: get_facts
+#   ios_facts:
+#   register: ruijie_facts
+#   vars:
+#     ansible_connection: network_cli
+#     ansible_network_os: ios
+
+# - name: Output Facts
+#   tags: get_facts
+#   debug: var=ruijie_facts
+
+
+- name: Get Show Interfaces
+  tags: get_facts
+  ios_command:
+    commands:
+      - show interfaces
+  register: ruijie_sh_interfaces
+  vars:
+    ansible_connection: network_cli
+    ansible_network_os: ios
+
+- name: Parse Ruijie Interfaces
+  set_fact:
+    ruijie_interfaces: "{{ ruijie_sh_interfaces.stdout[0] | parse_cli_textfsm(role_path + '/files/ruijie_show_interface.textfsm') }}"
+    cacheable: yes
+
+# - debug: var=ruijie_interfaces
+
+- name: Netbox -- Update Serial Number
+  when:
+    - ansible_net_stacked_serialnums is defined
+    - ansible_net_stacked_serialnums|length > 0
+  netbox_device:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      name: "{{ inventory_hostname }}"
+      serial: "{{ ansible_net_stacked_serialnums[0] }}"
+      tenant: "{{ device_tenant | default(omit) }}"
+    state: present
+
+
+- name: Netbox -- Create  Device Interfaces
+  when: "{{ 'null' not in item.INTERFACE }}"
+  netbox_device_interface:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      device: "{{ inventory_hostname }}"
+      name: "{{  item.INTERFACE }}"
+      type: "Virtual"
+      description: "{{  item.DESCRIPTION }}"
+      enabled: true
+    state: present
+  loop: "{{ ruijie_interfaces }}"
+  loop_control:
+    label: "{{ item.INTERFACE }}"
+
+- name: Netbox -- Create IP Address on Interfaces
+  when:
+    - item.IP_ADDRESS is defined 
+    - item.IP_ADDRESS | ipaddr 
+  netbox_ip_address:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      address: "{{ item.IP_ADDRESS }}"
+      tenant: "{{ device_tenant | default(omit) }}"
+      assigned_object:
+        name: "{{ item.INTERFACE }}"
+        device: "{{ inventory_hostname }}"
+    state: present
+  loop: "{{ ruijie_interfaces }}"
+  loop_control:
+    label: "{{ item.INTERFACE }}"
+
+- name: Netbox -- Delete Dummy Managment IP
+  netbox_device_interface:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      device: "{{ inventory_hostname }}"
+      name: "_mgmt"
+    state: absent
+
+- name: Netbox -- Update Managment IP on Device
+  netbox_device:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      name: "{{ inventory_hostname }}"
+      primary_ip4: "{{ primary_ip4 }}"
+    state: present

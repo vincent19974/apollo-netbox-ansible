@@ -1,0 +1,52 @@
+[[inputs.snmp]]
+  agents = ["192.168.1.251"]
+  version = 2
+  community = "public"
+  interval = "60s"
+  timeout = "10s"
+  retries = 3
+
+
+###############################################################################
+#                                 INTERFACE                                   #
+###############################################################################
+[[inputs.snmp.field]]
+  name = "uptime"
+  oid = "RFC1213-MIB::sysUpTime.0"
+  is_tag = true
+
+###############################################################################
+
+
+[[inputs.snmp.table]]
+  name = "interfaces"
+
+    [[inputs.snmp.table.field]]
+    oid = "IF-MIB::ifName"
+    is_tag = true
+
+    [[inputs.snmp.table.field]]
+    oid = "IF-MIB::ifAlias"
+    is_tag = true
+
+    [[inputs.snmp.table.field]]
+    oid = "IF-MIB::ifLastChange"
+
+
+###############################################################################
+#                                 System                                   #
+###############################################################################
+
+[[inputs.snmp.table]]
+  name = "system"
+  index_as_tag = true
+
+    [[inputs.snmp.table.field]]
+    name = "CPU5min"
+    is_tag = true
+    oid = "SNMPv2-SMI::enterprises.9.9.109.1.1.1.1.8.1"
+
+    [[inputs.snmp.table.field]]
+    name = "CPU1min"
+    is_tag = true
+    oid = "SNMPv2-SMI::enterprises.9.9.109.1.1.1.1.9.1"

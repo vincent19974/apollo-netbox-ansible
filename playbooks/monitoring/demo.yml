@@ -1,0 +1,24 @@
+---
+  - name: test
+    hosts: localhost
+    gather_facts: no
+    vars:
+      telegraf_ping_hosts:
+        loopback1: "10.0.4.22"
+        loopback2: "10.0.8.22"
+        ovpn-out1: "10.10.18.182"
+      regions:
+        - manilla
+    tasks:
+    
+    - set_fact:
+        ping_hosts: "{{ telegraf_ping_hosts | dict2items | map(attribute='value') | list }}"
+    
+    - debug: var=ping_hosts
+
+    - debug:
+        msg: "{{ regions | difference(['patch01', 'patch02']) | first }}"
+    # - lineinfile:
+    #     create: yes
+    #     path: ./test.txt
+    #     line: "[ \"{{ ping_hosts | join('\", \"') }}\" ]"

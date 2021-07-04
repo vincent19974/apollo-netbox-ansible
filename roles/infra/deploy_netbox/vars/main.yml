@@ -1,0 +1,4 @@
+netbox_repo: https://github.com/netbox-community/netbox-docker.git
+netbox_repo_dir: netbox
+netbox_version: latest
+netbox_docker_version: release

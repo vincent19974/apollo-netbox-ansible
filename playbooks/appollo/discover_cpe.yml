@@ -1,0 +1,13 @@
+- name: Discover ruijie CPE Facts
+  hosts: ruijie
+  gather_facts: no
+  tasks:
+    - name: send command
+    
+    - name: Collect Facts
+      ios_facts:
+      register: cpe_facts
+      vars:
+        ansible_connection: network_cli
+    
+    - debug: var=cpe_facts

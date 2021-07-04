@@ -1,0 +1,49 @@
+- name: Deploy configuration based on Netbox
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Validate
+      assert:
+        that:
+          - config_lines is defined
+          - config_lines | length > 0
+
+    - name: Push config to Device
+      iosxr_config:
+        lines: "{{ config_lines }}"
+      register: config_to_push
+      vars:
+        ansible_connection: network_cli
+
+    - name: send Email
+      run_once: yes
+      delegate_to: localhost
+      check_mode: no
+      ignore_errors: true
+      when: config_to_push.changed
+      mail:
+        host: smtp.office365.com
+        port: 587
+        subtype: plain
+        username: kokasha@layer2.com.au
+        password: 'K)K@sha@L2'
+        from: kokasha@layer2.com.au
+        to: kokasha@layer2.com.au
+        subject: Config Push By Ansible
+        body: |
+          Configs That will be Pushed to These Nodes
+          !!!
+          {%  for host in play_hosts %}
+          {{ host }}
+          {%  endfor %}
+          !!!
+
+          {% for host in play_hosts %}
+          {%  if hostvars[host].config_to_push.diff is defined %}
+          {{ host }}
+          ==========
+          !!!
+          {{ hostvars[host].config_to_push.diff.prepared  }}
+          !!!
+          {%  endif %}
+          {%  endfor %}
