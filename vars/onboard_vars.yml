@@ -1,0 +1,11 @@
+---
+cpe_role: 'CPE'
+cpe_location: 'LAYER2_TEST_LAB'
+cpe_vendor: 'Cisco'
+cpe_model: 'XRv9000'
+cpe_name: cpe_xrv01
+# cpe_mgmt_port: 'MgmtEth0/RP0/CPU0/0'
+# cpe_mgmt_subnet: '172.20.4.0/24'
+
+
+# http_server_ip: 172.20.4.101

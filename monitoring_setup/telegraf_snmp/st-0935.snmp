@@ -1,0 +1,135 @@
+[[inputs.snmp]]
+  agents = ["172.17.0.69"]
+  version = 2
+  community = "public"
+  interval = "10s"
+  timeout = "10s"
+  retries = 3
+
+
+###############################################################################
+#                                 System                                   #
+###############################################################################
+
+[[inputs.snmp.field]]
+    oid = "RFC1213-MIB::sysName.0"
+    name = "hostname"
+    is_tag = true
+
+[[inputs.snmp.field]]
+  name = "uptime"
+  oid = "RFC1213-MIB::sysUpTime.0"
+
+[[inputs.snmp.field]]
+  name = "CPU5min_perc"
+  oid = "SNMPv2-SMI::enterprises.4881.1.1.10.2.36.1.1.3.0"
+
+[[inputs.snmp.field]]
+  name = "CPU1min_perc"
+  oid = "SNMPv2-SMI::enterprises.4881.1.1.10.2.36.1.1.2.0"
+
+[[inputs.snmp.field]]
+  name = "TotalMemory"
+  oid = "SNMPv2-SMI::enterprises.4881.1.1.10.2.35.1.1.1.6.1"
+
+[[inputs.snmp.field]]
+  name = "FreeMemory"
+  oid = "SNMPv2-SMI::enterprises.4881.1.1.10.2.35.1.1.1.8.1"
+
+[[inputs.snmp.field]]
+  name = "UsedMem_perc"
+  oid = "SNMPv2-SMI::enterprises.4881.1.1.10.2.35.1.1.1.3.1"
+
+
+###############################################################################
+#                                 INTERFACE                                   #
+###############################################################################
+
+[[inputs.snmp.table]]
+  name = "interfaces"
+  inherit_tags = ["hostname"]
+
+[[inputs.snmp.table.field]]
+  name = "Name"
+  oid = "IF-MIB::ifName"
+  is_tag = true
+
+[[inputs.snmp.table.field]]
+  name = "description"
+  oid = "IF-MIB::ifAlias"
+
+[[inputs.snmp.table.field]]
+  oid = "IF-MIB::ifIndex"
+
+[[inputs.snmp.table.field]]
+  name = "MTU"
+  oid = "IF-MIB::ifMtu"
+
+[[inputs.snmp.table.field]]
+  name = "last-change"
+  oid = "IF-MIB::ifLastChange"
+
+[[inputs.snmp.table.field]]
+  name = "admin-status"
+  oid = "IF-MIB::ifAdminStatus"
+
+[[inputs.snmp.table.field]]
+  name = "oper-status"
+  oid = "IF-MIB::ifOperStatus"
+
+[[inputs.snmp.table.field]]
+  name = "in-octets"
+  oid = "IF-MIB::ifHCInOctets"
+
+[[inputs.snmp.table.field]]
+  name = "out-octets"
+  oid = "IF-MIB::ifHCOutOctets"
+
+[[inputs.snmp.table.field]]
+  name = "in-pkts"
+  oid = "IF-MIB::ifHCInUcastPkts"
+
+[[inputs.snmp.table.field]]
+  name = "out-pkts"
+  oid = "IF-MIB::ifHCOutUcastPkts"
+
+[[inputs.snmp.table.field]]
+  name = "in-unicast-pkts"
+  oid = "IF-MIB::ifHCInUcastPkts"
+
+[[inputs.snmp.table.field]]
+  name = "out-unicast-pkts"
+  oid = "IF-MIB::ifHCOutUcastPkts"
+
+[[inputs.snmp.table.field]]
+  name = "in-broadcast-pkts"
+  oid = "IF-MIB::ifHCInBroadcastPkts"
+
+[[inputs.snmp.table.field]]
+  name = "out-broadcast-pkts"
+  oid = "IF-MIB::ifHCOutBroadcastPkts"
+
+[[inputs.snmp.table.field]]
+  name = "in-multicast-pkts"
+  oid = "IF-MIB::ifHCInMulticastPkts"
+
+[[inputs.snmp.table.field]]
+  name = "out-multicast-pkts"
+  oid = "IF-MIB::ifHCOutMulticastPkts"
+
+[[inputs.snmp.table.field]]
+  name = "in-discards"
+  oid = "IF-MIB::ifInDiscards"
+
+[[inputs.snmp.table.field]]
+  name = "out-discards"
+  oid = "IF-MIB::ifOutDiscards"
+
+[[inputs.snmp.table.field]]
+  name = "in-errors"
+  oid = "IF-MIB::ifInErrors"
+
+[[inputs.snmp.table.field]]
+  name = "out-errors"
+  oid = "IF-MIB::ifOutErrors"
+

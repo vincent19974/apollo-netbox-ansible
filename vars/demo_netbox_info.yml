@@ -1,0 +1,10 @@
+---
+cpe_role: 'CPE'
+cpe_vendor: 'Cisco'
+cpe_model: 'XRv9000'
+cpe_mgmt_subnet: '172.20.4.0/24'
+demo_sites:
+  - l2x_syd
+  - l2x_ph
+  - l2x_eqx
+
