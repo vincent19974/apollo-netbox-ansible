@@ -27,3 +27,5 @@ fintech-cliqq-dev-redeem3,Sys Ops,4,4096,62,A1-R04-U10,AGC SysOps ,202.60.10.184
 fintech-cliqq-production-bot2,Sys Ops,8,4096,32,A1-R04-U10,AGC SysOps ,,192.168.18.187,AOS,OpenStackHost,JanChristian & Juan,Running
 fintech-cliqq-test-sms.api,Sys Ops,4,4096,30,A1-R04-U10,AGC SysOps ,202.60.10.179,,AOS,OpenStackHost,JanChristian & Juan Jamon,Running
 infra-internal-test-rocketchat.nginx,Sys Ops,4,4096,30,A1-R04-U10,AGC SysOps ,202.60.10.145,,AOS,OpenStackHost,Luigi,Running
+fms-fms-production-apo,Sys Ops,4,4096,64,,AGC SysOps ,202.60.10.216,,,,Michael,Running
+test,,,,,,,,,,,,
