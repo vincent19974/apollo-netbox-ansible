@@ -49,7 +49,7 @@ infra-internal-production-pinoyextreme.nas,infra,2,2048,30,A1-R04-U11,AGC SysOps
 devops-k8s-test-node1,devops,8,16384,64,A1-R04-U11,AGC SysOps ,202.60.10.214,,test,Carlex,Running
 supplychain-cliqqshop-dev-db.test1,supplychain,2,2048,50,A1-R04-U11,AGC SysOps ,,192.168.17.90,dev,Ian,Running
 infra-oss-production-rt.cdec,infra,2,2048,125,A1-R04-U11,AGC SysOps ,,192.168.18.94,production,Danrey/Mae,Running
-infra-oss-test-tracker.pwa,infra,2,2048,31,A1-R04-U11,AGC SysOps ,202.60.10.164,,test,Malone/Mae,Running
+infra-oss-test-tracker.pwa1,infra,2,2048,31,A1-R04-U11,AGC SysOps ,202.60.10.164,,test,Malone/Mae,Running
 fintech-payconnect-test-fineract.mifosx,fintech,4,16384,60,A1-R04-U11,AGC SysOps , 202.60.9.116,192.168.18.92,test,Russel Cuy/Jasper Briones,Running
 data.analytics-datalake-dev-7connect.db,data.analytics,4,8192,200,A1-R04-U11,AGC SysOps ,,192.168.18.98,dev,Dom Cimfranca,Running
 infra-network-test-ldap2,infra,2,2048,32,A1-R04-U11,AGC SysOps ,202.60.10.106,,test,Luigi,Running
@@ -163,7 +163,7 @@ supplychain-cliqqshop-dev-merchant.portal,supplychain,2,2048,30,A1-R05-U31,AGC S
 devops-k8s-production-ci.apollo,devops,4,8192,100,A1-R05-U31,AGC SysOps ,202.60.10.72,,production,Carlex,Running
 fmfi-fmfi-production-fmfi.test.server,fmfi,4,8192,64,A1-R05-U31,AGC SysOps ,202.60.10.130,,production,Carlex,Running
 data.analytics-metabase-production-cdec,data.analytics,4,4096,75,A1-R05-U31,AGC SysOps ,202.60.10.149,,production,Danrey,Running
-infra-oss-test-tracker.pwa,infra,2,2048,50,A1-R05-U31,AGC SysOps ,202.60.10.133,,test,Dom Cimafranca/Mae,Running
+infra-oss-test-tracker.pwa2,infra,2,2048,50,A1-R05-U31,AGC SysOps ,202.60.10.133,,test,Dom Cimafranca/Mae,Running
 infra-oss-test-tracker.backend.2,infra,2,2048,65,A1-R05-U31,AGC SysOps ,202.60.10.90,,test,Dom Cimafranca/Mae,Running
 infra-oss-production-rt.dash,infra,4,4096,55,A1-R05-U31,AGC SysOps ,202.60.10.118,,production,Dom Cimafranca/Mae,Running
 fintech-cliqq-test-new.radius.api,fintech,2,2048,32,A1-R05-U31,AGC SysOps ,202.60.10.155,,test,Juan Jamon/Chris,Running
