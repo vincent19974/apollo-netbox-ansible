@@ -134,14 +134,14 @@ infra-network-production-vpn.via.ipc,infra,2,2048,50,A1-R04-U18,AGC SysOps ,,192
 fintech-shopconnect-dev-frontend.test1,fintech,4,2048,32,A1-R05-U29,AGC SysOps ,,192.168.18.88,dev,Carlex,Running
 infra-network-production-freeradius.agc,infra,2,2048,30,A1-R05-U29,AGC SysOps ,202.60.10.183,,production,Mitzi,Running
 infra-network-production-strongswan.b,infra,2,2048,32,A1-R05-U29,AGC SysOps ,202.60.9.99,,production,Menard,Running
-infra-network-production-sma2.bill.generator,infra,2,2048,50,A1-R05-U29,AGC SysOps ,202.60.10.70,,production,Luigi,Running
+infra-network-production-sma2.bill.generator,infra,2,2048,50,A1-R05-U29,A1-R04-U18,202.60.10.70,,production,Luigi,Running
 fintech-payconnect-test-recondasboard.consumer,fintech,4,4096,40,A1-R05-U29,AGC SysOps ,,192.168.18.112,test,Russel,Running
 fintech-payconnect-test-uat.web,fintech,4,4096,34,A1-R05-U29,AGC SysOps ,202.60.10.156,,test,Juan Jamon,Running
 supplychain-cliqqshop-dev-ecms,supplychain,2,2048,30,A1-R05-U29,AGC SysOps ,202.60.10.93,,dev,Ian / Miguel / Jared / Jessie /,Running
 supplychain-cliqqshop-dev-pimcore,supplychain,2,2048,30,A1-R05-U29,AGC SysOps ,202.60.10.76,,dev,Ian / Miguel / Jared / Jessie /,Running
 supplychain-cliqqshop-dev-kong,supplychain,2,2048,30,A1-R05-U29,AGC SysOps ,202.60.10.94,,dev,Ian / Miguel / Jared / Jessie /,Running
 supplychain-cliqqshop-dev-elastic,supplychain,2,2048,30,A1-R05-U29,AGC SysOps ,202.60.10.81,,dev,Ian / Miguel / Jared / Jessie /,Running
-supplychain-cliqqshop-dev-vsf.api,supplychain,2,2048,30,A1-R05-U29,AGC SysOps ,202.60.10.69,,dev,Ian / Miguel / Jared / Jessie /,Running
+supplychain-cliqqshop-dev-vsf.api,supplychain,2,2048,30,A1-R05-U29,A1-R04-U18,202.60.10.69,,dev,Ian / Miguel / Jared / Jessie /,Running
 supplychain-cliqqshop-dev-redis,supplychain,2,2048,30,A1-R05-U29,AGC SysOps ,202.60.10.83,,dev,Ian / Miguel / Jared / Jessie /,Running
 supplychain-cliqqshop-dev-kafka,supplychain,2,2048,30,A1-R05-U29,AGC SysOps ,202.60.10.74,,dev,Ian / Miguel / Jared / Jessie /,Running
 supplychain-cliqqshop-dev-microservices,supplychain,2,2048,30,A1-R05-U29,AGC SysOps ,202.60.10.82,,dev,Ian / Miguel / Jared / Jessie /,Running
@@ -155,3 +155,19 @@ data.analytics-datalake-production-farm.iot1,data.analytics,2,2048,32,A1-R05-U29
 fintech-payconnect-production-merchant.aggregator.env,fintech,2,2048,35,A1-R05-U29,AGC SysOps ,202.60.10.148,,production,Juan Jamon,Running
 fintech-payconnect-dev-payplus.7pay,fintech,4,4096,62,A1-R05-U29,AGC SysOps ,202.60.10.158,,dev,Carlex/Juan Jamon,Running
 fintech-loyalty-production-loyalty.test,fintech,4,8192,64,A1-R05-U29,AGC SysOps ,202.60.10.141,,production,Juan Jamon,Running
+infra-internal-test-biometrics,infra,4,4096,80,A1-R05-U31,AGC SysOps ,,172.29.224.3,test,SYSOPS,Running
+infra-oss-test-atis3.beta,infra,2,2048,50,A1-R05-U31,AGC SysOps ,202.60.10.124,,test,Dom Cimafranca/Mae,Running
+infra-oss-production-atis.test,infra,4,4096,62,A1-R05-U31,AGC SysOps ,202.60.10.210,,production,Mae,Running
+fintech-payconnect-production-frontend.dashboard,fintech,4,4096,40,A1-R05-U31,AGC SysOps ,202.60.10.194,,production,Russel Cuy,Running
+supplychain-cliqqshop-dev-merchant.portal,supplychain,2,2048,30,A1-R05-U31,AGC SysOps ,202.60.10.68,,dev,Ian,Running
+devops-k8s-production-ci.apollo,devops,4,8192,100,A1-R05-U31,AGC SysOps ,202.60.10.72,,production,Carlex,Running
+fmfi-fmfi-production-fmfi.test.server,fmfi,4,8192,64,A1-R05-U31,AGC SysOps ,202.60.10.130,,production,Carlex,Running
+data.analytics-metabase-production-cdec,data.analytics,4,4096,75,A1-R05-U31,AGC SysOps ,202.60.10.149,,production,Danrey,Running
+infra-oss-test-tracker.pwa,infra,2,2048,50,A1-R05-U31,AGC SysOps ,202.60.10.133,,test,Dom Cimafranca/Mae,Running
+infra-oss-test-tracker.backend.2,infra,2,2048,65,A1-R05-U31,AGC SysOps ,202.60.10.90,,test,Dom Cimafranca/Mae,Running
+infra-oss-production-rt.dash,infra,4,4096,55,A1-R05-U31,AGC SysOps ,202.60.10.118,,production,Dom Cimafranca/Mae,Running
+fintech-cliqq-test-new.radius.api,fintech,2,2048,32,A1-R05-U31,AGC SysOps ,202.60.10.155,,test,Juan Jamon/Chris,Running
+supplychain-mariodboro-production-mariodboro.webserver1,supplychain,4,8192,32,A1-R05-U31,AGC SysOps ,202.60.10.199,,production,Carlex,Running
+fintech-payconnect-production-zookeeper2,fintech,1,2048,55,A1-R05-U31,AGC SysOps ,,,production,Carlex,Running
+fintech-payconnect-production-yoti.frontend,fintech,4,4096,55,A1-R05-U31,AGC SysOps ,202.60.10.101,,production,Russel Cuy,Running
+fintech-payconnect-production-yoti.backend,fintech,4,4096,32,A1-R05-U31,AGC SysOps ,,192.168.18.239,production,Russel Cuy,Running
