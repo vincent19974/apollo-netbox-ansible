@@ -134,14 +134,14 @@ infra-network-production-vpn.via.ipc,infra,2,2048,50,A1-R04-U18,AGC SysOps ,,192
 fintech-shopconnect-dev-frontend.test1,fintech,4,2048,32,A1-R05-U29,AGC SysOps ,,192.168.18.88,dev,Carlex,Running
 infra-network-production-freeradius.agc,infra,2,2048,30,A1-R05-U29,AGC SysOps ,202.60.10.183,,production,Mitzi,Running
 infra-network-production-strongswan.b,infra,2,2048,32,A1-R05-U29,AGC SysOps ,202.60.9.99,,production,Menard,Running
-infra-network-production-sma2.bill.generator,infra,2,2048,50,A1-R05-U29,A1-R04-U18,202.60.10.70,,production,Luigi,Running
+infra-network-production-sma2.bill.generator,infra,2,2048,50,A1-R05-U29,AGC SysOps ,202.60.10.70,,production,Luigi,Running
 fintech-payconnect-test-recondasboard.consumer,fintech,4,4096,40,A1-R05-U29,AGC SysOps ,,192.168.18.112,test,Russel,Running
 fintech-payconnect-test-uat.web,fintech,4,4096,34,A1-R05-U29,AGC SysOps ,202.60.10.156,,test,Juan Jamon,Running
 supplychain-cliqqshop-dev-ecms,supplychain,2,2048,30,A1-R05-U29,AGC SysOps ,202.60.10.93,,dev,Ian / Miguel / Jared / Jessie /,Running
 supplychain-cliqqshop-dev-pimcore,supplychain,2,2048,30,A1-R05-U29,AGC SysOps ,202.60.10.76,,dev,Ian / Miguel / Jared / Jessie /,Running
 supplychain-cliqqshop-dev-kong,supplychain,2,2048,30,A1-R05-U29,AGC SysOps ,202.60.10.94,,dev,Ian / Miguel / Jared / Jessie /,Running
 supplychain-cliqqshop-dev-elastic,supplychain,2,2048,30,A1-R05-U29,AGC SysOps ,202.60.10.81,,dev,Ian / Miguel / Jared / Jessie /,Running
-supplychain-cliqqshop-dev-vsf.api,supplychain,2,2048,30,A1-R05-U29,A1-R04-U18,202.60.10.69,,dev,Ian / Miguel / Jared / Jessie /,Running
+supplychain-cliqqshop-dev-vsf.api,supplychain,2,2048,30,A1-R05-U29,AGC SysOps ,202.60.10.69,,dev,Ian / Miguel / Jared / Jessie /,Running
 supplychain-cliqqshop-dev-redis,supplychain,2,2048,30,A1-R05-U29,AGC SysOps ,202.60.10.83,,dev,Ian / Miguel / Jared / Jessie /,Running
 supplychain-cliqqshop-dev-kafka,supplychain,2,2048,30,A1-R05-U29,AGC SysOps ,202.60.10.74,,dev,Ian / Miguel / Jared / Jessie /,Running
 supplychain-cliqqshop-dev-microservices,supplychain,2,2048,30,A1-R05-U29,AGC SysOps ,202.60.10.82,,dev,Ian / Miguel / Jared / Jessie /,Running
