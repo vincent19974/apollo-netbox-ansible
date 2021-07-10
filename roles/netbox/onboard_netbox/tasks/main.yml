@@ -10,8 +10,7 @@
       color: FAB880
     state: present
     validate_certs: False
-  async: 45
-  poll: 0
+
 
 - name: Netbox -- Create Tenant for Virtual Machine
   netbox_tenant:
@@ -21,8 +20,7 @@
       name: "{{ device_tenant }}"
     state: present
     validate_certs: False
-  async: 45  
-  poll: 0
+
 
 
 
@@ -43,8 +41,7 @@
 #      primary_ip4: "{{ device_mgmt_private_ip }}"
     state: present
     validate_certs: False
-  async: 45
-  poll: 0
+
 
     #- name: Netbox -- Create MGMT Public IP Address of Node
     #tags: ip
@@ -82,6 +79,5 @@
         Type: "{{ device_type }}"
     state: present
     validate_certs: False
-  async: 45
-  poll: 0
+
       
