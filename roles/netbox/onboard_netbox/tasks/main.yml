@@ -1,31 +1,35 @@
 
 ---
 - name: Netbox --Create device role
-  when: device_role is defined 
+  when: device_role is defined
   netbox_device_role:
-    netbox_url: https://202.60.12.108/
-    netbox_token: 6d44005d0d0e9ea3725b47cf47b0aa2b3d7f8fba
+    netbox_url: https://dcim.apollo.com.ph/
+    netbox_token: 3c05e93c4ef731b63c30f80a4fa1a9bfc579c5e4
     data:
       name: "{{ device_role }}"
       color: FAB880
     state: present
     validate_certs: False
+  async: 45
+  poll: 0
 
 - name: Netbox -- Create Tenant for Virtual Machine
   netbox_tenant:
-    netbox_url: https://202.60.12.108/
-    netbox_token: 6d44005d0d0e9ea3725b47cf47b0aa2b3d7f8fba
+    netbox_url: https://dcim.apollo.com.ph/
+    netbox_token: 3c05e93c4ef731b63c30f80a4fa1a9bfc579c5e4
     data:
       name: "{{ device_tenant }}"
     state: present
     validate_certs: False
+  async: 45  
+  poll: 0
 
 
 
 - name: Netbox -- Create Virtual Machine
   netbox.netbox.netbox_virtual_machine:
-    netbox_url: https://202.60.12.108/
-    netbox_token: 6d44005d0d0e9ea3725b47cf47b0aa2b3d7f8fba
+    netbox_url: https://dcim.apollo.com.ph/
+    netbox_token: 3c05e93c4ef731b63c30f80a4fa1a9bfc579c5e4
     data:
       name: "{{ device_name }}"
       vcpus: "{{ vcpus }}"
@@ -39,17 +43,19 @@
 #      primary_ip4: "{{ device_mgmt_private_ip }}"
     state: present
     validate_certs: False
+  async: 45
+  poll: 0
 
-#- name: Netbox -- Create MGMT Public IP Address of Node
-#  tags: ip
-#  netbox_ip_address:
-#    netbox_url: https://202.60.12.108/
-#    netbox_token: 6d44005d0d0e9ea3725b47cf47b0aa2b3d7f8fba
-#    data:
-#      address: "{{ public }}"
-#      tenant: "{{ device_tenant }}"
-#    state: present
-#    validate_certs: False
+    #- name: Netbox -- Create MGMT Public IP Address of Node
+    #tags: ip
+    #netbox_ip_address:
+    #netbox_url: https://202.60.12.108/
+    #netbox_token: 6d44005d0d0e9ea3725b47cf47b0aa2b3d7f8fba
+    #data:
+    #address: "{{ public }}"
+    #tenant: "{{ device_tenant }}"
+    #state: present
+    #validate_certs: False
 
 #- name: Attach IP to Virtual Machines
 #  netbox_ip_address:
@@ -63,8 +69,8 @@
 #    validate_certs: False
 - name: Assign Custom Field data to Virtual Machine
   netbox.netbox.netbox_virtual_machine:
-    netbox_url: https://202.60.12.108/
-    netbox_token: 6d44005d0d0e9ea3725b47cf47b0aa2b3d7f8fba
+    netbox_url: https://dcim.apollo.com.ph/
+    netbox_token: 3c05e93c4ef731b63c30f80a4fa1a9bfc579c5e4
     data:
       name: "{{ device_name }}"
       custom_fields:
@@ -76,4 +82,6 @@
         Type: "{{ device_type }}"
     state: present
     validate_certs: False
+  async: 45
+  poll: 0
       
