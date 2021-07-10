@@ -27,3 +27,17 @@ fintech-cliqq-dev-redeem3,Sys Ops,4,4096,62,A1-R04-U10,AGC SysOps ,202.60.10.184
 fintech-cliqq-production-bot2,Sys Ops,8,4096,32,A1-R04-U10,AGC SysOps ,,192.168.18.187,AOS,OpenStackHost,JanChristian & Juan,Running
 fintech-cliqq-test-sms.api,Sys Ops,4,4096,30,A1-R04-U10,AGC SysOps ,202.60.10.179,,AOS,OpenStackHost,JanChristian & Juan Jamon,Running
 infra-internal-test-rocketchat.nginx,Sys Ops,4,4096,30,A1-R04-U10,AGC SysOps ,202.60.10.145,,AOS,OpenStackHost,Luigi,Running
+fms-fms-production-apo,Sys Ops,4,4096,64,A1-R04-U9,AGC SysOps ,202.60.10.216,,AOS,OpenStackHost,Michael,Running
+supplychain-erp-production-kafka.scripts,Sys Ops,2,2048,34,A1-R04-U9,AGC SysOps ,,192.168.18.116,AOS,OpenStackHost,Sarah Osay,Running
+supplychain-cliqqshop-dev-shoployalty.test1,Sys Ops,8,4096,50,A1-R04-U9,AGC SysOps ,202.60.10.170,,AOS,OpenStackHost,Juan Jamon/Ian,Running
+supplychain-cliqqshop-dev-shop1,Sys Ops,2,2048,32,A1-R04-U9,AGC SysOps ,202.60.10.189,,AOS,OpenStackHost,Ian,Running
+supplychain-wms-test-wms.generic1,Sys Ops,2,2048,32,A1-R04-U9,AGC SysOps ,202.60.10.181,192.168.18.91,AOS,OpenStackHost,Gelie,Running
+fintech-online.gulay-test-billing.center.backend,Sys Ops,2,4096,50,A1-R04-U9,AGC SysOps ,202.60.10.188,,AOS,OpenStackHost,Jasper,Running
+fintech-payconnect-production-postgresql,Sys Ops,4,4096,55,A1-R04-U9,AGC SysOps ,192.168.17.88,,AOS,OpenStackHost,Juan Jamon,Running
+fintech-payconnect-production-paymentgateway.be1,Sys Ops,4,16384,100,A1-R04-U9,AGC SysOps ,202.60.10.169,,AOS,OpenStackHost,Carlex,Running
+data.analytics-datalake-production-mysql,Sys Ops,4,8192,100,A1-R04-U9,AGC SysOps ,192.168.17.67,,AOS,OpenStackHost,Dom Cimafranca,Running
+internal-oss-test-mailoutgoing2,Sys Ops,4,4096,55,A1-R04-U9,AGC SysOps ,202.60.10.154,,AOS,OpenStackHost,menard,Running
+infra-network-production-ldap1,Sys Ops,2,2048,,A1-R04-U9,AGC SysOps ,202.60.10.105,,AOS,OpenStackHost,Luigi,Running
+infra-internal-production-rocketchat.mongodb.4,Sys Ops,4,4096,,A1-R04-U9,AGC SysOps ,192.168.18.36,,AOS,OpenStackHost,Luigi,Running
+fintech-online.gulay-dev-onlinegulay.frontend,Sys Ops,2,4096,,A1-R04-U9,AGC SysOps ,202.60.10.174,,AOS,OpenStackHost,Yonas,Running
+infra-kafka-test-zookeeper3,Sys Ops,2,4096,,A1-R04-U9,AGC SysOps ,192.168.18.244,,AOS,OpenStackHost,jessie@apolloglobal.net,Running
