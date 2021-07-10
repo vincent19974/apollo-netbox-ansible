@@ -56,6 +56,8 @@
         device_status: "{{ item['cf_Active Status'] }}"
         device_tenant: "{{ item['tenant'] }}"
         device_role: 'CPE'
+        device_type: "{{ item['cf_Type'] }}"
+      
         
         
       
