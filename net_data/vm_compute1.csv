@@ -1,218 +1,212 @@
-name,cf_Group,vcpus,memory,disk,cf_Disk(two-volumes),cluster,tenant,cf_Public IP,cf_Private IP,cf_Type,cf_Owner,cf_Active Status
-supplychain-wms-production-wms.ecommerce,supplychain,2,4096,35,,A1-R05-U26,AGC SysOps ,202.60.10.107,,production,Sarah,Running
-fintech-payconnect-production-rs2.rewards.processing,fintech,4,2048,31,,A1-R05-U26,AGC SysOps ,202.60.10.204,,production,Juan Jamon,Running
-supplychain-erp-test-odoo12.pmi,supplychain,4,4096,64,,A1-R05-U26,AGC SysOps ,,192.168.18.46,test,Carlex & Sarah,Running
-supplychain-erp-test-erp.prod,supplychain,8,4096,64,,A1-R05-U26,AGC SysOps ,10.255.255.183,,test,Randy,Running
-infra-oss-production-nginx.proxy,infra,2,2048,31,,A1-R05-U26,AGC SysOps ,202.60.10.217,,production,Mae,Running
-infra-internal-production-openproject,infra,4,8192,64,,A1-R05-U26,AGC SysOps ,202.60.10.137,,production,Luigi,Running
-infra-network-production-quad.a,infra,2,4096,64,,A1-R05-U26,AGC SysOps ,202.60.10.125,,production,Luigi,Running
-fintech-payconnect-test-switch2,fintech,4,4096,32,,A1-R05-U26,AGC SysOps ,202.60.10.168,,test,Juan Jamon,Running
-infra-internal-production-rocketchat.mongodb.1,infra,4,4096,100,,A1-R05-U26,AGC SysOps ,,192.168.18.21,production,Luigi,Running
-infra-internal-production-rocketchat.mongodb.3,infra,4,4096,100,,A1-R05-U26,AGC SysOps ,,192.168.18.23,production,Luigi,Running
-fms-fms-production-kitanglad,fms,4,4096,64,,A1-R05-U26,AGC SysOps ,,192.168.70.241,production,Michael,Running
-etrade-etrade-test-fe,etrade,2,2048,34,,A1-R05-U26,AGC SysOps ,202.60.10.120,,test,Danrey,Running
-datalake-datalake-dev-wiki,datalake,4,4096,30,,A1-R05-U26,AGC SysOps ,,192.168.70.21,dev,Dom Cimafranca,Running
-infra-network.management-test-elk,infra,4,4096,20,,A1-R05-U26,AGC SysOps ,202.60.10.135,,test,mitzi/menard,Running
-infra-network.management-test-grafana,infra,2,2048,20,,A1-R05-U26,AGC SysOps ,202.60.10.138,,test,mitzi/menard,Running
-infra-internal-test-cloned.dcim,infra,2,2048,60,,A1-R05-U26,AGC SysOps ,202.60.12.108,,test,vincent,Running
-supplychain-wms-production-wms.dataconnect,supplychain,2,2048,35,,A1-R04-U10,AGC SysOps ,202.60.10.121 ,,production,Sarah Osay,Running
-fintech-payconnect-dev-backend,fintech,4,4096,50,,A1-R04-U10,AGC SysOps ,202.60.10.176,,dev,Juan Jamon,Running
-supplychain-erp-test-odoo12.1,supplychain,4,4096,64,,A1-R04-U10,AGC SysOps ,,192.168.18.178,test,Sarah Osay & Gelie,Running
-infra-oss-production-atis.apollo,infra,4,4096,62,,A1-R04-U10,AGC SysOps ,,192.168.17.180,production,Randy/Mae,Running
-infra-oss-production-atis.corona,infra,2,2048,62,,A1-R04-U10,AGC SysOps ,,192.168.17.86 ,production,Randy/Mae,Running
-fintech-payconnect-dev-biller.api.test,fintech,2,2048,30,,A1-R04-U10,AGC SysOps ,202.60.10.100,,dev,Russel Cuy,Running
-fintech-payconnect-production-kafka1,fintech,4,4096,100,,A1-R04-U10,AGC SysOps ,,192.168.18.165,production,Carlex,Running
-fintech-cliqq-dev-redeem3,fintech,4,4096,62,,A1-R04-U10,AGC SysOps ,202.60.10.184,,dev,Juan Jamon,Running
-fintech-cliqq-production-bot2,fintech,8,4096,32,,A1-R04-U10,AGC SysOps ,,192.168.18.187,production,JanChristian & Juan,Running
-fintech-cliqq-test-sms.api,fintech,4,4096,30,,A1-R04-U10,AGC SysOps ,202.60.10.179,,test,JanChristian & Juan Jamon,Running
-infra-internal-test-rocketchat.nginx,infra,4,4096,30,,A1-R04-U10,AGC SysOps ,202.60.10.145,,test,Luigi,Running
-fms-fms-production-apo,fms,4,4096,64,,A1-R04-U9,AGC SysOps ,202.60.10.216,,production,Michael,Running
-supplychain-erp-production-kafka.scripts,supplychain,2,2048,34,,A1-R04-U9,AGC SysOps ,,192.168.18.116,production,Sarah Osay,Running
-supplychain-cliqqshop-dev-shoployalty.test1,supplychain,8,4096,50,,A1-R04-U9,AGC SysOps ,202.60.10.170,,dev,Juan Jamon/Ian,Running
-supplychain-cliqqshop-dev-shop1,supplychain,2,2048,32,,A1-R04-U9,AGC SysOps ,202.60.10.189,,dev,Ian,Running
-supplychain-wms-test-wms.generic1,supplychain,2,2048,32,,A1-R04-U9,AGC SysOps ,202.60.10.181,192.168.18.91,test,Gelie,Running
-fintech-online.gulay-test-billing.center.backend,fintech,2,4096,50,,A1-R04-U9,AGC SysOps ,202.60.10.188,,test,Jasper,Running
-fintech-payconnect-production-postgresql,fintech,4,4096,55,,A1-R04-U9,AGC SysOps ,,192.168.17.88,production,Juan Jamon,Running
-fintech-payconnect-production-paymentgateway.be1,fintech,4,16384,100,,A1-R04-U9,AGC SysOps ,202.60.10.169,,production,Carlex,Running
-data.analytics-datalake-production-mysql,data.analytics,4,8192,100,,A1-R04-U9,AGC SysOps ,,192.168.17.67,production,Dom Cimafranca,Running
-internal-oss-test-mailoutgoing2,internal,4,4096,55,,A1-R04-U9,AGC SysOps ,202.60.10.154,,test,menard,Running
-infra-network-production-ldap1,infra,2,2048,32,,A1-R04-U9,AGC SysOps ,202.60.10.105,,production,Luigi,Running
-infra-internal-production-rocketchat.mongodb.4,infra,4,4096,30,,A1-R04-U9,AGC SysOps ,,192.168.18.36,production,Luigi,Running
-fintech-online.gulay-dev-onlinegulay.frontend,fintech,2,4096,50,,A1-R04-U9,AGC SysOps ,202.60.10.174,,dev,Yonas,Running
-infra-kafka-test-zookeeper3,infra,2,4096,50,,A1-R04-U9,AGC SysOps ,,192.168.18.244,test,jessie@apolloglobal.net,Running
-fintech-payconnect-test-frontend,fintech,4,2048,50,,A1-R04-U11,AGC SysOps ,,192.168.18.99,test,Juan Jamon,Running
-supplychain-erp-test-odoo14.2,supplychain,4,4096,64,,A1-R04-U11,AGC SysOps ,,192.168.18.180,test,Sarah Osay,Running
-dev-apollo.ldap.wifi-production-captive.portal,dev,2,4096,30,,A1-R04-U11,AGC SysOps ,202.60.10.165,,production,Orly,Running
-infra-oss-production-tracker.fdroid,infra,2,2048,200,,A1-R04-U11,AGC SysOps ,202.60.10.84,,production,Dom Cimafranca/Mae,Running
-infra-internal-production-bastillion,infra,2,2048,30,,A1-R04-U11,AGC SysOps ,202.60.10.122,,production,Luigi,Running
-infra-internal-production-pinoyextreme.nas,infra,2,2048,30,,A1-R04-U11,AGC SysOps ,,192.168.17.3,production,SYSOPS,Running
-devops-k8s-test-node1,devops,8,16384,64,,A1-R04-U11,AGC SysOps ,202.60.10.214,,test,Carlex,Running
-supplychain-cliqqshop-dev-db.test1,supplychain,2,2048,50,,A1-R04-U11,AGC SysOps ,,192.168.17.90,dev,Ian,Running
-infra-oss-production-rt.cdec,infra,2,2048,125,,A1-R04-U11,AGC SysOps ,,192.168.18.94,production,Danrey/Mae,Running
-infra-oss-test-tracker.pwa1,infra,2,2048,31,,A1-R04-U11,AGC SysOps ,202.60.10.164,,test,Malone/Mae,Running
-fintech-payconnect-test-fineract.mifosx,fintech,4,16384,60,,A1-R04-U11,AGC SysOps , 202.60.9.116,192.168.18.92,test,Russel Cuy/Jasper Briones,Running
-data.analytics-datalake-dev-7connect.db,data.analytics,4,8192,200,,A1-R04-U11,AGC SysOps ,,192.168.18.98,dev,Dom Cimfranca,Running
-infra-network-test-ldap2,infra,2,2048,32,,A1-R04-U11,AGC SysOps ,202.60.10.106,,test,Luigi,Running
-Infra-Kafka-test-zookeeper1,infra,2,4096,50,,A1-R04-U11,AGC SysOps ,,192.168.18.242,test,jessie@apolloglobal.net,Running
-infra-oss-production-sma2.dataconnect.openproject,infra,2,8192,64,,A1-R04-U11,AGC SysOps ,202.60.10.142,,production,ingrid@apolloglobal.net,Running
-infra-wfm-production-reports.db,infra,4,4096,100,,A1-R05-U23,AGC SysOps ,,192.168.18.118,production,Cristian Togonon,Running
-supplychain-wms-test-odoo14.wms,supplychain,2,2048,35,,A1-R05-U23,AGC SysOps ,,192.168.18.238,test,Sarah Osay,Running
-supplychain-wms-production-apollo.wms,supplychain,2,2048,35,,A1-R05-U23,AGC SysOps ,202.60.10.187,,production,Sarah Osay,Running
-supplychain-wms-test-odoo11.wms,supplychain,2,2048,35,,A1-R05-U23,AGC SysOps ,202.60.10.178,,test,Sarah Osay,Running
-fintech-shopconnect-dev-parcel,fintech,2,2048,30,,A1-R05-U23,AGC SysOps ,,192.168.18.115,dev,Ian/Miguel/Jared,Running
-fintech-shopconnect-dev-notification,fintech,2,2048,30,,A1-R05-U23,AGC SysOps ,,192.168.18.117,dev,Ian/Miguel/Jared,Running
-fintech-shopconnect-dev-pickuppoint,fintech,2,2048,30,,A1-R05-U23,AGC SysOps ,,192.168.18.119,dev,Ian/Miguel/Jared,Running
-fintech-shopconnect-dev-elastic,fintech,2,2048,30,,A1-R05-U23,AGC SysOps ,,192.168.17.116,dev,Ian/Miguel/Jared,Running
-fintech-cliqqshop-dev-dashboard,fintech,2,2048,30,,A1-R05-U23,AGC SysOps ,202.60.10.171,,dev,Ian/Miguel/Jared,Running
-fintech-microfinance-dev-microfinance.backend,fintech,2,4096,50,,A1-R05-U23,AGC SysOps ,202.60.10.186 ,192.168.17.118,dev,Pamela Demafeliz,Running
-fintech-microfinance-dev-microfinance.frontend,fintech,2,4096,50,,A1-R05-U23,AGC SysOps ,202.60.10.167 ,192.168.18.104,dev,Pamela Demafeliz,Running
-fms-fms-production-matutum,fms,4,4096,64,,A1-R05-U23,AGC SysOps ,202.60.10.212,,production,Michael,Running
-supplychain-cliqqshop-dev-pimcore.microservices,supplychain,2,2048,30,,A1-R05-U23,AGC SysOps ,202.60.10.182,,dev,Ian/Miguel/Jared,Running
-supplychain-cliqqshop-dev-orderdashboard,supplychain,2,2048,30,,A1-R05-U23,AGC SysOps ,202.60.10.173,,dev,Ian/Miguel/Jared,Running
-fintech-billing.center-dev-billing.center.frontend,fintech,2,4096,50,,A1-R05-U23,AGC SysOps ,202.60.10.213,,dev,Sarah,Running
-fintech-payconnect-dev-uat.db,fintech,8,16384,500,,A1-R05-U23,AGC SysOps ,,192.168.18.170,dev,Juan Jamon,Running
-fintech-payconnect-test-zookeeper3,fintech,1,2048,32,,A1-R05-U23,AGC SysOps ,,192.168.18.233,test,Carlex,Running
-fintech-payconnect-production-zookeeper1,fintech,1,2048,32,,A1-R05-U23,AGC SysOps ,,192.168.18.232,production,Carlex,Running
-fintech-payconnect-production-payconnect.dashboard.backend1,fintech,4,8192,64,,A1-R05-U25,AGC SysOps ,202.60.10.220,,production,Carlex,Running
-fintech-payconnect-production-payconnect.dashboard1,fintech,4,8192,64,,A1-R05-U25,AGC SysOps ,202.60.10.215,,production,Carlex,Running
-supplychain-erp-production-odoo12.mercande,supplychain,4,8192,60,,A1-R05-U25,AGC SysOps ,,192.168.18.48,production,Carlex/Sarah,Running
-infra-network-production-openvpn.agc,infra,2,2048,50,,A1-R05-U25,AGC SysOps ,202.60.9.252,,production,Luigi,Running
-infra-network-production-freepbx,infra,2,2048,100,,A1-R05-U25,AGC SysOps ,202.60.9.131,,production,Malone,Running
-devops-k8s-test-rancher1,data.analytics,4,8192,64,,A1-R05-U25,AGC SysOps ,202.60.10.201,,test,Carlex,Running
-infra-monitoring-production-zdash,infra,2,2048,32,,A1-R05-U25,AGC SysOps ,202.60.10.131,,production,brian rex,Running
-infra-monitoring-production-nms2,infra,2,4096,30,,A1-R05-U25,AGC SysOps ,,192.168.18.12,production,Luigi,Running
-infra-network-test-freepbx.cdec,infra,2,2048,100,,A1-R05-U25,AGC SysOps ,202.60.10.203,,test,Malone,Running
-fintech-payconnect-dev-merchant.aggregator,fintech,8,16384,100,,A1-R05-U25,AGC SysOps ,202.60.10.219,,dev,Juan Jamon/Jan Christian,Running
-fintech-payconnect-test-slave1,fintech,2,4096,50,,A1-R05-U25,AGC SysOps ,,192.168.18.8,test,Juan Jamon,Running
-fintech-payconnect-test-slave2,fintech,2,4096,50,,A1-R05-U25,AGC SysOps ,,192.168.18.9,test,Juan Jamon,Running
-fintech-payconnect-test-uat.reports,fintech,2,2048,35,,A1-R05-U25,AGC SysOps ,,192.168.18.78,test,Juan Jamon/JD/Christian,Running
-fintech-payconnect-test-uat.stip.switch,fintech,2,2048,35,,A1-R05-U25,AGC SysOps ,,192.168.18.76,test,Juan Jamon/JD/Christian,Running
-fintech-payconnect-dev-payment.gateway.backend,fintech,2,4096,50,,A1-R05-U25,AGC SysOps ,202.60.10.211,,dev,Juan Jamon,Running
-fintech-payconnect-production-payment.gateway.frontend,fintech,2,4096,50,,A1-R05-U25,AGC SysOps ,202.60.10.202,,production,Juan Jamon,Running
-infra-oss-production-rt.psc,infra,4,4096,100,,A1-R05-U25,AGC SysOps ,,192.168.18.95,production,Malone/Mae,Running
-Infra-Kafka-test-zookeeper2,infra,2,4096,50,,A1-R05-U25,AGC SysOps ,,192.168.18.243,test,jessie@apolloglobal.net,Running
-fintech-payconnect-production-kafka3,fintech,4,8192,100,,A1-R05-U24,AGC SysOps ,,192.168.18.237,production,Carlex,Running
-infra-oss-production-dataconnect.openproject,infra,2,8192,64,,A1-R05-U20,AGC SysOps ,202.60.10.91,,production,Ingrid,Running
-infra-network-production-psc.vpn,infra,4,2048,50,,A1-R05-U20,AGC SysOps ,202.60.9.253,,production,Luigi,Running
-infra-network-production-strongswan.c,infra,2,2048,34,,A1-R05-U20,AGC SysOps ,202.60.9.214,,production,Menard,Running
-infra-network-production-strongswan.a,infra,2,2048,35,,A1-R05-U20,AGC SysOps ,202.60.9.98,,production,Menard,Running
-etrade-grails.jpos-test-prepaid,etrade,2,2048,32,,A1-R05-U20,AGC SysOps ,,192.168.17.175,test,Danrey Igno,Running
-fintech-payconnect-production-cdec.wallet.loadbal1,fintech,4,8192,50,,A1-R05-U20,AGC SysOps ,202.60.10.208,,production,Russel Cuy,Running
-devops-k8s-production-rancher3,devops,4,8192,64,,A1-R05-U20,AGC SysOps ,202.60.10.166,,production,Carlex,Running
-fintech-payconnect-production-debezium1,fintech,4,8192,100,,A1-R05-U20,AGC SysOps ,,192.168.18.234,production,Carlex,Running
-fintech-payconnect-production-kafka2,fintech,4,8192,100,,A1-R05-U20,AGC SysOps ,,192.168.18.161,production,Carlex,Running
-l2x-network-test-awx,l2x,4,4096,10,,A1-R05-U20,AGC SysOps ,202.60.10.150,,test,menard@apolloglobal.net,Running
-infra-network-production-acs.test,infra,4,4096,30,,A1-R04-U33,AGC SysOps ,202.60.10.89,192.168.18.55,production,Orly/Nemrod,Running
-supplychain-erp-test-odoo12.trifoods,supplychain,4,8192,60,,A1-R04-U33,AGC SysOps ,,192.168.18.49,test,Carlex/Sarah,Running
-supplychain-erp-test-kafka.scripts,supplychain,2,2048,35,,A1-R04-U33,AGC SysOps ,,192.168.17.206,test,Sarah Osay,Running
-supplychain-odoo-production-db.master,supplychain,4,8192,200,,A1-R04-U33,AGC SysOps ,,192.168.17.192,production,Gelie,Running
-devops-k8s-test-rancher2,devops,4,8192,64,,A1-R04-U33,AGC SysOps ,202.60.10.180,,test,Carlex,Running
-fintech-payconnect-test-paymentgateway.fe1,fintech,4,8192,64,,A1-R04-U33,AGC SysOps ,202.60.10.172,,test,Carlex,Running
-data.analytics-datalake-production-kafka,data.analytics,8,16384,128,,A1-R04-U33,AGC SysOps ,202.60.10.185,,production,Juan Jamon,Running
-devops-devops-test-gitlab.runner,devops,4,8192,128,,A1-R04-U33,AGC SysOps ,,192.168.18.173,test,Carlex,Running
-infra-oss-production-tracker2,infra,4,4096,64,,A1-R04-U33,AGC SysOps ,,192.168.17.204,production,Malone/Mae,Running
-infra-oss-production-tracker1,infra,4,4096,64,,A1-R04-U33,AGC SysOps ,,192.168.17.179,production,Malone/Mae,Running
-devops-k8s-test-saltmaster,devops,2,4096,64,,A1-R04-U33,AGC SysOps ,,192.168.18.51,test,Carlex,Running
-supplychain-erp-production-odoo12.balancer,supplychain,2,4096,60,,A1-R05-U32,AGC SysOps ,202.60.10.66,,production,Carlex/Sarah,Running
-supplychain-erp-production-odoo12.corona,supplychain,4,8192,60,,A1-R05-U32,AGC SysOps ,,192.168.18.47,production,Carlex/Sarah,Running
-supplychain-erp-production-odoo12.ati,supplychain,4,8192,60,,A1-R05-U32,AGC SysOps ,,192.168.18.45,production,Carlex/Sarah,Running
-infra-internal-test-openproject,infra,4,4096,40,,A1-R05-U32,AGC SysOps ,,192.168.70.17,test,ingrid,Running
-fintech-payconnect-test-recondasboard.frontend,fintech,2,4096,50,,A1-R05-U32,AGC SysOps ,202.60.10.200,,test,Russel Cuy,Running
-fintech-payconnect-test-recondasboard.backend,fintech,2,4096,50,,A1-R05-U32,AGC SysOps ,202.60.10.205,,test,Pamela Demafeliz,Running
-fintech-payconnect-production-backend.dashboard,fintech,4,4096,40,,A1-R05-U32,AGC SysOps ,,192.168.18.162,production,Russel Cuy,Running
-fintech-payconnect-production-matcher.dashboard,fintech,4,4096,40,,A1-R05-U32,AGC SysOps ,,192.168.18.235,production,Russel Cuy,Running
-fintech-payconnect-production-cbs.consumer.dashboard,fintech,4,4096,40,,A1-R05-U32,AGC SysOps ,,192.168.18.240,production,Russel Cuy,Running
-fintech-payconnect-production-7connect.consumer.dashboard,fintech,4,4096,40,,A1-R05-U32,AGC SysOps ,,192.168.18.236,production,Russel Cuy,Running
-fintech-payconnect-production-mojaloop1,fintech,8,16384,100,,A1-R05-U32,AGC SysOps ,202.60.10.222,,production,Juan Jamon,Running
-fintech-payconnect-production-haproxy1,fintech,4,8192,64,,A1-R05-U32,AGC SysOps ,202.60.9.227,,production,Carlex,Running
-etrade-grails-test-gofast,etrade,2,2048,32,,A1-R04-U18,AGC SysOps ,,192.168.17.203,test,Danrey Igno,Running
-etrade-grails-test-peza,etrade,2,2048,32,,A1-R04-U18,AGC SysOps ,202.60.10.115,,test,Danrey Igno,Running
-etrade-grails-test-etrade,etrade,2,2048,32,,A1-R04-U18,AGC SysOps ,202.60.10.162,,test,Danrey Igno,Running
-fintech-cas-production-cas,fintech,4,8192,128,,A1-R04-U18,AGC SysOps ,202.60.10.221,,production,Robert,Running
-fintech-e.kyc-test-yoti.posgresql,fintech,4,4096,100,,A1-R04-U18,AGC SysOps ,,192.168.18.175,test,Pamela Demafeliz,Running
-infra-network-production-vpn.via.ipc,infra,2,2048,50,,A1-R04-U18,AGC SysOps ,,192.168.70.171,production,Luigi,Running
-fintech-shopconnect-dev-frontend.test1,fintech,4,2048,32,,A1-R05-U29,AGC SysOps ,,192.168.18.88,dev,Carlex,Running
-infra-network-production-freeradius.agc,infra,2,2048,30,,A1-R05-U29,AGC SysOps ,202.60.10.183,,production,Mitzi,Running
-infra-network-production-strongswan.b,infra,2,2048,32,,A1-R05-U29,AGC SysOps ,202.60.9.99,,production,Menard,Running
-infra-network-production-sma2.bill.generator,infra,2,2048,50,,A1-R05-U29,AGC SysOps ,202.60.10.70,,production,Luigi,Running
-fintech-payconnect-test-recondasboard.consumer,fintech,4,4096,40,,A1-R05-U29,AGC SysOps ,,192.168.18.112,test,Russel,Running
-fintech-payconnect-test-uat.web,fintech,4,4096,34,,A1-R05-U29,AGC SysOps ,202.60.10.156,,test,Juan Jamon,Running
-supplychain-cliqqshop-dev-ecms,supplychain,2,2048,30,,A1-R05-U29,AGC SysOps ,202.60.10.93,,dev,Ian / Miguel / Jared / Jessie /,Running
-supplychain-cliqqshop-dev-pimcore,supplychain,2,2048,30,,A1-R05-U29,AGC SysOps ,202.60.10.76,,dev,Ian / Miguel / Jared / Jessie /,Running
-supplychain-cliqqshop-dev-kong,supplychain,2,2048,30,,A1-R05-U29,AGC SysOps ,202.60.10.94,,dev,Ian / Miguel / Jared / Jessie /,Running
-supplychain-cliqqshop-dev-elastic,supplychain,2,2048,30,,A1-R05-U29,AGC SysOps ,202.60.10.81,,dev,Ian / Miguel / Jared / Jessie /,Running
-supplychain-cliqqshop-dev-vsf.api,supplychain,2,2048,30,,A1-R05-U29,AGC SysOps ,202.60.10.69,,dev,Ian / Miguel / Jared / Jessie /,Running
-supplychain-cliqqshop-dev-redis,supplychain,2,2048,30,,A1-R05-U29,AGC SysOps ,202.60.10.83,,dev,Ian / Miguel / Jared / Jessie /,Running
-supplychain-cliqqshop-dev-kafka,supplychain,2,2048,30,,A1-R05-U29,AGC SysOps ,202.60.10.74,,dev,Ian / Miguel / Jared / Jessie /,Running
-supplychain-cliqqshop-dev-microservices,supplychain,2,2048,30,,A1-R05-U29,AGC SysOps ,202.60.10.82,,dev,Ian / Miguel / Jared / Jessie /,Running
-fintech-payconnect-production-uat.web.stip,fintech,2,2048,34,,A1-R05-U29,AGC SysOps ,,192.168.18.77,production,Juan Jamon/Christian/JD,Running
-fintech-payconnect-test-uat.switch,fintech,2,4096,34,,A1-R05-U29,AGC SysOps ,202.60.10.146,,test,Juan Jamon,Running
-supplychain-cliqqshop-dev-new.vsf.pwa,supplychain,2,2048,30,,A1-R05-U29,AGC SysOps ,202.60.10.79,,dev,Ian / Miguel / Jared / Jessie /,Running
-supplychain-cliqqshop-dev-db.server,supplychain,2,2048,30,,A1-R05-U29,AGC SysOps ,202.60.10.92,,dev,Ian / Miguel / Jared / Jessie /,Running
-fmfi-fmfi-test-db.server,fmfi,2,2048,30,,A1-R05-U29,AGC SysOps ,202.60.10.73,,test,Carlex,Running
-infra-internal-production-dcim,infra,4,8192,62,,A1-R05-U29,AGC SysOps ,202.60.10.134,,production,Luigi,Running
-data.analytics-datalake-production-farm.iot1,data.analytics,2,2048,32,,A1-R05-U29,AGC SysOps ,202.60.10.132,,production,Michael,Running
-fintech-payconnect-production-merchant.aggregator.env,fintech,2,2048,35,,A1-R05-U29,AGC SysOps ,202.60.10.148,,production,Juan Jamon,Running
-fintech-payconnect-dev-payplus.7pay,fintech,4,4096,62,,A1-R05-U29,AGC SysOps ,202.60.10.158,,dev,Carlex/Juan Jamon,Running
-fintech-loyalty-production-loyalty.test,fintech,4,8192,64,,A1-R05-U29,AGC SysOps ,202.60.10.141,,production,Juan Jamon,Running
-infra-internal-test-biometrics,infra,4,4096,80,,A1-R05-U31,AGC SysOps ,,172.29.224.3,test,SYSOPS,Running
-infra-oss-test-atis3.beta,infra,2,2048,50,,A1-R05-U31,AGC SysOps ,202.60.10.124,,test,Dom Cimafranca/Mae,Running
-infra-oss-production-atis.test,infra,4,4096,62,,A1-R05-U31,AGC SysOps ,202.60.10.210,,production,Mae,Running
-fintech-payconnect-production-frontend.dashboard,fintech,4,4096,40,,A1-R05-U31,AGC SysOps ,202.60.10.194,,production,Russel Cuy,Running
-supplychain-cliqqshop-dev-merchant.portal,supplychain,2,2048,30,,A1-R05-U31,AGC SysOps ,202.60.10.68,,dev,Ian,Running
-devops-k8s-production-ci.apollo,devops,4,8192,100,,A1-R05-U31,AGC SysOps ,202.60.10.72,,production,Carlex,Running
-fmfi-fmfi-production-fmfi.test.server,fmfi,4,8192,64,,A1-R05-U31,AGC SysOps ,202.60.10.130,,production,Carlex,Running
-data.analytics-metabase-production-cdec,data.analytics,4,4096,75,,A1-R05-U31,AGC SysOps ,202.60.10.149,,production,Danrey,Running
-infra-oss-test-tracker.pwa2,infra,2,2048,50,,A1-R05-U31,AGC SysOps ,202.60.10.133,,test,Dom Cimafranca/Mae,Running
-infra-oss-test-tracker.backend.2,infra,2,2048,65,,A1-R05-U31,AGC SysOps ,202.60.10.90,,test,Dom Cimafranca/Mae,Running
-infra-oss-production-rt.dash,infra,4,4096,55,,A1-R05-U31,AGC SysOps ,202.60.10.118,,production,Dom Cimafranca/Mae,Running
-fintech-cliqq-test-new.radius.api,fintech,2,2048,32,,A1-R05-U31,AGC SysOps ,202.60.10.155,,test,Juan Jamon/Chris,Running
-supplychain-mariodboro-production-mariodboro.webserver1,supplychain,4,8192,32,,A1-R05-U31,AGC SysOps ,202.60.10.199,,production,Carlex,Running
-fintech-payconnect-production-zookeeper2,fintech,1,2048,55,,A1-R05-U31,AGC SysOps ,,,production,Carlex,Running
-fintech-payconnect-production-yoti.frontend,fintech,4,4096,55,,A1-R05-U31,AGC SysOps ,202.60.10.101,,production,Russel Cuy,Running
-fintech-payconnect-production-yoti.backend,fintech,4,4096,32,,A1-R05-U31,AGC SysOps ,,192.168.18.239,production,Russel Cuy,Running
-fintech-payconnect-production-haproxy2,fintech,4,4096,64,,A1-R05-U33,AGC SysOps ,202.60.10.209,,production,Carlex,Running
-devops-k8s-production-haproxy,devops,2,4096,64,,A1-R05-U33,AGC SysOps ,202.60.10.67,,production,Carlex,Running
-iconnect-iconnect-production-order.management.frontend.test1,iconnect,2,4096,32,,A1-R05-U33,AGC SysOps ,,192.168.18.143,production,Carlex,Running
-fintech-shopconnect-dev-backend.test1,fintech,4,8192,32,,A1-R05-U16,AGC SysOps ,,192.168.18.86,dev,Carlex,Running
-infra-network-production-acs,infra,4,8192,50,,A1-R05-U16,AGC SysOps ,202.60.10.85,,production,Orlando Sarceda/Nemrod,Running
-fintech-payconnect-test-kong1,fintech,4,8192,64,,A1-R05-U16,AGC SysOps ,,192.168.18.146,test,Carlex,Running
-infra-oss-test-mailincoming,internal,4,4096,50,,A1-R05-U16,AGC SysOps ,202.60.9.8,,test,menard,Running
-internal-infra-dev-workplace,infra,4,8192,1000,,A1-R05-U16,AGC SysOps ,202.60.10.136,,dev,luigi,Running
-infra-internal-production-graylog,infra,4,8192,100,,A1-R05-U16,AGC SysOps ,202.60.10.109,,production,Luigi,Running
-infra-internal-production-gitlab,fintech,4,8192,500,,A1-R05-U16,AGC SysOps ,202.60.10.143,,production,Luigi,Running
-fintech-payconnect-test-recondasboard.matcherconsumer,devops,4,4096,40,,A1-R05-U16,AGC SysOps ,,192.168.18.114,test,Russel,Running
-devops-k8s-dev-graylog1,plentina,4,8192,100,,A1-R05-U16,AGC SysOps ,202.60.10.87,,dev,Carlex,Running
-plentina-plentina-production-mobile.tokenizer1,plentina,2,4096,32,,A1-R05-U16,AGC SysOps ,,192.168.18.87,production,Carlex,Running
-infra-api-test-devportal,infra,2,4096,100,,A1-R04-U22,AGC SysOps ,202.60.10.108,,test,Sir Ian/Orly/Nemrod,Running
-infra-monitoring-production-nms.proxy,infra,4,4096,30,,A1-R04-U22,AGC SysOps ,202.60.10.110,,production,Luigi,Running
-infra-oss-test-elastiflow,infra,8,16384,,"30GB /dev/vda 
-30GB /dev/vdb ",A1-R04-U22,AGC SysOps ,202.60.10.88,,test,Michael-CDO,Running
-iconnect-iconnect-test-order.management.backend1,iconnect,2,4096,34,,A1-R04-U22,AGC SysOps ,,192.168.18.56,test,Carlex,Running
-infra-oss-production-dataconnect.postgres.slave2,infra,2,2048,100,,A1-R04-U22,AGC SysOps ,202.60.10.140,192.168.18.89,production,,Running
-infra-oss-test-smtpauth,infra,4,4096,55,,A1-R04-U22,AGC SysOps ,202.60.9.12,,test,Menard,Running
-infra-oss-test-dovecot,infra,4,8192,55,"1TB-a  /dev/vdb
-1TB-b /dev/vdc
-200GB-c /dev/vdd ",A1-R04-U22,AGC SysOps ,202.60.9.11,,test,Menard,Running
-datalake-airflow-dev,datalake,,,,,A1-R04-U22,AGC SysOps ,,192.168.18.98,dev,,Running
-L2X-network-test-deploy,l2x,2,2048,100,,A1-R04-U22,AGC SysOps ,202.60.10.147,,test,mitzi,Running
-infra-network-test-pfsence,infra,,,,,A1-R04-U22,AGC SysOps ,202.60.10.139,,test,,Running
-infra-oss-production-dataconnect.postgres.slave2,infra,,,,,A1-R04-U22,AGC SysOps ,202.60.10.140,,production,,Running
-fintech-payconnect-production-matcher.dashboard.db,fintech,16,16384,100,,A1-R04-U21,AGC SysOps ,,192.168.18.177,production,Russel Cuy,Running
-fintech-payconnect-production-fmfi.db1,fintech,4,8192,64,,A1-R04-U21,AGC SysOps ,,192.168.18.169,production,Carlex,Running
-fintech-payconnect-production-fmfi1,fintech,8,16384,128,,A1-R04-U21,AGC SysOps ,202.60.10.218,,production,Carlex,Running
-infra-internal-production-dokuwiki,infra,2,2048,62,,A1-R05-U38,AGC SysOps ,202.60.10.144,,production,Luigi,Running
-devops-k8s-dev-loadbalancer1,devops,2,4096,64,,A1-R05-U38,AGC SysOps ,202.60.10.123,,dev,Carlex,Running
-devops-k8s-dev-node2,devops,8,8192,64,,A1-R05-U38,AGC SysOps ,,192.168.17.77,dev,Carlex,Running
-infra-oss-production-atis.dataconnect,infra,2,2048,60,,A1-R05-U38,AGC SysOps ,,,production,Gelie/Mae,Running
-infra-oss-production-atis.dataconnect,infra,2,2048,32,,A1-R05-U38,AGC SysOps ,202.60.10.126,,production,Menard,Running
-infra-network-production-powerdns.1,infra,2,2048,32,,A1-R05-U38,AGC SysOps ,202.60.9.4,,production,Menard,Running
-supplychain-wms-test-wms.poultrymax,supplychain,2,2048,35,,A1-R05-U36,AGC SysOps ,202.60.10.103,,test,Gelie,Running
-fintech-payconnect-production-billers.api1,fintech,2,4096,32,,A1-R05-U36,AGC SysOps ,,192.168.18.138,production,Carlex,Running
-iconnect-iconnect-test-iconnect.notification1,iconnect,1,2048,32,,A1-R05-U36,AGC SysOps ,,192.168.18.139,test,Carlex,Running
-iconnect-iconnect-test-iconnect.notification.test1,iconnect,1,2048,32,,A1-R05-U36,AGC SysOps ,,192.168.18.80,test,Carlex,Running
-infra-network-production-strongswan.cert.c,infra,2,2048,34,,A1-R05-U36,AGC SysOps ,202.60.9.114,,production,Menard,Running
-infra-network-test-strongswan.cert.b,infra,2,2048,34,,A1-R05-U36,AGC SysOps ,202.60.9.113,,test,Menard,Running
-infra-network-test-strongswan.cert.a,infra,2,2048,34,,A1-R05-U36,AGC SysOps ,202.60.9.49,,test,Menard,Running
-fintech-payconnect-production-ksqldb.test,fintech,8,8192,100,,A1-R05-U36,AGC SysOps ,,192.168.18.191,production,Russel / Janchris / Juan,Running
-fintech-payconnect-production-tdm.reports.test,fintech,4,8192,40,,A1-R05-U36,AGC SysOps ,,192.168.18.2,production,Russel / Janchris / Juan,Running
+name,cf_Group,vcpus,memory,disk,cf_Disk(GB)-vda,cf_Disk(GB)-vdb,cf_Disk(GB)-vdc,cluster,tenant,cf_Public IP,cf_Private IP,cf_Type,cf_Owner,cf_Active Status
+supplychain-wms-production-wms.ecommerce,supplychain,2,4096,35,,,,A1-R05-U26,AGC SysOps ,202.60.10.107,,production,Sarah,Running
+fintech-payconnect-production-rs2.rewards.processing,fintech,4,2048,31,,,,A1-R05-U26,AGC SysOps ,202.60.10.204,,production,Juan Jamon,Running
+supplychain-erp-test-odoo12.pmi,supplychain,4,4096,64,,,,A1-R05-U26,AGC SysOps ,,192.168.18.46,test,Carlex & Sarah,Running
+supplychain-erp-test-erp.prod,supplychain,8,4096,64,,,,A1-R05-U26,AGC SysOps ,10.255.255.183,,test,Randy,Running
+infra-oss-production-nginx.proxy,infra,2,2048,31,,,,A1-R05-U26,AGC SysOps ,202.60.10.217,,production,Mae,Running
+infra-internal-production-openproject,infra,4,8192,64,,,,A1-R05-U26,AGC SysOps ,202.60.10.137,,production,Luigi,Running
+infra-network-production-quad.a,infra,2,4096,64,,,,A1-R05-U26,AGC SysOps ,202.60.10.125,,production,Luigi,Running
+fintech-payconnect-test-switch2,fintech,4,4096,32,,,,A1-R05-U26,AGC SysOps ,202.60.10.168,,test,Juan Jamon,Running
+infra-internal-production-rocketchat.mongodb.1,infra,4,4096,100,,,,A1-R05-U26,AGC SysOps ,,192.168.18.21,production,Luigi,Running
+infra-internal-production-rocketchat.mongodb.3,infra,4,4096,100,,,,A1-R05-U26,AGC SysOps ,,192.168.18.23,production,Luigi,Running
+fms-fms-production-kitanglad,fms,4,4096,64,,,,A1-R05-U26,AGC SysOps ,,192.168.70.241,production,Michael,Running
+etrade-etrade-test-fe,etrade,2,2048,34,,,,A1-R05-U26,AGC SysOps ,202.60.10.120,,test,Danrey,Running
+datalake-datalake-dev-wiki,datalake,4,4096,30,,,,A1-R05-U26,AGC SysOps ,,192.168.70.21,dev,Dom Cimafranca,Running
+infra-network.management-test-elk,infra,4,4096,20,,,,A1-R05-U26,AGC SysOps ,202.60.10.135,,test,mitzi/menard,Running
+infra-network.management-test-grafana,infra,2,2048,20,,,,A1-R05-U26,AGC SysOps ,202.60.10.138,,test,mitzi/menard,Running
+infra-internal-test-cloned.dcim,infra,2,2048,60,,,,A1-R05-U26,AGC SysOps ,202.60.12.108,,test,vincent,Running
+supplychain-wms-production-wms.dataconnect,supplychain,2,2048,35,,,,A1-R04-U10,AGC SysOps ,202.60.10.121 ,,production,Sarah Osay,Running
+fintech-payconnect-dev-backend,fintech,4,4096,50,,,,A1-R04-U10,AGC SysOps ,202.60.10.176,,dev,Juan Jamon,Running
+supplychain-erp-test-odoo12.1,supplychain,4,4096,64,,,,A1-R04-U10,AGC SysOps ,,192.168.18.178,test,Sarah Osay & Gelie,Running
+infra-oss-production-atis.apollo,infra,4,4096,62,,,,A1-R04-U10,AGC SysOps ,,192.168.17.180,production,Randy/Mae,Running
+infra-oss-production-atis.corona,infra,2,2048,62,,,,A1-R04-U10,AGC SysOps ,,192.168.17.86 ,production,Randy/Mae,Running
+fintech-payconnect-dev-biller.api.test,fintech,2,2048,30,,,,A1-R04-U10,AGC SysOps ,202.60.10.100,,dev,Russel Cuy,Running
+fintech-payconnect-production-kafka1,fintech,4,4096,100,,,,A1-R04-U10,AGC SysOps ,,192.168.18.165,production,Carlex,Running
+fintech-cliqq-dev-redeem3,fintech,4,4096,62,,,,A1-R04-U10,AGC SysOps ,202.60.10.184,,dev,Juan Jamon,Running
+fintech-cliqq-production-bot2,fintech,8,4096,32,,,,A1-R04-U10,AGC SysOps ,,192.168.18.187,production,JanChristian & Juan,Running
+fintech-cliqq-test-sms.api,fintech,4,4096,30,,,,A1-R04-U10,AGC SysOps ,202.60.10.179,,test,JanChristian & Juan Jamon,Running
+infra-internal-test-rocketchat.nginx,infra,4,4096,30,,,,A1-R04-U10,AGC SysOps ,202.60.10.145,,test,Luigi,Running
+fms-fms-production-apo,fms,4,4096,64,,,,A1-R04-U9,AGC SysOps ,202.60.10.216,,production,Michael,Running
+supplychain-erp-production-kafka.scripts,supplychain,2,2048,34,,,,A1-R04-U9,AGC SysOps ,,192.168.18.116,production,Sarah Osay,Running
+supplychain-cliqqshop-dev-shoployalty.test1,supplychain,8,4096,50,,,,A1-R04-U9,AGC SysOps ,202.60.10.170,,dev,Juan Jamon/Ian,Running
+supplychain-cliqqshop-dev-shop1,supplychain,2,2048,32,,,,A1-R04-U9,AGC SysOps ,202.60.10.189,,dev,Ian,Running
+supplychain-wms-test-wms.generic1,supplychain,2,2048,32,,,,A1-R04-U9,AGC SysOps ,202.60.10.181,192.168.18.91,test,Gelie,Running
+fintech-online.gulay-test-billing.center.backend,fintech,2,4096,50,,,,A1-R04-U9,AGC SysOps ,202.60.10.188,,test,Jasper,Running
+fintech-payconnect-production-postgresql,fintech,4,4096,55,,,,A1-R04-U9,AGC SysOps ,,192.168.17.88,production,Juan Jamon,Running
+fintech-payconnect-production-paymentgateway.be1,fintech,4,16384,100,,,,A1-R04-U9,AGC SysOps ,202.60.10.169,,production,Carlex,Running
+data.analytics-datalake-production-mysql,data.analytics,4,8192,100,,,,A1-R04-U9,AGC SysOps ,,192.168.17.67,production,Dom Cimafranca,Running
+internal-oss-test-mailoutgoing2,internal,4,4096,55,,,,A1-R04-U9,AGC SysOps ,202.60.10.154,,test,menard,Running
+infra-network-production-ldap1,infra,2,2048,32,,,,A1-R04-U9,AGC SysOps ,202.60.10.105,,production,Luigi,Running
+infra-internal-production-rocketchat.mongodb.4,infra,4,4096,30,,,,A1-R04-U9,AGC SysOps ,,192.168.18.36,production,Luigi,Running
+fintech-online.gulay-dev-onlinegulay.frontend,fintech,2,4096,50,,,,A1-R04-U9,AGC SysOps ,202.60.10.174,,dev,Yonas,Running
+infra-kafka-test-zookeeper3,infra,2,4096,50,,,,A1-R04-U9,AGC SysOps ,,192.168.18.244,test,jessie@apolloglobal.net,Running
+fintech-payconnect-test-frontend,fintech,4,2048,50,,,,A1-R04-U11,AGC SysOps ,,192.168.18.99,test,Juan Jamon,Running
+supplychain-erp-test-odoo14.2,supplychain,4,4096,64,,,,A1-R04-U11,AGC SysOps ,,192.168.18.180,test,Sarah Osay,Running
+dev-apollo.ldap.wifi-production-captive.portal,dev,2,4096,30,,,,A1-R04-U11,AGC SysOps ,202.60.10.165,,production,Orly,Running
+infra-oss-production-tracker.fdroid,infra,2,2048,200,,,,A1-R04-U11,AGC SysOps ,202.60.10.84,,production,Dom Cimafranca/Mae,Running
+infra-internal-production-bastillion,infra,2,2048,30,,,,A1-R04-U11,AGC SysOps ,202.60.10.122,,production,Luigi,Running
+infra-internal-production-pinoyextreme.nas,infra,2,2048,30,,,,A1-R04-U11,AGC SysOps ,,192.168.17.3,production,SYSOPS,Running
+devops-k8s-test-node1,devops,8,16384,64,,,,A1-R04-U11,AGC SysOps ,202.60.10.214,,test,Carlex,Running
+supplychain-cliqqshop-dev-db.test1,supplychain,2,2048,50,,,,A1-R04-U11,AGC SysOps ,,192.168.17.90,dev,Ian,Running
+infra-oss-production-rt.cdec,infra,2,2048,125,,,,A1-R04-U11,AGC SysOps ,,192.168.18.94,production,Danrey/Mae,Running
+infra-oss-test-tracker.pwa1,infra,2,2048,31,,,,A1-R04-U11,AGC SysOps ,202.60.10.164,,test,Malone/Mae,Running
+fintech-payconnect-test-fineract.mifosx,fintech,4,16384,60,,,,A1-R04-U11,AGC SysOps , 202.60.9.116,192.168.18.92,test,Russel Cuy/Jasper Briones,Running
+data.analytics-datalake-dev-7connect.db,data.analytics,4,8192,200,,,,A1-R04-U11,AGC SysOps ,,192.168.18.98,dev,Dom Cimfranca,Running
+infra-network-test-ldap2,infra,2,2048,32,,,,A1-R04-U11,AGC SysOps ,202.60.10.106,,test,Luigi,Running
+Infra-Kafka-test-zookeeper1,infra,2,4096,50,,,,A1-R04-U11,AGC SysOps ,,192.168.18.242,test,jessie@apolloglobal.net,Running
+infra-oss-production-sma2.dataconnect.openproject,infra,2,8192,64,,,,A1-R04-U11,AGC SysOps ,202.60.10.142,,production,ingrid@apolloglobal.net,Running
+infra-wfm-production-reports.db,infra,4,4096,100,,,,A1-R05-U23,AGC SysOps ,,192.168.18.118,production,Cristian Togonon,Running
+supplychain-wms-test-odoo14.wms,supplychain,2,2048,35,,,,A1-R05-U23,AGC SysOps ,,192.168.18.238,test,Sarah Osay,Running
+supplychain-wms-production-apollo.wms,supplychain,2,2048,35,,,,A1-R05-U23,AGC SysOps ,202.60.10.187,,production,Sarah Osay,Running
+supplychain-wms-test-odoo11.wms,supplychain,2,2048,35,,,,A1-R05-U23,AGC SysOps ,202.60.10.178,,test,Sarah Osay,Running
+fintech-shopconnect-dev-parcel,fintech,2,2048,30,,,,A1-R05-U23,AGC SysOps ,,192.168.18.115,dev,Ian/Miguel/Jared,Running
+fintech-shopconnect-dev-notification,fintech,2,2048,30,,,,A1-R05-U23,AGC SysOps ,,192.168.18.117,dev,Ian/Miguel/Jared,Running
+fintech-shopconnect-dev-pickuppoint,fintech,2,2048,30,,,,A1-R05-U23,AGC SysOps ,,192.168.18.119,dev,Ian/Miguel/Jared,Running
+fintech-shopconnect-dev-elastic,fintech,2,2048,30,,,,A1-R05-U23,AGC SysOps ,,192.168.17.116,dev,Ian/Miguel/Jared,Running
+fintech-cliqqshop-dev-dashboard,fintech,2,2048,30,,,,A1-R05-U23,AGC SysOps ,202.60.10.171,,dev,Ian/Miguel/Jared,Running
+fintech-microfinance-dev-microfinance.backend,fintech,2,4096,50,,,,A1-R05-U23,AGC SysOps ,202.60.10.186 ,192.168.17.118,dev,Pamela Demafeliz,Running
+fintech-microfinance-dev-microfinance.frontend,fintech,2,4096,50,,,,A1-R05-U23,AGC SysOps ,202.60.10.167 ,192.168.18.104,dev,Pamela Demafeliz,Running
+fms-fms-production-matutum,fms,4,4096,64,,,,A1-R05-U23,AGC SysOps ,202.60.10.212,,production,Michael,Running
+supplychain-cliqqshop-dev-pimcore.microservices,supplychain,2,2048,30,,,,A1-R05-U23,AGC SysOps ,202.60.10.182,,dev,Ian/Miguel/Jared,Running
+supplychain-cliqqshop-dev-orderdashboard,supplychain,2,2048,30,,,,A1-R05-U23,AGC SysOps ,202.60.10.173,,dev,Ian/Miguel/Jared,Running
+fintech-billing.center-dev-billing.center.frontend,fintech,2,4096,50,,,,A1-R05-U23,AGC SysOps ,202.60.10.213,,dev,Sarah,Running
+fintech-payconnect-dev-uat.db,fintech,8,16384,500,,,,A1-R05-U23,AGC SysOps ,,192.168.18.170,dev,Juan Jamon,Running
+fintech-payconnect-test-zookeeper3,fintech,1,2048,32,,,,A1-R05-U23,AGC SysOps ,,192.168.18.233,test,Carlex,Running
+fintech-payconnect-production-zookeeper1,fintech,1,2048,32,,,,A1-R05-U23,AGC SysOps ,,192.168.18.232,production,Carlex,Running
+fintech-payconnect-production-payconnect.dashboard.backend1,fintech,4,8192,64,,,,A1-R05-U25,AGC SysOps ,202.60.10.220,,production,Carlex,Running
+fintech-payconnect-production-payconnect.dashboard1,fintech,4,8192,64,,,,A1-R05-U25,AGC SysOps ,202.60.10.215,,production,Carlex,Running
+supplychain-erp-production-odoo12.mercande,supplychain,4,8192,60,,,,A1-R05-U25,AGC SysOps ,,192.168.18.48,production,Carlex/Sarah,Running
+infra-network-production-openvpn.agc,infra,2,2048,50,,,,A1-R05-U25,AGC SysOps ,202.60.9.252,,production,Luigi,Running
+infra-network-production-freepbx,infra,2,2048,100,,,,A1-R05-U25,AGC SysOps ,202.60.9.131,,production,Malone,Running
+devops-k8s-test-rancher1,data.analytics,4,8192,64,,,,A1-R05-U25,AGC SysOps ,202.60.10.201,,test,Carlex,Running
+infra-monitoring-production-zdash,infra,2,2048,32,,,,A1-R05-U25,AGC SysOps ,202.60.10.131,,production,brian rex,Running
+infra-monitoring-production-nms2,infra,2,4096,30,,,,A1-R05-U25,AGC SysOps ,,192.168.18.12,production,Luigi,Running
+infra-network-test-freepbx.cdec,infra,2,2048,100,,,,A1-R05-U25,AGC SysOps ,202.60.10.203,,test,Malone,Running
+fintech-payconnect-dev-merchant.aggregator,fintech,8,16384,100,,,,A1-R05-U25,AGC SysOps ,202.60.10.219,,dev,Juan Jamon/Jan Christian,Running
+fintech-payconnect-test-slave1,fintech,2,4096,50,,,,A1-R05-U25,AGC SysOps ,,192.168.18.8,test,Juan Jamon,Running
+fintech-payconnect-test-slave2,fintech,2,4096,50,,,,A1-R05-U25,AGC SysOps ,,192.168.18.9,test,Juan Jamon,Running
+fintech-payconnect-test-uat.reports,fintech,2,2048,35,,,,A1-R05-U25,AGC SysOps ,,192.168.18.78,test,Juan Jamon/JD/Christian,Running
+fintech-payconnect-test-uat.stip.switch,fintech,2,2048,35,,,,A1-R05-U25,AGC SysOps ,,192.168.18.76,test,Juan Jamon/JD/Christian,Running
+fintech-payconnect-dev-payment.gateway.backend,fintech,2,4096,50,,,,A1-R05-U25,AGC SysOps ,202.60.10.211,,dev,Juan Jamon,Running
+fintech-payconnect-production-payment.gateway.frontend,fintech,2,4096,50,,,,A1-R05-U25,AGC SysOps ,202.60.10.202,,production,Juan Jamon,Running
+infra-oss-production-rt.psc,infra,4,4096,100,,,,A1-R05-U25,AGC SysOps ,,192.168.18.95,production,Malone/Mae,Running
+Infra-Kafka-test-zookeeper2,infra,2,4096,50,,,,A1-R05-U25,AGC SysOps ,,192.168.18.243,test,jessie@apolloglobal.net,Running
+fintech-payconnect-production-kafka3,fintech,4,8192,100,,,,A1-R05-U24,AGC SysOps ,,192.168.18.237,production,Carlex,Running
+infra-oss-production-dataconnect.openproject,infra,2,8192,64,,,,A1-R05-U20,AGC SysOps ,202.60.10.91,,production,Ingrid,Running
+infra-network-production-psc.vpn,infra,4,2048,50,,,,A1-R05-U20,AGC SysOps ,202.60.9.253,,production,Luigi,Running
+infra-network-production-strongswan.c,infra,2,2048,34,,,,A1-R05-U20,AGC SysOps ,202.60.9.214,,production,Menard,Running
+infra-network-production-strongswan.a,infra,2,2048,35,,,,A1-R05-U20,AGC SysOps ,202.60.9.98,,production,Menard,Running
+etrade-grails.jpos-test-prepaid,etrade,2,2048,32,,,,A1-R05-U20,AGC SysOps ,,192.168.17.175,test,Danrey Igno,Running
+fintech-payconnect-production-cdec.wallet.loadbal1,fintech,4,8192,50,,,,A1-R05-U20,AGC SysOps ,202.60.10.208,,production,Russel Cuy,Running
+devops-k8s-production-rancher3,devops,4,8192,64,,,,A1-R05-U20,AGC SysOps ,202.60.10.166,,production,Carlex,Running
+fintech-payconnect-production-debezium1,fintech,4,8192,100,,,,A1-R05-U20,AGC SysOps ,,192.168.18.234,production,Carlex,Running
+fintech-payconnect-production-kafka2,fintech,4,8192,100,,,,A1-R05-U20,AGC SysOps ,,192.168.18.161,production,Carlex,Running
+l2x-network-test-awx,l2x,4,4096,10,,,,A1-R05-U20,AGC SysOps ,202.60.10.150,,test,menard@apolloglobal.net,Running
+infra-network-production-acs.test,infra,4,4096,30,,,,A1-R04-U33,AGC SysOps ,202.60.10.89,192.168.18.55,production,Orly/Nemrod,Running
+supplychain-erp-test-odoo12.trifoods,supplychain,4,8192,60,,,,A1-R04-U33,AGC SysOps ,,192.168.18.49,test,Carlex/Sarah,Running
+supplychain-erp-test-kafka.scripts,supplychain,2,2048,35,,,,A1-R04-U33,AGC SysOps ,,192.168.17.206,test,Sarah Osay,Running
+supplychain-odoo-production-db.master,supplychain,4,8192,200,,,,A1-R04-U33,AGC SysOps ,,192.168.17.192,production,Gelie,Running
+devops-k8s-test-rancher2,devops,4,8192,64,,,,A1-R04-U33,AGC SysOps ,202.60.10.180,,test,Carlex,Running
+fintech-payconnect-test-paymentgateway.fe1,fintech,4,8192,64,,,,A1-R04-U33,AGC SysOps ,202.60.10.172,,test,Carlex,Running
+data.analytics-datalake-production-kafka,data.analytics,8,16384,128,,,,A1-R04-U33,AGC SysOps ,202.60.10.185,,production,Juan Jamon,Running
+devops-devops-test-gitlab.runner,devops,4,8192,128,,,,A1-R04-U33,AGC SysOps ,,192.168.18.173,test,Carlex,Running
+infra-oss-production-tracker2,infra,4,4096,64,,,,A1-R04-U33,AGC SysOps ,,192.168.17.204,production,Malone/Mae,Running
+infra-oss-production-tracker1,infra,4,4096,64,,,,A1-R04-U33,AGC SysOps ,,192.168.17.179,production,Malone/Mae,Running
+devops-k8s-test-saltmaster,devops,2,4096,64,,,,A1-R04-U33,AGC SysOps ,,192.168.18.51,test,Carlex,Running
+supplychain-erp-production-odoo12.balancer,supplychain,2,4096,60,,,,A1-R05-U32,AGC SysOps ,202.60.10.66,,production,Carlex/Sarah,Running
+supplychain-erp-production-odoo12.corona,supplychain,4,8192,60,,,,A1-R05-U32,AGC SysOps ,,192.168.18.47,production,Carlex/Sarah,Running
+supplychain-erp-production-odoo12.ati,supplychain,4,8192,60,,,,A1-R05-U32,AGC SysOps ,,192.168.18.45,production,Carlex/Sarah,Running
+infra-internal-test-openproject,infra,4,4096,40,,,,A1-R05-U32,AGC SysOps ,,192.168.70.17,test,ingrid,Running
+fintech-payconnect-test-recondasboard.frontend,fintech,2,4096,50,,,,A1-R05-U32,AGC SysOps ,202.60.10.200,,test,Russel Cuy,Running
+fintech-payconnect-test-recondasboard.backend,fintech,2,4096,50,,,,A1-R05-U32,AGC SysOps ,202.60.10.205,,test,Pamela Demafeliz,Running
+fintech-payconnect-production-backend.dashboard,fintech,4,4096,40,,,,A1-R05-U32,AGC SysOps ,,192.168.18.162,production,Russel Cuy,Running
+fintech-payconnect-production-matcher.dashboard,fintech,4,4096,40,,,,A1-R05-U32,AGC SysOps ,,192.168.18.235,production,Russel Cuy,Running
+fintech-payconnect-production-cbs.consumer.dashboard,fintech,4,4096,40,,,,A1-R05-U32,AGC SysOps ,,192.168.18.240,production,Russel Cuy,Running
+fintech-payconnect-production-7connect.consumer.dashboard,fintech,4,4096,40,,,,A1-R05-U32,AGC SysOps ,,192.168.18.236,production,Russel Cuy,Running
+fintech-payconnect-production-mojaloop1,fintech,8,16384,100,,,,A1-R05-U32,AGC SysOps ,202.60.10.222,,production,Juan Jamon,Running
+fintech-payconnect-production-haproxy1,fintech,4,8192,64,,,,A1-R05-U32,AGC SysOps ,202.60.9.227,,production,Carlex,Running
+etrade-grails-test-gofast,etrade,2,2048,32,,,,A1-R04-U18,AGC SysOps ,,192.168.17.203,test,Danrey Igno,Running
+etrade-grails-test-peza,etrade,2,2048,32,,,,A1-R04-U18,AGC SysOps ,202.60.10.115,,test,Danrey Igno,Running
+etrade-grails-test-etrade,etrade,2,2048,32,,,,A1-R04-U18,AGC SysOps ,202.60.10.162,,test,Danrey Igno,Running
+fintech-cas-production-cas,fintech,4,8192,128,,,,A1-R04-U18,AGC SysOps ,202.60.10.221,,production,Robert,Running
+fintech-e.kyc-test-yoti.posgresql,fintech,4,4096,100,,,,A1-R04-U18,AGC SysOps ,,192.168.18.175,test,Pamela Demafeliz,Running
+infra-network-production-vpn.via.ipc,infra,2,2048,50,,,,A1-R04-U18,AGC SysOps ,,192.168.70.171,production,Luigi,Running
+fintech-shopconnect-dev-frontend.test1,fintech,4,2048,32,,,,A1-R05-U29,AGC SysOps ,,192.168.18.88,dev,Carlex,Running
+infra-network-production-freeradius.agc,infra,2,2048,30,,,,A1-R05-U29,AGC SysOps ,202.60.10.183,,production,Mitzi,Running
+infra-network-production-strongswan.b,infra,2,2048,32,,,,A1-R05-U29,AGC SysOps ,202.60.9.99,,production,Menard,Running
+infra-network-production-sma2.bill.generator,infra,2,2048,50,,,,A1-R05-U29,AGC SysOps ,202.60.10.70,,production,Luigi,Running
+fintech-payconnect-test-recondasboard.consumer,fintech,4,4096,40,,,,A1-R05-U29,AGC SysOps ,,192.168.18.112,test,Russel,Running
+fintech-payconnect-test-uat.web,fintech,4,4096,34,,,,A1-R05-U29,AGC SysOps ,202.60.10.156,,test,Juan Jamon,Running
+supplychain-cliqqshop-dev-ecms,supplychain,2,2048,30,,,,A1-R05-U29,AGC SysOps ,202.60.10.93,,dev,Ian / Miguel / Jared / Jessie /,Running
+supplychain-cliqqshop-dev-pimcore,supplychain,2,2048,30,,,,A1-R05-U29,AGC SysOps ,202.60.10.76,,dev,Ian / Miguel / Jared / Jessie /,Running
+supplychain-cliqqshop-dev-kong,supplychain,2,2048,30,,,,A1-R05-U29,AGC SysOps ,202.60.10.94,,dev,Ian / Miguel / Jared / Jessie /,Running
+supplychain-cliqqshop-dev-elastic,supplychain,2,2048,30,,,,A1-R05-U29,AGC SysOps ,202.60.10.81,,dev,Ian / Miguel / Jared / Jessie /,Running
+supplychain-cliqqshop-dev-vsf.api,supplychain,2,2048,30,,,,A1-R05-U29,AGC SysOps ,202.60.10.69,,dev,Ian / Miguel / Jared / Jessie /,Running
+supplychain-cliqqshop-dev-redis,supplychain,2,2048,30,,,,A1-R05-U29,AGC SysOps ,202.60.10.83,,dev,Ian / Miguel / Jared / Jessie /,Running
+supplychain-cliqqshop-dev-kafka,supplychain,2,2048,30,,,,A1-R05-U29,AGC SysOps ,202.60.10.74,,dev,Ian / Miguel / Jared / Jessie /,Running
+supplychain-cliqqshop-dev-microservices,supplychain,2,2048,30,,,,A1-R05-U29,AGC SysOps ,202.60.10.82,,dev,Ian / Miguel / Jared / Jessie /,Running
+fintech-payconnect-production-uat.web.stip,fintech,2,2048,34,,,,A1-R05-U29,AGC SysOps ,,192.168.18.77,production,Juan Jamon/Christian/JD,Running
+fintech-payconnect-test-uat.switch,fintech,2,4096,34,,,,A1-R05-U29,AGC SysOps ,202.60.10.146,,test,Juan Jamon,Running
+supplychain-cliqqshop-dev-new.vsf.pwa,supplychain,2,2048,30,,,,A1-R05-U29,AGC SysOps ,202.60.10.79,,dev,Ian / Miguel / Jared / Jessie /,Running
+supplychain-cliqqshop-dev-db.server,supplychain,2,2048,30,,,,A1-R05-U29,AGC SysOps ,202.60.10.92,,dev,Ian / Miguel / Jared / Jessie /,Running
+fmfi-fmfi-test-db.server,fmfi,2,2048,30,,,,A1-R05-U29,AGC SysOps ,202.60.10.73,,test,Carlex,Running
+infra-internal-production-dcim,infra,4,8192,62,,,,A1-R05-U29,AGC SysOps ,202.60.10.134,,production,Luigi,Running
+data.analytics-datalake-production-farm.iot1,data.analytics,2,2048,32,,,,A1-R05-U29,AGC SysOps ,202.60.10.132,,production,Michael,Running
+fintech-payconnect-production-merchant.aggregator.env,fintech,2,2048,35,,,,A1-R05-U29,AGC SysOps ,202.60.10.148,,production,Juan Jamon,Running
+fintech-payconnect-dev-payplus.7pay,fintech,4,4096,62,,,,A1-R05-U29,AGC SysOps ,202.60.10.158,,dev,Carlex/Juan Jamon,Running
+fintech-loyalty-production-loyalty.test,fintech,4,8192,64,,,,A1-R05-U29,AGC SysOps ,202.60.10.141,,production,Juan Jamon,Running
+infra-internal-test-biometrics,infra,4,4096,80,,,,A1-R05-U31,AGC SysOps ,,172.29.224.3,test,SYSOPS,Running
+infra-oss-test-atis3.beta,infra,2,2048,50,,,,A1-R05-U31,AGC SysOps ,202.60.10.124,,test,Dom Cimafranca/Mae,Running
+infra-oss-production-atis.test,infra,4,4096,62,,,,A1-R05-U31,AGC SysOps ,202.60.10.210,,production,Mae,Running
+fintech-payconnect-production-frontend.dashboard,fintech,4,4096,40,,,,A1-R05-U31,AGC SysOps ,202.60.10.194,,production,Russel Cuy,Running
+supplychain-cliqqshop-dev-merchant.portal,supplychain,2,2048,30,,,,A1-R05-U31,AGC SysOps ,202.60.10.68,,dev,Ian,Running
+devops-k8s-production-ci.apollo,devops,4,8192,100,,,,A1-R05-U31,AGC SysOps ,202.60.10.72,,production,Carlex,Running
+fmfi-fmfi-production-fmfi.test.server,fmfi,4,8192,64,,,,A1-R05-U31,AGC SysOps ,202.60.10.130,,production,Carlex,Running
+data.analytics-metabase-production-cdec,data.analytics,4,4096,75,,,,A1-R05-U31,AGC SysOps ,202.60.10.149,,production,Danrey,Running
+infra-oss-test-tracker.pwa2,infra,2,2048,50,,,,A1-R05-U31,AGC SysOps ,202.60.10.133,,test,Dom Cimafranca/Mae,Running
+infra-oss-test-tracker.backend.2,infra,2,2048,65,,,,A1-R05-U31,AGC SysOps ,202.60.10.90,,test,Dom Cimafranca/Mae,Running
+infra-oss-production-rt.dash,infra,4,4096,55,,,,A1-R05-U31,AGC SysOps ,202.60.10.118,,production,Dom Cimafranca/Mae,Running
+fintech-cliqq-test-new.radius.api,fintech,2,2048,32,,,,A1-R05-U31,AGC SysOps ,202.60.10.155,,test,Juan Jamon/Chris,Running
+supplychain-mariodboro-production-mariodboro.webserver1,supplychain,4,8192,32,,,,A1-R05-U31,AGC SysOps ,202.60.10.199,,production,Carlex,Running
+fintech-payconnect-production-zookeeper2,fintech,1,2048,55,,,,A1-R05-U31,AGC SysOps ,,,production,Carlex,Running
+fintech-payconnect-production-yoti.frontend,fintech,4,4096,55,,,,A1-R05-U31,AGC SysOps ,202.60.10.101,,production,Russel Cuy,Running
+fintech-payconnect-production-yoti.backend,fintech,4,4096,32,,,,A1-R05-U31,AGC SysOps ,,192.168.18.239,production,Russel Cuy,Running
+fintech-payconnect-production-haproxy2,fintech,4,4096,64,,,,A1-R05-U33,AGC SysOps ,202.60.10.209,,production,Carlex,Running
+devops-k8s-production-haproxy,devops,2,4096,64,,,,A1-R05-U33,AGC SysOps ,202.60.10.67,,production,Carlex,Running
+iconnect-iconnect-production-order.management.frontend.test1,iconnect,2,4096,32,,,,A1-R05-U33,AGC SysOps ,,192.168.18.143,production,Carlex,Running
+fintech-shopconnect-dev-backend.test1,fintech,4,8192,32,,,,A1-R05-U16,AGC SysOps ,,192.168.18.86,dev,Carlex,Running
+infra-network-production-acs,infra,4,8192,50,,,,A1-R05-U16,AGC SysOps ,202.60.10.85,,production,Orlando Sarceda/Nemrod,Running
+fintech-payconnect-test-kong1,fintech,4,8192,64,,,,A1-R05-U16,AGC SysOps ,,192.168.18.146,test,Carlex,Running
+infra-oss-test-mailincoming,internal,4,4096,50,,,,A1-R05-U16,AGC SysOps ,202.60.9.8,,test,menard,Running
+internal-infra-dev-workplace,infra,4,8192,1000,,,,A1-R05-U16,AGC SysOps ,202.60.10.136,,dev,luigi,Running
+infra-internal-production-graylog,infra,4,8192,100,,,,A1-R05-U16,AGC SysOps ,202.60.10.109,,production,Luigi,Running
+infra-internal-production-gitlab,fintech,4,8192,500,,,,A1-R05-U16,AGC SysOps ,202.60.10.143,,production,Luigi,Running
+fintech-payconnect-test-recondasboard.matcherconsumer,devops,4,4096,40,,,,A1-R05-U16,AGC SysOps ,,192.168.18.114,test,Russel,Running
+devops-k8s-dev-graylog1,plentina,4,8192,100,,,,A1-R05-U16,AGC SysOps ,202.60.10.87,,dev,Carlex,Running
+plentina-plentina-production-mobile.tokenizer1,plentina,2,4096,32,,,,A1-R05-U16,AGC SysOps ,,192.168.18.87,production,Carlex,Running
+infra-api-test-devportal,infra,2,4096,100,,,,A1-R04-U22,AGC SysOps ,202.60.10.108,,test,Sir Ian/Orly/Nemrod,Running
+infra-monitoring-production-nms.proxy,infra,4,4096,30,,,,A1-R04-U22,AGC SysOps ,202.60.10.110,,production,Luigi,Running
+infra-oss-test-elastiflow,infra,8,16384,30,30,30,,A1-R04-U22,AGC SysOps ,202.60.10.88,,test,Michael-CDO,Running
+iconnect-iconnect-test-order.management.backend1,iconnect,2,4096,34,,,,A1-R04-U22,AGC SysOps ,,192.168.18.56,test,Carlex,Running
+infra-oss-production-dataconnect.postgres.slave2,infra,2,2048,100,,,,A1-R04-U22,AGC SysOps ,202.60.10.140,192.168.18.89,production,,Running
+infra-oss-test-smtpauth,infra,4,4096,55,,,,A1-R04-U22,AGC SysOps ,202.60.9.12,,test,Menard,Running
+infra-oss-test-dovecot,infra,4,8192,55,1000,1000,200,A1-R04-U22,AGC SysOps ,202.60.9.11,,test,Menard,Running
+L2X-network-test-deploy,l2x,2,2048,100,,,,A1-R04-U22,AGC SysOps ,202.60.10.147,,test,mitzi,Running
+fintech-payconnect-production-matcher.dashboard.db,fintech,16,16384,100,,,,A1-R04-U21,AGC SysOps ,,192.168.18.177,production,Russel Cuy,Running
+fintech-payconnect-production-fmfi.db1,fintech,4,8192,64,,,,A1-R04-U21,AGC SysOps ,,192.168.18.169,production,Carlex,Running
+fintech-payconnect-production-fmfi1,fintech,8,16384,128,,,,A1-R04-U21,AGC SysOps ,202.60.10.218,,production,Carlex,Running
+infra-internal-production-dokuwiki,infra,2,2048,62,,,,A1-R05-U38,AGC SysOps ,202.60.10.144,,production,Luigi,Running
+devops-k8s-dev-loadbalancer1,devops,2,4096,64,,,,A1-R05-U38,AGC SysOps ,202.60.10.123,,dev,Carlex,Running
+devops-k8s-dev-node2,devops,8,8192,64,,,,A1-R05-U38,AGC SysOps ,,192.168.17.77,dev,Carlex,Running
+infra-oss-production-atis.dataconnect,infra,2,2048,60,,,,A1-R05-U38,AGC SysOps ,,,production,Gelie/Mae,Running
+infra-oss-production-atis.dataconnect,infra,2,2048,32,,,,A1-R05-U38,AGC SysOps ,202.60.10.126,,production,Menard,Running
+infra-network-production-powerdns.1,infra,2,2048,32,,,,A1-R05-U38,AGC SysOps ,202.60.9.4,,production,Menard,Running
+supplychain-wms-test-wms.poultrymax,supplychain,2,2048,35,,,,A1-R05-U36,AGC SysOps ,202.60.10.103,,test,Gelie,Running
+fintech-payconnect-production-billers.api1,fintech,2,4096,32,,,,A1-R05-U36,AGC SysOps ,,192.168.18.138,production,Carlex,Running
+iconnect-iconnect-test-iconnect.notification1,iconnect,1,2048,32,,,,A1-R05-U36,AGC SysOps ,,192.168.18.139,test,Carlex,Running
+iconnect-iconnect-test-iconnect.notification.test1,iconnect,1,2048,32,,,,A1-R05-U36,AGC SysOps ,,192.168.18.80,test,Carlex,Running
+infra-network-production-strongswan.cert.c,infra,2,2048,34,,,,A1-R05-U36,AGC SysOps ,202.60.9.114,,production,Menard,Running
+infra-network-test-strongswan.cert.b,infra,2,2048,34,,,,A1-R05-U36,AGC SysOps ,202.60.9.113,,test,Menard,Running
+infra-network-test-strongswan.cert.a,infra,2,2048,34,,,,A1-R05-U36,AGC SysOps ,202.60.9.49,,test,Menard,Running
+fintech-payconnect-production-ksqldb.test,fintech,8,8192,100,,,,A1-R05-U36,AGC SysOps ,,192.168.18.191,production,Russel / Janchris / Juan,Running
+fintech-payconnect-production-tdm.reports.test,fintech,4,8192,40,,,,A1-R05-U36,AGC SysOps ,,192.168.18.2,production,Russel / Janchris / Juan,Running
