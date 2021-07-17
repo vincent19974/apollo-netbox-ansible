@@ -24,6 +24,7 @@
 
 
 
+
 - name: Netbox -- Create Virtual Machine
   netbox.netbox.netbox_virtual_machine:
     netbox_url: https://dcim.apollo.com.ph/
@@ -41,6 +42,8 @@
 #      primary_ip4: "{{ device_mgmt_private_ip }}"
     state: present
     validate_certs: False
+  async: 100
+  poll: 1
 
 
     #- name: Netbox -- Create MGMT Public IP Address of Node
@@ -77,7 +80,7 @@
         Group: "{{ device_groups }}"
         Active Status: "{{ device_status }}"
         Type: "{{ device_type }}"
+        Disk(two-volumes): "{{ device_disk_two_volumes }}"
     state: present
     validate_certs: False
-
       
