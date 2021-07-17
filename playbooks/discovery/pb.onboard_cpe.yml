@@ -57,7 +57,9 @@
         device_tenant: "{{ item['tenant'] }}"
         device_role: 'CPE'
         device_type: "{{ item['cf_Type'] }}"
-        device_disk_two_volumes: "{{ item['cf_Disk(two-volumes)'] }}"
+        device_disk_vda: "{{ item['cf_Disk(GB)-vda'] }}"
+        device_disk_vdb: "{{ item['cf_Disk(GB)-vdb'] }}"
+        device_disk_vdc: "{{ item['cf_Disk(GB)-vdc'] }}"
       
         
         

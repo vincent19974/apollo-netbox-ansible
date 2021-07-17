@@ -11,7 +11,6 @@
     state: present
     validate_certs: False
 
-
 - name: Netbox -- Create Tenant for Virtual Machine
   netbox_tenant:
     netbox_url: https://dcim.apollo.com.ph/
@@ -20,8 +19,6 @@
       name: "{{ device_tenant }}"
     state: present
     validate_certs: False
-
-
 
 
 
@@ -42,10 +39,6 @@
 #      primary_ip4: "{{ device_mgmt_private_ip }}"
     state: present
     validate_certs: False
-  async: 100
-  poll: 1
-
-
     #- name: Netbox -- Create MGMT Public IP Address of Node
     #tags: ip
     #netbox_ip_address:
@@ -80,7 +73,8 @@
         Group: "{{ device_groups }}"
         Active Status: "{{ device_status }}"
         Type: "{{ device_type }}"
-        Disk(two-volumes): "{{ device_disk_two_volumes }}"
+        Disk(GB)-vda: "{{ device_disk_vda }}"
+        Disk(GB)-vdb: "{{ device_disk_vdb }}"
+        Disk(GB)-vdc: "{{ device_disk_vdc }}"
     state: present
     validate_certs: False
-      
