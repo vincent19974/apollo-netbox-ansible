@@ -6,13 +6,14 @@
     netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
     data:
       name: "{{ device_tenant }} "
+      slug: "{{ device_slug }}" 
     state: present
     validate_certs: false
   register: resulttenant
   until: resulttenant is not failed
   retries: 5
+
 - name: Netbox -- Create CPE Location
-  
   netbox_site:
     netbox_url: https://netbox-sandbox.apolloglobal.net/
     netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
@@ -25,11 +26,11 @@
 #        - "{{ device_status | default(omit) }}"
 #        - "{{ device_island | default(omit) }}"
 #        - "{{ device_dctech | default(omit) }}"
-    state: present
+#    state: present
     validate_certs: false
-  register: resultloc
-  until: resultloc is not failed
-  retries: 5
+#  register: resultloc
+#  until: resultloc is not failed
+#  retries: 5
 
 - name: Netbox -- Create manufacturer 
   netbox_manufacturer:

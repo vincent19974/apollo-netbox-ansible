@@ -47,5 +47,6 @@
 #        device_island: "{{ item['island_group'] }}"
 #        device_dctech: "{{ item['dctech_circuit'] }}"
         device_role: "CPE"
+        device_slug: "psc-demo"
         device_tenant: "PSC Demo"
         
