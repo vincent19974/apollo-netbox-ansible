@@ -1,80 +1,162 @@
-
 ---
+- name: Netbox -- Create Tenant for CPE
+  ignore_errors: true
+  netbox_tenant:
+    netbox_url: https://netbox-sandbox.apolloglobal.net/
+    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
+    data:
+      name: "{{ device_tenant }} "
+    state: present
+    validate_certs: false
+  register: resulttenant
+  until: resulttenant is not failed
+  retries: 5
+- name: Netbox -- Create CPE Location
+  
+  netbox_site:
+    netbox_url: https://netbox-sandbox.apolloglobal.net/
+    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
+    data:
+      name: "{{ device_site }}"
+      custom_fields:
+        Store Status: "{{ site_status }}"
+      tenant: "{{ device_tenant | default(omit) }}"    
+#      tags: 
+#        - "{{ device_status | default(omit) }}"
+#        - "{{ device_island | default(omit) }}"
+#        - "{{ device_dctech | default(omit) }}"
+    state: present
+    validate_certs: false
+  register: resultloc
+  until: resultloc is not failed
+  retries: 5
+
+- name: Netbox -- Create manufacturer 
+  netbox_manufacturer:
+    netbox_url: https://netbox-sandbox.apolloglobal.net/
+    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
+    data:
+      name: "{{ device_vendor }}"
+    state: present
+    validate_certs: false
+  register: resultman
+  until: resultman is not failed
+  retries: 5
 - name: Netbox --Create device role
-  when: device_role is defined
+  when: device_role is defined 
   netbox_device_role:
-    netbox_url: https://dcim.apollo.com.ph/
-    netbox_token: 3c05e93c4ef731b63c30f80a4fa1a9bfc579c5e4
+    netbox_url: https://netbox-sandbox.apolloglobal.net/
+    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
     data:
       name: "{{ device_role }}"
       color: FAB880
     state: present
-    validate_certs: False
-
-- name: Netbox -- Create Tenant for Virtual Machine
-  netbox_tenant:
-    netbox_url: https://dcim.apollo.com.ph/
-    netbox_token: 3c05e93c4ef731b63c30f80a4fa1a9bfc579c5e4
+    validate_certs: false
+  register: resultrole
+  until: resultrole is not failed
+  retries: 5
+- name: Netbox --Create device type
+  netbox_device_type:
+    netbox_url: https://netbox-sandbox.apolloglobal.net/
+    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
     data:
-      name: "{{ device_tenant }}"
+      model: "{{ device_model }}"
+      manufacturer: "{{ device_vendor }}"
     state: present
-    validate_certs: False
+    validate_certs: false
+  register: resulttype
+  until: resulttype is not failed
+  retries: 5
 
-
-
-- name: Netbox -- Create Virtual Machine
-  netbox.netbox.netbox_virtual_machine:
-    netbox_url: https://dcim.apollo.com.ph/
-    netbox_token: 3c05e93c4ef731b63c30f80a4fa1a9bfc579c5e4
+- name: Netbox -- Create Device
+  netbox_device:
+    netbox_url: https://netbox-sandbox.apolloglobal.net/
+    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
     data:
-      name: "{{ device_name }}"
-      vcpus: "{{ vcpus }}"
-      disk: "{{ disk }}"
-      memory: "{{ memory }}"
-#      virtual_machine_role: "{{ vmrole }}"
-      cluster: "{{ device_cluster }}"
-      tenant: "{{ device_tenant }}"
-#      primary_ip4: "{{ ipv4 }}"
-#      virtual_machine_role: "{{ vm_role }}"
-#      primary_ip4: "{{ device_mgmt_private_ip }}"
-    state: present
-    validate_certs: False
-    #- name: Netbox -- Create MGMT Public IP Address of Node
-    #tags: ip
-    #netbox_ip_address:
-    #netbox_url: https://202.60.12.108/
-    #netbox_token: 6d44005d0d0e9ea3725b47cf47b0aa2b3d7f8fba
-    #data:
-    #address: "{{ public }}"
-    #tenant: "{{ device_tenant }}"
-    #state: present
-    #validate_certs: False
-
-#- name: Attach IP to Virtual Machines
-#  netbox_ip_address:
-#    netbox_url: https://202.60.12.108/
-#    netbox_token: 6d44005d0d0e9ea3725b47cf47b0aa2b3d7f8fba
-#    data:
-#      interface:
-#        virtual_machine: "{{ device_name }}"
-
-#    state: new
-#    validate_certs: False
-- name: Assign Custom Field data to Virtual Machine
-  netbox.netbox.netbox_virtual_machine:
-    netbox_url: https://dcim.apollo.com.ph/
-    netbox_token: 3c05e93c4ef731b63c30f80a4fa1a9bfc579c5e4
-    data:
-      name: "{{ device_name }}"
+      name: "{{ device_role + '-' + device_site }}"
+      device_type: "{{ device_model }}"
+      device_role: "{{ device_role | default(omit) }}"
+      site: "{{ device_site }}"
+      tenant: "{{ device_tenant | default(omit) }}"
       custom_fields:
-        Public IP: "{{ public }}"
-        Private IP: "{{ private }}"
-        Owner: "{{ device_owner }}"
-        Group: "{{ device_groups }}"
-        Active Status: "{{ device_status }}"
-        Type: "{{ device_type }}"
-        Disk(GB)-vda: "{{ device_disk_vda }}"
-        Disk(GB)-vdb: "{{ device_disk_vdb }}"
-        Disk(GB)-vdc: "{{ device_disk_vdc }}"
+        prom_labels: '{"__snmp_module__": "arista_sw"}'
     state: present
-    validate_certs: False
+    validate_certs: false
+  register: resultdev
+  until: resultdev is not failed
+  retries: 5
+- name: Netbox -- Create  Dummy Mgmt Interface on a Device
+  netbox_device_interface:
+    netbox_url: https://netbox-sandbox.apolloglobal.net/
+    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
+    data:
+      device: "{{ device_role + '-' + device_site }}"
+      name: "{{  device_dummy_mgmt_port }}"
+      type: "Virtual"
+      description: "Dummy Managment Port"
+      mgmt_only: true
+      mode: Access
+      enabled: true
+    state: present
+    validate_certs: false
+  register: resultcreatedummy
+  until: resultcreatedummy is not failed
+  retries: 5
+
+#- name: Netbox -- get device id
+#  shell: "curl -s https://netbox-sandbox.apolloglobal.net/api/dcim/devices/?name=CPE-ST-2345 -H 'Authorization: Token 9b5e317a31ef12015172f9af6a18c4624748ac38' | jq '.' | grep 'devices' | awk '{split($0,a,"/"); print a[7]}'"
+#  delegate_to: 127.0.0.1
+#  register: deviceid
+
+#- debug:
+#   msg: "{{deviceid}}"
+  
+#- name: Netbox -- remove old Mgmt IP Address on the Mgmt Interface
+#  ignore_errors: true
+#  netbox_ip_address:
+#    netbox_url: "{{ netbox_url }}"
+#    netbox_token: "{{ netbox_token }}"
+#    data:
+#      address: "{{ device_mgmt_ip }}"
+#      tenant: "{{ device_tenant | default(omit) }}"
+#      assigned_object:
+#        name: "{{ device_dummy_mgmt_port }}"
+#        device: "{{ device_role + '-' + device_site }}"
+#    state: absent
+#    validate_certs: false
+#  register: resultrem
+#  until: resultrem is not failed
+#  retries: 5
+
+- name: Netbox -- Attach Mgmt IP Address on the Mgmt Interface
+  ignore_errors: true
+  netbox_ip_address:
+    netbox_url: https://netbox-sandbox.apolloglobal.net/
+    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
+    data:
+      address: "{{ device_mgmt_ip }}"
+      tenant: "{{ device_tenant | default(omit) }}"
+      assigned_object:
+        name: "{{ device_dummy_mgmt_port }}"
+        device: "{{ device_role + '-' + device_site }}"
+    state: new
+    validate_certs: false
+  register: resultatt
+  until: resultatt is not failed
+  retries: 5
+
+- name: Netbox -- Setup Managment IP on Device
+  ignore_errors: true
+  netbox_device:
+    netbox_url: https://netbox-sandbox.apolloglobal.net/
+    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
+    data:
+      name: "{{device_role + '-' + device_site }}"
+      site: "{{ device_site }}"
+      primary_ip4: "{{ device_mgmt_ip | default(omit) }}"
+    state: present
+    validate_certs: false
+  register: resultsett
+  until: resultsett is not failed
+  retries: 5
+

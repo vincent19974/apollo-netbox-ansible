@@ -2,9 +2,9 @@
 - name: Load CPE list from CSV
   hosts: netbox
   gather_facts: no
-  tags: from_csv , never
+#  tags: from_csv , never
   vars:
-    csv_data_file: 'vm_compute1.csv'
+    csv_data_file: 'psc1_mindanao.csv'
     
   tasks:
 
@@ -28,11 +28,11 @@
   connection: local
   vars:
     ansible_python_interpreter: "{{ ansible_playbook_python }}"
-    tenant: 'AGC SysOps / Engineering'
+    tenant: 'Apollo'
   tasks:
     - name: Add nodes to netbox from CSV File
       ignore_errors: yes
-      tags: from_csv
+#      tags: from_csv
       when: csv_file_data is defined     
       loop: "{{ csv_file_data.list }}"
       include_role:
@@ -57,9 +57,9 @@
         device_tenant: "{{ item['tenant'] }}"
         device_role: 'CPE'
         device_type: "{{ item['cf_Type'] }}"
-        device_disk_vda: "{{ item['cf_Disk(GB)-vda'] }}"
-        device_disk_vdb: "{{ item['cf_Disk(GB)-vdb'] }}"
-        device_disk_vdc: "{{ item['cf_Disk(GB)-vdc'] }}"
+        #        device_disk_vda: "{{ item['cf_Disk(GB)-vda'] }}"
+        #device_disk_vdb: "{{ item['cf_Disk(GB)-vdb'] }}"
+        #device_disk_vdc: "{{ item['cf_Disk(GB)-vdc'] }}"
       
         
         
