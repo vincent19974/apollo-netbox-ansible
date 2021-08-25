@@ -1,8 +1,8 @@
 [nms_stack]
-netbox      ansible_host=202.60.12.108
-awx         ansible_host=202.60.10.75
-grafana      ansible_host=202.60.10.86
-elk         ansible_host=202.60.10.77
+netbox      ansible_host=<IP>
+awx         ansible_host=<IP>
+grafana      ansible_host=2<IP>
+elk         ansible_host=<IP>
 
 [CPE]
 ST-2318
