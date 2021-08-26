@@ -1,0 +1,52 @@
+---
+- name: Load CPE list from CSV
+  hosts: netbox
+  gather_facts: no
+#  tags: from_csv , never
+  vars:
+    csv_data_file: 'ncr-mindanao-sites-status.csv'
+    
+  tasks:
+
+    - name: Setup base Data folder
+      set_fact:
+        base_data_folder: "{{ playbook_dir.split('playbooks') | first }}"
+
+    - name: Read CSV File
+      delegate_to: localhost
+      read_csv:
+        path: "{{ base_data_folder + 'net_data/' + csv_data_file }}"
+      register: csv_file_data
+
+- name: Onboard into Netbox
+  hosts: netbox
+  gather_facts: no
+  connection: local
+  vars:
+    ansible_python_interpreter: "{{ ansible_playbook_python }}"
+    tenant: 'PSC Demo'
+  tasks:
+    - name: Add nodes to netbox from CSV File
+      ignore_errors: yes
+#      tags: from_csv
+      when: csv_file_data is defined     
+      loop: "{{ csv_file_data.list }}"
+      include_role:
+        name: netbox/onboard_netbox
+        apply:
+          tags: from_csv
+      vars:
+        netbox_url: "https://netbox-sandbox.apolloglobal.net/"
+        netbox_token: "9b5e317a31ef12015172f9af6a18c4624748ac38"
+        device_site: "{{ item['site_id'] }}"
+        device_vendor: "ROUTER"
+        device_model: "MODEL"
+        site_status: "{{ item['cf_Status'] }}"
+        device_mgmt_ip: "{{ item['mgmt_ip'] }}"
+#        device_status: "{{ item['device_stat'] }}"
+#        device_island: "{{ item['island_group'] }}"
+#        device_dctech: "{{ item['dctech_circuit'] }}"
+        device_role: "CPE"
+        device_slug: "psc"
+        device_tenant: "PSC"
+        
