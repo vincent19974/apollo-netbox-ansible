@@ -4,7 +4,7 @@
   gather_facts: no
 #  tags: from_csv , never
   vars:
-    csv_data_file: 'onboarding-50stores.csv'
+    csv_data_file: 'onboarding-200stores.csv'
     
   tasks:
 
@@ -32,7 +32,7 @@
       when: csv_file_data is defined     
       loop: "{{ csv_file_data.list }}"
       include_role:
-        name: netbox/onboard_50_stores
+        name: netbox/onboard_200_stores
         apply:
           tags: from_csv
       vars:
