@@ -12,7 +12,7 @@
   register: resulttenant
   until: resulttenant is not failed
   retries: 5
-  async: 15
+  async: 45
   poll: 0
 
 - name: Netbox -- Create CPE Location
@@ -45,7 +45,7 @@
   register: resultman
   until: resultman is not failed
   retries: 5
-  async: 15
+  async: 45
   poll: 0
 
 - name: Netbox --Create device role
@@ -61,7 +61,7 @@
   register: resultrole
   until: resultrole is not failed
   retries: 5
-  async: 15
+  async: 45
   poll: 0
 
 - name: Netbox --Create device type
@@ -76,7 +76,7 @@
   register: resulttype
   until: resulttype is not failed
   retries: 5
-  async: 15
+  async: 45
   poll: 0
 
 - name: Netbox -- Create Device
@@ -96,94 +96,6 @@
   register: resultdev
   until: resultdev is not failed
   retries: 5
-  async: 15
-  poll: 1
-
-- name: Netbox -- Create  Dummy Mgmt Interface on a Device
-  netbox_device_interface:
-    netbox_url: https://netbox-sandbox.apolloglobal.net/
-    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
-    data:
-      device: "{{ device_role + '-' + device_site }}"
-      name: "{{  device_dummy_mgmt_port }}"
-      type: "Virtual"
-      description: "Dummy Managment Port"
-      mgmt_only: true
-      mode: Access
-      enabled: true
-    state: present
-    validate_certs: false
-  register: resultcreatedummy
-  until: resultcreatedummy is not failed
-  retries: 5
-  async: 15
-  poll: 0
-
-- name: wait dummy mgmt to finish
-  async_status:
-    jid: "{{ resultcreatedummy.ansible_job_id }}"
-  register: job_result
-  until: job_result.finished
-  retries: 5
-  delay: 2
-#- name: Netbox -- get device id
-#  shell: "curl -s https://netbox-sandbox.apolloglobal.net/api/dcim/devices/?name=CPE-ST-2345 -H 'Authorization: Token 9b5e317a31ef12015172f9af6a18c4624748ac38' | jq '.' | grep 'devices' | awk '{split($0,a,"/"); print a[7]}'"
-#  delegate_to: 127.0.0.1
-#  register: deviceid
-
-#- debug:
-#   msg: "{{deviceid}}"
-  
-#- name: Netbox -- remove old Mgmt IP Address on the Mgmt Interface
-#  ignore_errors: true
-#  netbox_ip_address:
-#    netbox_url: "{{ netbox_url }}"
-#    netbox_token: "{{ netbox_token }}"
-#    data:
-#      address: "{{ device_mgmt_ip }}"
-#      tenant: "{{ device_tenant | default(omit) }}"
-#      assigned_object:
-#        name: "{{ device_dummy_mgmt_port }}"
-#        device: "{{ device_role + '-' + device_site }}"
-#    state: absent
-#    validate_certs: false
-#  register: resultrem
-#  until: resultrem is not failed
-#  retries: 5
-
-- name: Netbox -- Attach Mgmt IP Address on the Mgmt Interface
-  ignore_errors: true
-  netbox_ip_address:
-    netbox_url: https://netbox-sandbox.apolloglobal.net/
-    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
-    data:
-      address: "{{ device_mgmt_ip }}"
-      tenant: "{{ device_tenant | default(omit) }}"
-      assigned_object:
-        name: "{{ device_dummy_mgmt_port }}"
-        device: "{{ device_role + '-' + device_site }}"
-    state: present
-    validate_certs: false
-  register: resultatt
-  until: resultatt is not failed
-  retries: 5
-  async: 15
-  poll: 0
-
-- name: Netbox -- Setup Managment IP on Device
-  ignore_errors: true
-  netbox_device:
-    netbox_url: https://netbox-sandbox.apolloglobal.net/
-    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
-    data:
-      name: "{{device_role + '-' + device_site }}"
-      site: "{{ device_site }}"
-      primary_ip4: "{{ device_mgmt_ip | default(omit) }}"
-    state: present
-    validate_certs: false
-  register: resultsett
-  until: resultsett is not failed
-  retries: 5
-  async: 15
+  async: 45
   poll: 0
 
