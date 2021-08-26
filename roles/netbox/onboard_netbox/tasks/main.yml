@@ -12,6 +12,8 @@
   register: resulttenant
   until: resulttenant is not failed
   retries: 5
+  async: 15
+  poll: 0
 
 - name: Netbox -- Create CPE Location
   netbox_site:
@@ -43,6 +45,9 @@
   register: resultman
   until: resultman is not failed
   retries: 5
+  async: 15
+  poll: 0
+
 - name: Netbox --Create device role
   when: device_role is defined 
   netbox_device_role:
@@ -56,6 +61,9 @@
   register: resultrole
   until: resultrole is not failed
   retries: 5
+  async: 15
+  poll: 0
+
 - name: Netbox --Create device type
   netbox_device_type:
     netbox_url: https://netbox-sandbox.apolloglobal.net/
@@ -68,6 +76,8 @@
   register: resulttype
   until: resulttype is not failed
   retries: 5
+  async: 15
+  poll: 0
 
 - name: Netbox -- Create Device
   netbox_device:
@@ -86,6 +96,9 @@
   register: resultdev
   until: resultdev is not failed
   retries: 5
+  async: 15
+  poll: 1
+
 - name: Netbox -- Create  Dummy Mgmt Interface on a Device
   netbox_device_interface:
     netbox_url: https://netbox-sandbox.apolloglobal.net/
@@ -103,7 +116,16 @@
   register: resultcreatedummy
   until: resultcreatedummy is not failed
   retries: 5
+  async: 15
+  poll: 0
 
+- name: wait dummy mgmt to finish
+  async_status:
+    jid: "{{ resultcreatedummy.ansible_job_id }}"
+  register: job_result
+  until: job_result.finished
+  retries: 5
+  delay: 2
 #- name: Netbox -- get device id
 #  shell: "curl -s https://netbox-sandbox.apolloglobal.net/api/dcim/devices/?name=CPE-ST-2345 -H 'Authorization: Token 9b5e317a31ef12015172f9af6a18c4624748ac38' | jq '.' | grep 'devices' | awk '{split($0,a,"/"); print a[7]}'"
 #  delegate_to: 127.0.0.1
@@ -140,11 +162,13 @@
       assigned_object:
         name: "{{ device_dummy_mgmt_port }}"
         device: "{{ device_role + '-' + device_site }}"
-    state: new
+    state: present
     validate_certs: false
   register: resultatt
   until: resultatt is not failed
   retries: 5
+  async: 15
+  poll: 0
 
 - name: Netbox -- Setup Managment IP on Device
   ignore_errors: true
@@ -160,4 +184,6 @@
   register: resultsett
   until: resultsett is not failed
   retries: 5
+  async: 15
+  poll: 0
 
