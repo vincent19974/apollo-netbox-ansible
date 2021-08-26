@@ -4,7 +4,7 @@
   gather_facts: no
 #  tags: from_csv , never
   vars:
-    csv_data_file: 'psc1_mindanao.csv'
+    csv_data_file: 'vincent-50stores.csv'
     
   tasks:
 
@@ -47,6 +47,6 @@
 #        device_island: "{{ item['island_group'] }}"
 #        device_dctech: "{{ item['dctech_circuit'] }}"
         device_role: "CPE"
-        device_slug: "psc-demo"
-        device_tenant: "PSC Demo"
+        device_slug: "psc-test"
+        device_tenant: "PSC-TEST"
         
