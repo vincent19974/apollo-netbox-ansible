@@ -4,7 +4,7 @@
   gather_facts: no
 #  tags: from_csv , never
   vars:
-    csv_data_file: 'onboarding-50stores.csv'
+    csv_data_file: 'onboarding_ncr_asof83121.csv'
     
   tasks:
 
@@ -36,17 +36,17 @@
         apply:
           tags: from_csv
       vars:
-        netbox_url: "https://netbox-sandbox.apolloglobal.net/"
-        netbox_token: "9b5e317a31ef12015172f9af6a18c4624748ac38"
+        netbox_url: "https://netbox.apolloglobal.net/"
+        netbox_token: "e87e0916bdc7236b037746808c1c3b3da8fcba25"
         device_site: "{{ item['site_id'] }}"
         device_vendor: "ROUTER"
         device_model: "MODEL"
-        site_status: "{{ item['cf_Status'] }}"
+        site_status: "{{ item['sites_status'] }}"
         device_mgmt_ip: "{{ item['mgmt_ip'] }}"
-#        device_status: "{{ item['device_stat'] }}"
+        device_location: "{{ item['tag_location'] }}"
 #        device_island: "{{ item['island_group'] }}"
-#        device_dctech: "{{ item['dctech_circuit'] }}"
+        device_dctech: "{{ item['tag_dctech'] }}"
         device_role: "CPE"
-        device_slug: "psc-test"
-        device_tenant: "PSC-TEST"
+        device_slug: "psc"
+        device_tenant: "PSC"
         

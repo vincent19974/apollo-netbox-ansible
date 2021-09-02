@@ -12,7 +12,7 @@
   register: resulttenant
   until: resulttenant is not failed
   retries: 5
-  async: 45
+  async: 15
   poll: 0
 
 - name: Netbox -- Create CPE Location
@@ -45,7 +45,7 @@
   register: resultman
   until: resultman is not failed
   retries: 5
-  async: 45
+  async: 15
   poll: 0
 
 - name: Netbox --Create device role
@@ -61,7 +61,7 @@
   register: resultrole
   until: resultrole is not failed
   retries: 5
-  async: 45
+  async: 15
   poll: 0
 
 - name: Netbox --Create device type
@@ -76,7 +76,7 @@
   register: resulttype
   until: resulttype is not failed
   retries: 5
-  async: 45
+  async: 15
   poll: 0
 
 - name: Netbox -- Create Device
@@ -96,6 +96,6 @@
   register: resultdev
   until: resultdev is not failed
   retries: 5
-  async: 45
+  async: 15
   poll: 0
 

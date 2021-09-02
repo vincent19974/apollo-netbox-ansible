@@ -2,8 +2,8 @@
 - name: Netbox -- Create Tenant for CPE
   ignore_errors: true
   netbox_tenant:
-    netbox_url: https://netbox-sandbox.apolloglobal.net/
-    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
+    netbox_url: https://netbox.apolloglobal.net/
+    netbox_token: e87e0916bdc7236b037746808c1c3b3da8fcba25
     data:
       name: "{{ device_tenant }} "
       slug: "{{ device_slug }}" 
@@ -17,18 +17,18 @@
 
 - name: Netbox -- Create CPE Location
   netbox_site:
-    netbox_url: https://netbox-sandbox.apolloglobal.net/
-    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
+    netbox_url: https://netbox.apolloglobal.net/
+    netbox_token: e87e0916bdc7236b037746808c1c3b3da8fcba25
     data:
       name: "{{ device_site }}"
       custom_fields:
         Store Status: "{{ site_status }}"
       tenant: "{{ device_tenant | default(omit) }}"    
-#      tags: 
-#        - "{{ device_status | default(omit) }}"
+      tags: 
+        - "{{ device_location | default(omit) }}"
 #        - "{{ device_island | default(omit) }}"
-#        - "{{ device_dctech | default(omit) }}"
-#    state: present
+        - "{{ device_dctech | default(omit) }}"
+    state: present
     validate_certs: false
 #  register: resultloc
 #  until: resultloc is not failed
@@ -36,8 +36,8 @@
 
 - name: Netbox -- Create manufacturer 
   netbox_manufacturer:
-    netbox_url: https://netbox-sandbox.apolloglobal.net/
-    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
+    netbox_url: https://netbox.apolloglobal.net/
+    netbox_token: e87e0916bdc7236b037746808c1c3b3da8fcba25
     data:
       name: "{{ device_vendor }}"
     state: present
@@ -51,8 +51,8 @@
 - name: Netbox --Create device role
   when: device_role is defined 
   netbox_device_role:
-    netbox_url: https://netbox-sandbox.apolloglobal.net/
-    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
+    netbox_url: https://netbox.apolloglobal.net/
+    netbox_token: e87e0916bdc7236b037746808c1c3b3da8fcba25
     data:
       name: "{{ device_role }}"
       color: FAB880
@@ -66,8 +66,8 @@
 
 - name: Netbox --Create device type
   netbox_device_type:
-    netbox_url: https://netbox-sandbox.apolloglobal.net/
-    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
+    netbox_url: https://netbox.apolloglobal.net/
+    netbox_token: e87e0916bdc7236b037746808c1c3b3da8fcba25
     data:
       model: "{{ device_model }}"
       manufacturer: "{{ device_vendor }}"
@@ -81,8 +81,8 @@
 
 - name: Netbox -- Create Device
   netbox_device:
-    netbox_url: https://netbox-sandbox.apolloglobal.net/
-    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
+    netbox_url: https://netbox.apolloglobal.net/
+    netbox_token: e87e0916bdc7236b037746808c1c3b3da8fcba25
     data:
       name: "{{ device_role + '-' + device_site }}"
       device_type: "{{ device_model }}"
@@ -101,8 +101,8 @@
 
 - name: Netbox -- Create  Dummy Mgmt Interface on a Device
   netbox_device_interface:
-    netbox_url: https://netbox-sandbox.apolloglobal.net/
-    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
+    netbox_url: https://netbox.apolloglobal.net/
+    netbox_token: e87e0916bdc7236b037746808c1c3b3da8fcba25
     data:
       device: "{{ device_role + '-' + device_site }}"
       name: "{{  device_dummy_mgmt_port }}"
@@ -124,7 +124,7 @@
     jid: "{{ resultcreatedummy.ansible_job_id }}"
   register: job_result
   until: job_result.finished
-  retries: 5
+  retries: 30
   delay: 2
 #- name: Netbox -- get device id
 #  shell: "curl -s https://netbox-sandbox.apolloglobal.net/api/dcim/devices/?name=CPE-ST-2345 -H 'Authorization: Token 9b5e317a31ef12015172f9af6a18c4624748ac38' | jq '.' | grep 'devices' | awk '{split($0,a,"/"); print a[7]}'"
@@ -154,8 +154,8 @@
 - name: Netbox -- Attach Mgmt IP Address on the Mgmt Interface
   ignore_errors: true
   netbox_ip_address:
-    netbox_url: https://netbox-sandbox.apolloglobal.net/
-    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
+    netbox_url: https://netbox.apolloglobal.net/
+    netbox_token: e87e0916bdc7236b037746808c1c3b3da8fcba25
     data:
       address: "{{ device_mgmt_ip }}"
       tenant: "{{ device_tenant | default(omit) }}"
@@ -173,8 +173,8 @@
 - name: Netbox -- Setup Managment IP on Device
   ignore_errors: true
   netbox_device:
-    netbox_url: https://netbox-sandbox.apolloglobal.net/
-    netbox_token: 6c3c25b8522dfc2bda9781e963ccc0f7a8edaf9d
+    netbox_url: https://netbox.apolloglobal.net/
+    netbox_token: e87e0916bdc7236b037746808c1c3b3da8fcba25
     data:
       name: "{{device_role + '-' + device_site }}"
       site: "{{ device_site }}"
